@@ -1,32 +1,36 @@
 <template>
   <section class="message-section">
-    <div class="left">
+    <div class="left" data-animation="fade-right">
       <h2 class="title">Welcome Home</h2>
     </div>
     <div class="right">
       <div class="body">
-        <p class="subtitle">Real estate with heart, clarity, and local soul</p>
+        <p class="subtitle" data-animation="fade-up">Real estate with heart, clarity, and local soul</p>
         
-        <p>
+        <p data-animation="fade-up" class="delay-100">
           I'm Olivia, an <strong>AMPI-certified real estate agent</strong> at LunaMar Estates, passionate about helping you find not just a property, but a lifestyle.
         </p>
         
-        <p>
+        <p data-animation="fade-up" class="delay-200">
           With a background in journalism, hospitality, and luxury service, I guide my clients with care, discretion, and vision — from first-time buyers to seasoned investors. I speak your language (and Spanish too), and I know this town like home — because it is.
         </p>
         
-        <p>
+        <p data-animation="fade-up" class="delay-300">
           Let's make the journey smooth, meaningful, and maybe even fun.
         </p>
         
-        <h3 class="section-heading">My values</h3>
-        <p class="values">Trust | Connection | Local Insight | Intuitive Care | Calm Guidance</p>
+        <h3 class="section-heading" data-animation="fade-up">
+          My values
+        </h3>
+        <p class="values delay-100" data-animation="fade-up">Trust | Connection | Local Insight | Intuitive Care | Calm Guidance</p>
         
-        <h3 class="section-heading">Services</h3>
+        <h3 class="section-heading" data-animation="fade-up">
+          Services
+        </h3>
         <ul class="services-list">
-          <li>Personalized real estate guidance</li>
-          <li>Curated property showings</li>
-          <li>Investment &amp; lifestyle consulting</li>
+          <li data-animation="fade-left" class="delay-100">Personalized real estate guidance</li>
+          <li data-animation="fade-left" class="delay-200">Curated property showings</li>
+          <li data-animation="fade-left" class="delay-300">Investment &amp; lifestyle consulting</li>
         </ul>
       </div>
     </div>

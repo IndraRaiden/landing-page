@@ -1,72 +1,72 @@
 <template>
   <section class="meetme-section">
-    <div class="left">
+    <div class="left" data-animation="fade-right">
       <h2 class="title">Meet Me</h2>
     </div>
     <div class="right">
       <div class="meetme-content">
-        <div class="profile-image">
+        <div class="profile-image" data-animation="fade-right">
           <img src="https://picsum.photos/400" alt="Olivia's profile" />
         </div>
         <div class="profile-info">
-          <p class="subtitle">Olivia Matheson</p>
+          <p class="subtitle" data-animation="fade-up">Olivia Matheson</p>
           
-          <p>I'm Olivia Matheson, a Canadian-born, Sayulita-based AMPI-certified agent with a heart for helping people feel at home — literally.</p>
+          <p data-animation="fade-up" class="delay-100">I'm Olivia Matheson, a Canadian-born, Sayulita-based AMPI-certified agent with a heart for helping people feel at home — literally.</p>
           
-          <p>My journey began in journalism and luxury hospitality, where I learned to listen deeply, care intuitively, and notice every detail. Today, I bring that same attention and calm confidence to real estate, helping clients navigate each step with clarity and trust.</p>
+          <p data-animation="fade-up" class="delay-200">My journey began in journalism and luxury hospitality, where I learned to listen deeply, care intuitively, and notice every detail. Today, I bring that same attention and calm confidence to real estate, helping clients navigate each step with clarity and trust.</p>
           
-          <p>Whether you're buying your dream beach home or listing a legacy property, my goal is to create an experience that feels thoughtful, smooth, and truly yours.</p>
+          <p data-animation="fade-up" class="delay-300">Whether you're buying your dream beach home or listing a legacy property, my goal is to create an experience that feels thoughtful, smooth, and truly yours.</p>
           
-          <p>Outside of real estate, I love the jungle trails, hidden coves, and artisan markets that make this town so special — and I bring that same love of place to every client I work with.</p>
+          <p data-animation="fade-up" class="delay-400">Outside of real estate, I love the jungle trails, hidden coves, and artisan markets that make this town so special — and I bring that same love of place to every client I work with.</p>
           
-          <p>Let's connect — and find the life you're dreaming of.</p>
+          <p data-animation="fade-up" class="delay-500">Let's connect — and find the life you're dreaming of.</p>
           
-          <div class="values-section">
+          <div class="values-section" data-animation="fade-up">
             <h3 class="section-heading">The Values Behind My Work</h3>
             <p>Every client, every home, and every journey is unique — but the way I show up remains constant. My work is guided by a mix of professionalism, care, and a genuine love for this community.</p>
             
             <div class="values-grid">
-              <div class="value-item">
+              <div class="value-item delay-100" data-animation="fade-up">
                 <h4>Trust & Integrity</h4>
                 <p>As an AMPI-certified agent, my clients know they can count on me — always.</p>
               </div>
               
-              <div class="value-item">
+              <div class="value-item delay-200" data-animation="fade-up">
                 <h4>Calm, Grounded Guidance</h4>
                 <p>I approach every step with clarity, patience, and calm professionalism, no matter how big or small the decision.</p>
               </div>
               
-              <div class="value-item">
+              <div class="value-item delay-300" data-animation="fade-up">
                 <h4>Intuitive, Heartfelt Care</h4>
                 <p>I don't just check boxes — I listen deeply, understand your needs, and support you with genuine care.</p>
               </div>
               
-              <div class="value-item">
+              <div class="value-item delay-400" data-animation="fade-up">
                 <h4>Obsessed with Details</h4>
                 <p>From the right property to the perfect closing process, I focus on details that make your experience seamless.</p>
               </div>
               
-              <div class="value-item">
+              <div class="value-item delay-100" data-animation="fade-up">
                 <h4>Discretion & Clear Communication</h4>
                 <p>You'll always know where we stand. Transparent, honest, and respectful of your privacy.</p>
               </div>
               
-              <div class="value-item">
+              <div class="value-item delay-200" data-animation="fade-up">
                 <h4>Local Knowledge, Global Mindset</h4>
                 <p>Fluent in Spanish, deeply connected to Sayulita, and tuned into what life here truly means.</p>
               </div>
               
-              <div class="value-item">
+              <div class="value-item delay-300" data-animation="fade-up">
                 <h4>Ease, Comfort & Connection</h4>
                 <p>I aim to make this process feel like a natural, exciting next step — not a stressful transaction.</p>
               </div>
               
-              <div class="value-item">
+              <div class="value-item delay-400" data-animation="fade-up">
                 <h4>Rooted in Community</h4>
                 <p>I believe in supporting local businesses, culture, and people — because that's what makes this place magic.</p>
               </div>
               
-              <div class="value-item">
+              <div class="value-item delay-500" data-animation="fade-up">
                 <h4>Adaptable, Always</h4>
                 <p>My diverse background allows me to pivot, adapt, and meet your needs — however unique they are.</p>
               </div>

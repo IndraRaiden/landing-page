@@ -1,15 +1,15 @@
 <template>
   <section class="cta-wrapper">
     <div class="cta-content">
-      <div class="cta-heading">
+      <div class="cta-heading" data-animation="fade-up">
         <h2>Let's make your next move feel like coming home</h2>
       </div>
       
-      <div class="cta-message">
+      <div class="cta-message delay-100" data-animation="fade-up">
         <p>Whether you're just beginning or already dreaming of your next chapter,<br>I'm here to guide you every step of the way.</p>
       </div>
       
-      <div class="cta-contact">
+      <div class="cta-contact delay-200" data-animation="fade-up">
         <a href="mailto:olivia@lunamarestates.com" class="contact-email">olivia@lunamarestates.com</a>
         
         <div class="contact-social">

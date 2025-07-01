@@ -6,6 +6,7 @@
       class="hero-img"
       src="https://picsum.photos/1600/900"
       alt="Hero image"
+      data-animation="zoom-in"
     />
   </section>
 </template>

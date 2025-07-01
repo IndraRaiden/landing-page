@@ -1,12 +1,12 @@
 <template>
   <section class="contact-section">
-    <div class="left">
+    <div class="left" data-animation="fade-right">
       <h2 class="title">Get in Touch</h2>
     </div>
     <div class="right">
       <div class="contact-options">
         <!-- Email Option -->
-        <div class="contact-option">
+        <div class="contact-option" data-animation="fade-up">
           <h3 class="option-title">Email</h3>
           <div class="option-content">
             <p>Write to me at</p>
@@ -21,7 +21,7 @@
         </div>
         
         <!-- WhatsApp Option -->
-        <div class="contact-option">
+        <div class="contact-option delay-100" data-animation="fade-up">
           <h3 class="option-title">WhatsApp</h3>
           <div class="option-content">
             <p>Or say hi on WhatsApp</p>
@@ -35,7 +35,7 @@
         </div>
 
         <!-- Instagram Option -->
-        <div class="contact-option">
+        <div class="contact-option delay-200" data-animation="fade-up">
           <h3 class="option-title">Instagram</h3>
           <div class="option-content">
             <p>Or say hi on Instagram</p>
