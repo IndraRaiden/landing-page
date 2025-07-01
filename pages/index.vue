@@ -4,6 +4,7 @@
   <Message />
   <Contact />
   <MeetMe />
+  <CTA />
 </template>
 
 <script setup lang="ts">
@@ -12,6 +13,7 @@ import Navbar from '~/components/Navbar.vue';
 import Message from '~/components/Message.vue';
 import Contact from '~/components/Contact.vue';
 import MeetMe from '~/components/MeetMe.vue';
+import CTA from '~/components/CTA.vue';
 </script>
 
 
