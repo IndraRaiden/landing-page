@@ -1,12 +1,12 @@
 <template>
-  <section class="contact-section">
+  <section class="contact-section" style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(255, 255, 255, 0.92);">
     <div class="left" data-animation="fade-right">
       <h2 class="title">Get in Touch</h2>
     </div>
     <div class="right">
       <div class="contact-options">
         <!-- Email Option -->
-        <div class="contact-option" data-animation="fade-up">
+        <div class="contact-option contact-card" data-animation="fade-up">
           <h3 class="option-title">Email</h3>
           <div class="option-content">
             <p>Write to me at</p>
@@ -21,7 +21,7 @@
         </div>
         
         <!-- WhatsApp Option -->
-        <div class="contact-option delay-100" data-animation="fade-up">
+        <div class="contact-option contact-card delay-100" data-animation="fade-up">
           <h3 class="option-title">WhatsApp</h3>
           <div class="option-content">
             <p>Or say hi on WhatsApp</p>
@@ -35,7 +35,7 @@
         </div>
 
         <!-- Instagram Option -->
-        <div class="contact-option delay-200" data-animation="fade-up">
+        <div class="contact-option contact-card delay-200" data-animation="fade-up">
           <h3 class="option-title">Instagram</h3>
           <div class="option-content">
             <p>Or say hi on Instagram</p>
@@ -63,12 +63,16 @@
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 7rem;
+  width: 100%;
   max-width: 100%;
-  margin: 5rem 0;
-  padding: 0 5%;
+  margin: 8rem 0;
+  padding: 4rem 5%;
   font-family: "Times New Roman", Times, serif;
   color: #444;
   justify-content: space-between;
+  min-height: 500px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .title {
@@ -99,8 +103,10 @@
 
 .right {
   max-width: 800px;
+  width: 100%;
   margin-left: auto;
   padding-right: 5%;
+  box-sizing: border-box;
 }
 
 .contact-options {
@@ -108,12 +114,30 @@
   flex-direction: column;
   gap: 3rem;
   max-width: 700px;
+  width: 100%;
+  margin: 2rem 0;
+  box-sizing: border-box;
 }
 
 .contact-option {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .option-title {
@@ -164,6 +188,9 @@
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.02em;
+  max-width: 100%;
+  word-break: break-word;
+  box-sizing: border-box;
 }
 
 .contact-link:hover {
@@ -178,14 +205,27 @@
   transform: translateX(3px);
 }
 
+@media (max-width: 1024px) {
+  .contact-section {
+    grid-template-columns: 180px 1fr;
+    gap: 3rem;
+  }
+
+  .right {
+    padding-right: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-section {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 4rem 1rem;
   }
   
   .right {
     max-width: 100%;
+    padding-right: 0;
   }
 }
 </style>

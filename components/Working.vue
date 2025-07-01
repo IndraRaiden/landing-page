@@ -1,5 +1,5 @@
 <template>
-  <section class="working-section">
+  <section class="working-section" style="background-image: url('https://images.unsplash.com/photo-1555519653-1f5372ce6a3f?q=80&w=2060&auto=format&fit=crop'); background-size: cover; background-attachment: fixed; background-position: center; background-blend-mode: overlay; background-color: rgba(255, 255, 255, 0.92);">
     <div class="left" data-animation="fade-right">
       <h2 class="title">Working Together</h2>
     </div>
@@ -13,21 +13,25 @@
         
         <div class="service-grid">
           <div class="service-item delay-100" data-animation="fade-up">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Curated Property Showings" class="service-image">
             <h4 class="service-title">Curated Property Showings</h4>
             <p class="service-desc">Thoughtfully selected listings that reflect your lifestyle, goals, and taste.</p>
           </div>
           
           <div class="service-item delay-200" data-animation="fade-up">
+            <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Local Market Insight" class="service-image">
             <h4 class="service-title">Local Market Insight</h4>
             <p class="service-desc">Honest, up-to-date knowledge of Sayulita and the surrounding areas.</p>
           </div>
           
           <div class="service-item delay-300" data-animation="fade-up">
+            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Real Estate Guidance" class="service-image">
             <h4 class="service-title">Real Estate Guidance</h4>
             <p class="service-desc">Whether buying or selling, I help you navigate every step with clarity and calm.</p>
           </div>
           
           <div class="service-item delay-400" data-animation="fade-up">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Investment Support" class="service-image">
             <h4 class="service-title">Investment Support</h4>
             <p class="service-desc">Looking for ROI or long-term value? I help you make smart, confident choices.</p>
           </div>
@@ -134,9 +138,18 @@
   flex-direction: column;
   gap: 0.8rem;
   padding: 1.5rem;
-  background-color: #f9f9f9;
+  background-color: rgba(249, 249, 249, 0.9);
   border-left: 3px solid #e0e0e0;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.service-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
 }
 
 .service-item:hover {

@@ -114,13 +114,15 @@
 
 /* Placeholder colored backgrounds for each property */
 .casa-arbol {
-  background-color: #E8F4F0;
-  background-image: linear-gradient(45deg, #E8F4F0 0%, #d2e4dd 100%);
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop');
+  background-position: center;
+  background-size: cover;
 }
 
 .lote-omana {
-  background-color: #FFF8E6;
-  background-image: linear-gradient(45deg, #FFF8E6 0%, #f2e9d5 100%);
+  background-image: url('https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=2070&auto=format&fit=crop');
+  background-position: center;
+  background-size: cover;
 }
 
 .property-content {

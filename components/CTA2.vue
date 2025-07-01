@@ -15,7 +15,7 @@
       </div>
       
       <div class="cta2-image" data-animation="zoom-in">
-        <div class="placeholder-image">Beautiful Sayulita Living</div>
+        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1984&auto=format&fit=crop" alt="Beautiful Sayulita Beach House" class="real-image">
       </div>
     </div>
     
@@ -109,18 +109,11 @@
   height: 100%;
 }
 
-.placeholder-image {
+.real-image {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f2f2f2;
-  color: #666;
-  font-size: 1.5rem;
-  font-style: italic;
-  text-align: center;
-  padding: 2rem;
+  object-fit: cover;
+  object-position: center;
 }
 
 .testimonial {

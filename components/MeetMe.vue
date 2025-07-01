@@ -1,12 +1,34 @@
 <template>
+  <!-- Large lateral background image -->
+  <div class="meetme-container">
+    <div class="lateral-image" data-animation="fade-in">
+      <img src="https://images.unsplash.com/photo-1506749841726-3df2e72b9564?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Luxury Sayulita Beachfront" />
+    </div>
+    
   <section class="meetme-section">
     <div class="left" data-animation="fade-right">
       <h2 class="title">Meet Me</h2>
+      
+      <!-- Left side image and content -->
+      <div class="left-showcase" data-animation="fade-up">
+        <img src="https://images.unsplash.com/photo-1582271903785-a1a1158852c7?q=80&w=2069&auto=format&fit=crop" alt="Sayulita Beach View" class="left-image">
+        <div class="experience-badge">
+          <span class="number">10+</span>
+          <span class="text">Years in Real Estate</span>
+        </div>
+        <div class="certification-badge">
+          <span class="text">AMPI Certified</span>
+        </div>
+      </div>
     </div>
     <div class="right">
       <div class="meetme-content">
         <div class="profile-image" data-animation="fade-right">
-          <img src="https://picsum.photos/400" alt="Olivia's profile" />
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" alt="Olivia Matheson - Real Estate Agent" class="main-profile-image" />
+          <div class="featured-property">
+            <img src="https://images.unsplash.com/photo-1600607687644-a7e0722b3256?q=80&w=2070&auto=format&fit=crop" alt="Featured Sayulita Property" class="featured-image" />
+            <a href="#" class="portfolio-button">View Portfolio</a>
+          </div>
         </div>
         <div class="profile-info">
           <p class="subtitle" data-animation="fade-up">Olivia Matheson</p>
@@ -27,11 +49,14 @@
             
             <div class="values-grid">
               <div class="value-item delay-100" data-animation="fade-up">
+                <div class="value-image">
+                  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop" alt="Trust and Integrity" />
+                </div>
                 <h4>Trust & Integrity</h4>
                 <p>As an AMPI-certified agent, my clients know they can count on me — always.</p>
               </div>
               
-              <div class="value-item delay-200" data-animation="fade-up">
+              <div class="value-item delay-200 white-background" data-animation="fade-up">
                 <h4>Calm, Grounded Guidance</h4>
                 <p>I approach every step with clarity, patience, and calm professionalism, no matter how big or small the decision.</p>
               </div>
@@ -61,10 +86,6 @@
                 <p>I aim to make this process feel like a natural, exciting next step — not a stressful transaction.</p>
               </div>
               
-              <div class="value-item delay-400" data-animation="fade-up">
-                <h4>Rooted in Community</h4>
-                <p>I believe in supporting local businesses, culture, and people — because that's what makes this place magic.</p>
-              </div>
               
               <div class="value-item delay-500" data-animation="fade-up">
                 <h4>Adaptable, Always</h4>
@@ -76,6 +97,7 @@
       </div>
     </div>
   </section>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -83,23 +105,57 @@
 </script>
 
 <style scoped>
+.meetme-container {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.lateral-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.lateral-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.2);
+  max-width: 100%;
+}
+
 .meetme-section {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 7rem;
+  width: 100%;
   max-width: 100%;
   margin: 5rem 0;
   padding: 0 5%;
   font-family: "Times New Roman", Times, serif;
   color: #444;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
 }
 
 .title {
   font-size: 1.4rem;
   font-weight: 500;
   color: #333;
-  margin: 0;
+  margin: 0 0 2rem 0;
   letter-spacing: 0.03em;
   position: relative;
   display: inline-block;
@@ -125,6 +181,8 @@
   max-width: 800px;
   margin-left: auto;
   padding-right: 5%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .meetme-content {
@@ -132,15 +190,135 @@
   grid-template-columns: 220px 1fr;
   gap: 3rem;
   max-width: 700px;
+  width: 100%;
   line-height: 1.7;
   font-size: 0.95rem;
   letter-spacing: 0.01em;
+  box-sizing: border-box;
 }
 
-.profile-image img {
+.profile-image .main-profile-image {
   width: 100%;
   height: auto;
   display: block;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+}
+
+.featured-property {
+  position: relative;
+  margin-top: 1.5rem;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.featured-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.featured-property:hover .featured-image {
+  transform: scale(1.05);
+}
+
+.portfolio-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-button:hover {
+  background-color: white;
+  color: #333;
+  font-weight: 500;
+}
+
+.left-showcase {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.left-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+}
+
+.experience-badge, .certification-badge {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
+  max-width: calc(100% - 20px);
+  box-sizing: border-box;
+}
+
+.experience-badge {
+  top: 20px;
+  right: -20px;
+}
+
+.certification-badge {
+  bottom: 20px;
+  left: -20px;
+}
+
+.number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.text {
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.value-image {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.value-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  max-width: 100%;
+}
+
+.value-item:hover .value-image img {
+  transform: scale(1.1);
 }
 
 .subtitle {
@@ -207,10 +385,27 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .value-item {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+}
+
+.white-background {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .value-item h4 {
@@ -227,10 +422,27 @@
   line-height: 1.6;
 }
 
+@media (max-width: 1024px) {
+  .meetme-section {
+    grid-template-columns: 180px 1fr;
+    gap: 3rem;
+    padding: 0 2%;
+  }
+
+  .right {
+    padding-right: 0;
+  }
+  
+  .lateral-image {
+    width: 25%;
+  }
+}
+
 @media (max-width: 768px) {
   .meetme-section {
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 0 1rem;
   }
   
   .meetme-content {
@@ -253,6 +465,10 @@
   
   .values-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .lateral-image {
+    display: none; /* Hide on mobile */
   }
 }
 </style>

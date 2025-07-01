@@ -4,8 +4,8 @@
     <!-- Hero Image -->
     <img
       class="hero-img"
-      src="https://picsum.photos/1600/900"
-      alt="Hero image"
+      src="https://images.unsplash.com/photo-1623718649591-311775a30c43?q=80&w=2070&auto=format&fit=crop"
+      alt="Beautiful Sayulita Beachfront Property"
       data-animation="zoom-in"
     />
   </section>
