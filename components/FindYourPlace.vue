@@ -1,0 +1,222 @@
+<template>
+  <section class="find-place-section">
+    <div class="find-place-container">
+      <div class="find-place-header" data-animation="fade-up">
+        <h2 class="section-title">Find Your Place</h2>
+        <p class="section-subtitle">Handpicked homes that reflect your lifestyle.</p>
+        <p class="section-description delay-100" data-animation="fade-up">Here's a glimpse of a few special properties I've selected for you — each one reflecting the magic and opportunity of coastal living. Whether you're looking for a serene retreat, a smart investment, or a place to build your dream life, there's something waiting for you here.</p>
+      </div>
+      
+      <div class="property-grid">
+        <div class="property-card delay-100" data-animation="fade-up">
+          <div class="property-image casa-arbol"></div>
+          <div class="property-content">
+            <h3>🔸 Casa Árbol</h3>
+            <p>A hidden gem nestled in nature, designed for peace, flow, and inspired living.</p>
+            <a href="#casa-arbol" class="explore-link">View Details →</a>
+          </div>
+        </div>
+        
+        <div class="property-card delay-200" data-animation="fade-up">
+          <div class="property-image lote-omana"></div>
+          <div class="property-content">
+            <h3>🔸 Lote Omana</h3>
+            <p>A rare opportunity to build your vision from the ground up — in a location full of potential.</p>
+            <a href="#lote-omana" class="explore-link">View Details →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cta-buttons" data-animation="fade-up">
+        <a href="https://lunamarestates.com/portfolio" target="_blank" class="portfolio-btn">For the full selection of listings, visit the LunaMar portfolio</a>
+        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">Got questions? Contact me directly</a>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+// FindYourPlace component - showcasing different neighborhoods
+</script>
+
+<style scoped>
+.find-place-section {
+  width: 100%;
+  padding: 8rem 0;
+  background-color: #fff;
+  color: #333;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.find-place-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.find-place-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  line-height: 1.6;
+}
+
+.section-description {
+  font-size: 1rem;
+  opacity: 0.8;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.property-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.property-image {
+  height: 320px;
+  background-color: #f5f5f5;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Placeholder colored backgrounds for each property */
+.casa-arbol {
+  background-color: #E8F4F0;
+  background-image: linear-gradient(45deg, #E8F4F0 0%, #d2e4dd 100%);
+}
+
+.lote-omana {
+  background-color: #FFF8E6;
+  background-image: linear-gradient(45deg, #FFF8E6 0%, #f2e9d5 100%);
+}
+
+.property-content {
+  padding: 1.8rem;
+}
+
+.property-content h3 {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.property-content p {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.explore-link {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.explore-link:hover {
+  border-bottom-color: #333;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.portfolio-btn, .whatsapp-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.portfolio-btn {
+  background-color: #333;
+  color: #fff;
+  font-weight: 500;
+}
+
+.portfolio-btn:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+.whatsapp-btn {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.whatsapp-btn:hover {
+  border-color: #333;
+  background-color: rgba(0,0,0,0.03);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .property-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .cta-buttons {
+    padding: 0 1rem;
+  }
+  
+  .portfolio-btn, .whatsapp-btn {
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  
+  .section-description {
+    padding: 0 1rem;
+  }
+}
+</style>
