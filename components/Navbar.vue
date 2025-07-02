@@ -77,7 +77,8 @@ onUnmounted(() => {
   align-items: center;
   padding: 1rem 2rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: var(--color-beige);
+  background: var(--color-white);
+  border-bottom: 1px solid #e2e8f0;
   z-index: 1000;
   box-sizing: border-box;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -116,7 +117,7 @@ onUnmounted(() => {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--color-blue);
+  background-color: #888; /* Changed from blue to grey */
   transition: width 0.3s ease;
 }
 

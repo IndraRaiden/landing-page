@@ -43,13 +43,17 @@
 
 <style scoped>
 .message-section {
-  background-color: var(--color-peach);
-  padding: 6rem 0;
+  background-color: var(--color-white);
+  padding: 6rem 5%;
   position: relative;
   overflow: hidden;
   font-family: "Times New Roman", Times, serif;
   color: var(--color-text-dark);
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .title {
@@ -75,7 +79,7 @@
   left: 0;
   width: 100%;
   height: 8px;
-  background-color: var(--color-light-blue);
+  background-color: var(--color-blue-light);
   z-index: -1;
   transform: rotate(-1deg);
 }
@@ -97,7 +101,6 @@
 
 .right {
   max-width: 800px;
-  margin-left: auto;
   padding-right: 5%;
 }
 
@@ -125,7 +128,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-beige);
+  background-color: var(--color-blue-medium);
   transition: width 0.6s ease;
 }
 

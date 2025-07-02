@@ -1,5 +1,6 @@
 <template>
-  <section id="contact" class="contact-section" style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: var(--color-light-beige); background-blend-mode: soft-light;">
+  <section id="contact" class="contact-section">
+    <div class="background-overlay"></div>
     <div class="left" data-animation="fade-right">
       <h2 class="title">Get in Touch</h2>
     </div>
@@ -60,6 +61,7 @@
 
 <style scoped>
 .contact-section {
+  position: relative;
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 7rem;
@@ -68,22 +70,38 @@
   margin: 8rem 0;
   padding: 4rem 5%;
   font-family: "Times New Roman", Times, serif;
-  color: var(--color-text-dark);
+  color: var(--color-text-light);
   justify-content: space-between;
   min-height: 500px;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-light-beige);
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 500;
-  color: var(--color-text-dark);
+  color: var(--color-text-light);
   margin: 0;
   letter-spacing: 0.03em;
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .title::after {
@@ -128,11 +146,14 @@
 }
 
 .contact-card {
-  background-color: var(--color-light-blue);
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 5px;
   padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+  color: var(--color-text-dark);
 }
 
 .contact-card:hover {

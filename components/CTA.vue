@@ -1,5 +1,6 @@
 <template>
   <section class="cta-wrapper">
+    <div class="background-overlay"></div>
     <div class="cta-content">
       <div class="cta-heading" data-animation="text-gradient">
         <h2 data-text-animation="true">Let's make your next move feel like coming home</h2>
@@ -40,9 +41,24 @@
   margin-top: 8rem;
   margin-bottom: 8rem;
   padding: 8rem 0;
-  background-color: var(--color-light-beige);
   text-align: center;
   font-family: "Times New Roman", Times, serif;
+  color: var(--color-text-light);
+  overflow: hidden;
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+  position: relative;
+}
+
+
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .cta-content {
@@ -53,18 +69,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .cta-heading h2 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: var(--color-text-dark);
-  margin: 0 0 3rem;
-  line-height: 1.3;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 2rem;
+  line-height: 1.2;
   letter-spacing: -0.01em;
-  max-width: 800px;
+  max-width: 900px;
   position: relative;
   display: inline-block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 1rem;
 }
 
 .cta-heading h2::after {
@@ -85,9 +105,10 @@
 .cta-message p {
   font-size: 1.4rem;
   line-height: 1.8;
-  color: var(--color-text-dark);
+  color: var(--color-text-light);
   margin: 0;
   font-weight: 300;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .cta-contact {
@@ -99,11 +120,12 @@
 
 .contact-email {
   font-size: 1.7rem;
-  color: var(--color-text-dark);
+  color: var(--color-text-light);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 5px;
   transition: border-color 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .contact-email:hover {
@@ -119,7 +141,8 @@
 
 .contact-social > span {
   font-size: 1.1rem;
-  color: var(--color-text-dark);
+  color: var(--color-text-light);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .social-links {
@@ -130,10 +153,11 @@
 
 .social-links a {
   font-size: 1.2rem;
-  color: var(--color-text-dark);
+  color: var(--color-text-light);
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 0 0.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .social-links a:hover {

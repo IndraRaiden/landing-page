@@ -175,13 +175,15 @@
 }
 
 .portfolio-btn {
-  background-color: var(--color-beige);
-  color: var(--color-text-light);
+  background-color: transparent;
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-beige);
   font-weight: 500;
 }
 
 .portfolio-btn:hover {
-  background-color: var(--color-blue);
+  background-color: #f5f5f5; /* Light grey background on hover */
+  border-color: #888; /* Slightly darker grey border on hover */
   transform: translateY(-2px);
 }
 

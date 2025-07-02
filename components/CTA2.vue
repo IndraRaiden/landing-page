@@ -54,6 +54,7 @@
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  background-color: #f5f5f5; /* Light grey background */
 }
 
 .cta2-heading {
