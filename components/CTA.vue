@@ -40,7 +40,7 @@
   margin-top: 8rem;
   margin-bottom: 8rem;
   padding: 8rem 0;
-  background-color: #f8f8f8;
+  background-color: var(--color-light-beige);
   text-align: center;
   font-family: "Times New Roman", Times, serif;
 }
@@ -58,7 +58,7 @@
 .cta-heading h2 {
   font-size: 2.5rem;
   font-weight: 400;
-  color: #333;
+  color: var(--color-text-dark);
   margin: 0 0 3rem;
   line-height: 1.3;
   letter-spacing: -0.01em;
@@ -74,7 +74,7 @@
   bottom: -15px;
   width: 80px;
   height: 1px;
-  background-color: #555;
+  background-color: var(--color-blue);
   transform: translateX(-50%);
 }
 
@@ -85,7 +85,7 @@
 .cta-message p {
   font-size: 1.4rem;
   line-height: 1.8;
-  color: #555;
+  color: var(--color-text-dark);
   margin: 0;
   font-weight: 300;
 }
@@ -99,7 +99,7 @@
 
 .contact-email {
   font-size: 1.7rem;
-  color: #333;
+  color: var(--color-text-dark);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 5px;
@@ -107,7 +107,7 @@
 }
 
 .contact-email:hover {
-  border-color: #333;
+  border-color: var(--color-blue);
 }
 
 .contact-social {
@@ -119,7 +119,7 @@
 
 .contact-social > span {
   font-size: 1.1rem;
-  color: #777;
+  color: var(--color-text-dark);
 }
 
 .social-links {
@@ -130,19 +130,19 @@
 
 .social-links a {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--color-text-dark);
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 0 0.5rem;
 }
 
 .social-links a:hover {
-  color: #000;
+  color: var(--color-blue);
 }
 
 .dot {
   font-size: 1rem;
-  color: #999;
+  color: var(--color-beige);
 }
 
 @media (max-width: 768px) {

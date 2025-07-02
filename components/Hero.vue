@@ -16,9 +16,10 @@
 </script>
 
 <style scoped>
-section {
+.hero-section {
+  background-color: var(--color-blue-light);
   width: 100%;
-  background-color: transparent;
+  height: 100vh;
 }
 
 .nav-bar {
@@ -46,11 +47,22 @@ section {
 .nav-links a {
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: #000;
+  color: var(--color-text-dark);
   text-decoration: none;
   letter-spacing: 1px;
 }
 
+.hero-overlay a {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--color-blue-medium);
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
 
 .hero-img {
   width: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="contact-section" style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: rgba(255, 255, 255, 0.92);">
+  <section id="contact" class="contact-section" style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; background-blend-mode: overlay; background-color: var(--color-light-beige); background-blend-mode: soft-light;">
     <div class="left" data-animation="fade-right">
       <h2 class="title">Get in Touch</h2>
     </div>
@@ -68,7 +68,7 @@
   margin: 8rem 0;
   padding: 4rem 5%;
   font-family: "Times New Roman", Times, serif;
-  color: #444;
+  color: var(--color-text-dark);
   justify-content: space-between;
   min-height: 500px;
   box-sizing: border-box;
@@ -78,7 +78,7 @@
 .title {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-text-dark);
   margin: 0;
   letter-spacing: 0.03em;
   position: relative;
@@ -93,7 +93,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #333;
+  background-color: var(--color-blue);
   transition: width 0.6s ease;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .contact-card {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--color-light-blue);
   border-radius: 5px;
   padding: 1.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -143,7 +143,7 @@
 .option-title {
   font-size: 1.15rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-text-dark);
   letter-spacing: 0.02em;
   position: relative;
   display: inline-block;
@@ -158,7 +158,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #666;
+  background-color: var(--color-beige);
   transition: width 0.6s ease;
 }
 
@@ -181,8 +181,8 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: #333;
-  border: 1px solid #333;
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-beige);
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -194,7 +194,8 @@
 }
 
 .contact-link:hover {
-  background-color: #f5f5f5;
+  background-color: var(--color-beige);
+  color: var(--color-text-light);
 }
 
 .contact-link svg {

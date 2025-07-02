@@ -36,14 +36,14 @@
   margin: 8rem 0;
   padding: 0;
   font-family: "Times New Roman", Times, serif;
-  color: #333;
+  color: var(--color-text-dark);
 }
 
 .cta2-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  background-color: #f9f9f9;
+  background-color: var(--color-light-beige);
   overflow: hidden;
   width: 100%;
 }
@@ -85,7 +85,7 @@
 }
 
 .contact-info a {
-  color: #333;
+  color: var(--color-text-dark);
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
@@ -93,7 +93,7 @@
 }
 
 .contact-info a:hover {
-  border-bottom-color: #333;
+  border-bottom-color: var(--color-blue);
 }
 
 .social {

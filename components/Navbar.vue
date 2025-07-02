@@ -77,15 +77,17 @@ onUnmounted(() => {
   align-items: center;
   padding: 1rem 2rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: transparent;
+  background: var(--color-blue-dark);
   z-index: 1000;
   box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo {
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: 2px;
+  color: var(--color-text-light);
 }
 
 .nav-links {
@@ -99,7 +101,7 @@ onUnmounted(() => {
 .nav-links a {
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: #000;
+  color: var(--color-text-light);
   text-decoration: none;
   letter-spacing: 1px;
   position: relative;
@@ -114,7 +116,7 @@ onUnmounted(() => {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: var(--color-white);
   transition: width 0.3s ease;
 }
 

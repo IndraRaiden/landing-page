@@ -1,3 +1,15 @@
+/* Color palette */
+:root {
+  --color-blue-dark: #1e3a8a;
+  --color-blue-medium: #3b82f6;
+  --color-blue: #60a5fa;
+  --color-blue-light: #93c5fd;
+  --color-white: #ffffff;
+  
+  --color-text-dark: #1e293b;
+  --color-text-light: #ffffff;
+}
+
 /* Global CSS to prevent horizontal scrolling */
 html, body {
   margin: 0;
@@ -5,6 +17,8 @@ html, body {
   overflow-x: hidden;
   max-width: 100%;
   box-sizing: border-box;
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
 }
 
 * {

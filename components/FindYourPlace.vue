@@ -43,8 +43,8 @@
 .find-place-section {
   width: 100%;
   padding: 8rem 0;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--color-light-beige);
+  color: var(--color-text-dark);
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -93,8 +93,8 @@
 .property-card {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  border: 1px solid #eee;
+  background-color: var(--color-light-blue);
+  border: 1px solid var(--color-beige);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -139,12 +139,12 @@
   margin: 0 0 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--color-text-dark);
 }
 
 .explore-link {
   display: inline-block;
-  color: #333;
+  color: var(--color-text-dark);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
@@ -153,7 +153,7 @@
 }
 
 .explore-link:hover {
-  border-bottom-color: #333;
+  border-bottom-color: var(--color-blue);
 }
 
 .cta-buttons {
@@ -175,25 +175,25 @@
 }
 
 .portfolio-btn {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--color-beige);
+  color: var(--color-text-light);
   font-weight: 500;
 }
 
 .portfolio-btn:hover {
-  background-color: #555;
+  background-color: var(--color-blue);
   transform: translateY(-2px);
 }
 
 .whatsapp-btn {
   background-color: transparent;
-  color: #333;
-  border: 1px solid #ccc;
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-beige);
 }
 
 .whatsapp-btn:hover {
-  border-color: #333;
-  background-color: rgba(0,0,0,0.03);
+  border-color: var(--color-blue);
+  background-color: var(--color-peach);
   transform: translateY(-2px);
 }
 

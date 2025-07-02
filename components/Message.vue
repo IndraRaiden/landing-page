@@ -43,26 +43,41 @@
 
 <style scoped>
 .message-section {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 7rem;
-  max-width: 100%;
-  margin: 5rem 0;
-  padding: 0 5%;
+  background-color: var(--color-white);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
   font-family: "Times New Roman", Times, serif;
-  color: #444;
+  color: var(--color-text-dark);
   justify-content: space-between;
 }
 
 .title {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-text-dark);
   margin: 0;
   letter-spacing: 0.03em;
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-blue-light);
+  z-index: -1;
+  transform: rotate(-1deg);
 }
 
 .title::after {
@@ -72,7 +87,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #333;
+  background-color: var(--color-blue);
   transition: width 0.6s ease;
 }
 
@@ -110,7 +125,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #666;
+  background-color: var(--color-blue-medium);
   transition: width 0.6s ease;
 }
 
@@ -130,7 +145,7 @@
   font-size: 1.15rem;
   margin: 2rem 0 0.75rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-text-dark);
   letter-spacing: 0.02em;
   position: relative;
   display: inline-block;
@@ -144,7 +159,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #666;
+  background-color: var(--color-blue);
   transition: width 0.6s ease;
 }
 

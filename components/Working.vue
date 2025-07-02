@@ -1,5 +1,5 @@
 <template>
-  <section id="press" class="working-section" style="background-image: url('https://images.unsplash.com/photo-1555519653-1f5372ce6a3f?q=80&w=2060&auto=format&fit=crop'); background-size: cover; background-attachment: fixed; background-position: center; background-blend-mode: overlay; background-color: rgba(255, 255, 255, 0.92);">
+  <section id="press" class="working-section" style="background-image: url('https://images.unsplash.com/photo-1555519653-1f5372ce6a3f?q=80&w=2060&auto=format&fit=crop'); background-size: cover; background-attachment: fixed; background-position: center; background-blend-mode: overlay; background-color: var(--color-peach);">
     <div class="left" data-animation="fade-right">
       <h2 class="title">Working Together</h2>
     </div>
@@ -58,14 +58,14 @@
   margin: 8rem 0;
   padding: 0 5%;
   font-family: "Times New Roman", Times, serif;
-  color: #444;
+  color: var(--color-text-dark);
   justify-content: space-between;
 }
 
 .title {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #333;
+  color: var(--color-text-dark);
   margin: 0;
   letter-spacing: 0.03em;
   position: relative;
@@ -80,7 +80,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #333;
+  background-color: var(--color-blue);
   transition: width 0.6s ease;
 }
 
@@ -118,7 +118,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #666;
+  background-color: var(--color-beige);
   transition: width 0.6s ease;
 }
 
@@ -138,8 +138,8 @@
   flex-direction: column;
   gap: 0.8rem;
   padding: 1.5rem;
-  background-color: rgba(249, 249, 249, 0.9);
-  border-left: 3px solid #e0e0e0;
+  background-color: var(--color-light-blue);
+  border-left: 3px solid var(--color-beige);
   transition: border-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -153,14 +153,14 @@
 }
 
 .service-item:hover {
-  border-left-color: #888;
+  border-left-color: var(--color-blue);
 }
 
 .service-title {
   font-size: 1.1rem;
   font-weight: 500;
   margin: 0;
-  color: #333;
+  color: var(--color-text-dark);
   position: relative;
 }
 
@@ -168,7 +168,7 @@
   content: '✓';
   position: absolute;
   left: -1.5rem;
-  color: #999;
+  color: var(--color-beige);
   font-weight: normal;
   opacity: 0;
   transform: translateX(-10px);
@@ -184,17 +184,17 @@
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #555;
+  color: var(--color-text-dark);
 }
 
 .closing-statement {
   margin-top: 4rem;
   font-size: 1.05rem;
   font-style: italic;
-  color: #444;
+  color: var(--color-text-dark);
   padding: 1.5rem 0;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid var(--color-beige);
+  border-bottom: 1px solid var(--color-beige);
   text-align: center;
 }
 
