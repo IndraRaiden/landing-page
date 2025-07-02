@@ -1,12 +1,12 @@
 /* Color palette */
 :root {
-  --color-blue-dark: #1e3a8a;
-  --color-blue-medium: #3b82f6;
-  --color-blue: #60a5fa;
-  --color-blue-light: #93c5fd;
-  --color-white: #ffffff;
+  --color-beige: #d8b490;
+  --color-light-beige: #e8c39e;
+  --color-peach: #ffdcb6;
+  --color-blue: #94b9de;
+  --color-light-blue: #b7dcff;
   
-  --color-text-dark: #1e293b;
+  --color-text-dark: #333333;
   --color-text-light: #ffffff;
 }
 
@@ -17,7 +17,7 @@ html, body {
   overflow-x: hidden;
   max-width: 100%;
   box-sizing: border-box;
-  background-color: var(--color-white);
+  background-color: var(--color-peach);
   color: var(--color-text-dark);
 }
 

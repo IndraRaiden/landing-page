@@ -17,7 +17,7 @@
 
 <style scoped>
 .hero-section {
-  background-color: var(--color-blue-light);
+  background-color: var(--color-peach);
   width: 100%;
   height: 100vh;
 }
@@ -55,7 +55,7 @@
 .hero-overlay a {
   margin-top: 2rem;
   padding: 0.75rem 2rem;
-  background-color: var(--color-blue-medium);
+  background-color: var(--color-blue);
   color: var(--color-text-light);
   text-decoration: none;
   font-size: 0.9rem;

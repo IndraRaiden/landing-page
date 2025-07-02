@@ -77,7 +77,7 @@ onUnmounted(() => {
   align-items: center;
   padding: 1rem 2rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: var(--color-blue-dark);
+  background: var(--color-beige);
   z-index: 1000;
   box-sizing: border-box;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -87,7 +87,7 @@ onUnmounted(() => {
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: var(--color-text-light);
+  color: var(--color-text-dark);
 }
 
 .nav-links {
@@ -101,7 +101,7 @@ onUnmounted(() => {
 .nav-links a {
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: var(--color-text-light);
+  color: var(--color-text-dark);
   text-decoration: none;
   letter-spacing: 1px;
   position: relative;
@@ -116,7 +116,7 @@ onUnmounted(() => {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--color-white);
+  background-color: var(--color-blue);
   transition: width 0.3s ease;
 }
 

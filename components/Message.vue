@@ -43,7 +43,7 @@
 
 <style scoped>
 .message-section {
-  background-color: var(--color-white);
+  background-color: var(--color-peach);
   padding: 6rem 0;
   position: relative;
   overflow: hidden;
@@ -75,7 +75,7 @@
   left: 0;
   width: 100%;
   height: 8px;
-  background-color: var(--color-blue-light);
+  background-color: var(--color-light-blue);
   z-index: -1;
   transform: rotate(-1deg);
 }
@@ -125,7 +125,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-blue-medium);
+  background-color: var(--color-beige);
   transition: width 0.6s ease;
 }
 
