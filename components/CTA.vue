@@ -1,23 +1,23 @@
 <template>
   <section class="cta-wrapper">
     <div class="cta-content">
-      <div class="cta-heading" data-animation="fade-up">
-        <h2>Let's make your next move feel like coming home</h2>
+      <div class="cta-heading" data-animation="text-gradient">
+        <h2 data-text-animation="true">Let's make your next move feel like coming home</h2>
       </div>
       
-      <div class="cta-message delay-100" data-animation="fade-up">
+      <div class="cta-message delay-100" data-animation="blur-in">
         <p>Whether you're just beginning or already dreaming of your next chapter,<br>I'm here to guide you every step of the way.</p>
       </div>
       
-      <div class="cta-contact delay-200" data-animation="fade-up">
-        <a href="mailto:olivia@lunamarestates.com" class="contact-email">olivia@lunamarestates.com</a>
+      <div class="cta-contact delay-200" data-animation="slide-up">
+        <a href="mailto:olivia@lunamarestates.com" class="contact-email" data-animation="text-underline">olivia@lunamarestates.com</a>
         
         <div class="contact-social">
-          <span>Or say hi on</span>
-          <div class="social-links">
+          <span data-animation="scale-in" class="delay-300">Or say hi on</span>
+          <div class="social-links stagger-children" data-animation="fade-up">
             <a href="https://instagram.com/olivia.lunamar" target="_blank" rel="noopener noreferrer">Instagram</a>
             <span class="dot">•</span>
-            <a href="https://wa.me/11234567890" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://wa.me/523221014263" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </div>
       </div>

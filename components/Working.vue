@@ -1,5 +1,5 @@
 <template>
-  <section class="working-section" style="background-image: url('https://images.unsplash.com/photo-1555519653-1f5372ce6a3f?q=80&w=2060&auto=format&fit=crop'); background-size: cover; background-attachment: fixed; background-position: center; background-blend-mode: overlay; background-color: rgba(255, 255, 255, 0.92);">
+  <section id="press" class="working-section" style="background-image: url('https://images.unsplash.com/photo-1555519653-1f5372ce6a3f?q=80&w=2060&auto=format&fit=crop'); background-size: cover; background-attachment: fixed; background-position: center; background-blend-mode: overlay; background-color: rgba(255, 255, 255, 0.92);">
     <div class="left" data-animation="fade-right">
       <h2 class="title">Working Together</h2>
     </div>

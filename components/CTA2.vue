@@ -1,16 +1,16 @@
 <template>
   <section class="cta2-section">
-    <div class="cta2-container" data-animation="fade-up">
+    <div class="cta2-container" data-animation="scale-in">
       <div class="cta2-content">
-        <h2 class="cta2-heading" data-animation="fade-up">Let's make your next move feel like coming home</h2>
+        <h2 class="cta2-heading" data-animation="text-gradient">Let's make your next move feel like coming home</h2>
         
-        <p class="cta2-message delay-100" data-animation="fade-up">
+        <p class="cta2-message delay-100" data-animation="blur-in">
           Whether you're just beginning or already dreaming of your next chapter, I'm here to guide you every step of the way.
         </p>
         
-        <div class="contact-info delay-200" data-animation="fade-up">
-          <p class="email">Write to me at <a href="mailto:olivia@lunamarestates.com">olivia@lunamarestates.com</a></p>
-          <p class="social">Or say hi on <a href="https://instagram.com/lunamarestates" target="_blank">Instagram</a> and <a href="https://wa.me/1234567890" target="_blank">What'sApp</a></p>
+        <div class="contact-info delay-200" data-animation="slide-up">
+          <p class="email">Write to me at <a href="mailto:olivia@lunamarestates.com" data-animation="text-underline">olivia@lunamarestates.com</a></p>
+          <p class="social">Or say hi on <a href="https://instagram.com/lunamarestates" target="_blank" data-animation="text-underline">Instagram</a> and <a href="https://wa.me/523221014263" target="_blank" data-animation="text-underline">What'sApp</a></p>
         </div>
       </div>
       
@@ -19,9 +19,9 @@
       </div>
     </div>
     
-    <div class="testimonial delay-300" data-animation="fade-up">
+    <div class="testimonial delay-300" data-animation="rotate-in">
       <p class="quote">"Working with this agent changed our entire experience. They made the impossible possible."</p>
-      <p class="attribution">— Recent Client</p>
+      <p class="attribution delay-400" data-animation="fade-up">— Recent Client</p>
     </div>
   </section>
 </template>

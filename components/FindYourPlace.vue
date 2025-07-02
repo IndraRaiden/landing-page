@@ -1,5 +1,5 @@
 <template>
-  <section class="find-place-section">
+  <section id="projects" class="find-place-section">
     <div class="find-place-container">
       <div class="find-place-header" data-animation="fade-up">
         <h2 class="section-title">Find Your Place</h2>
@@ -28,8 +28,8 @@
       </div>
       
       <div class="cta-buttons" data-animation="fade-up">
-        <a href="https://lunamarestates.com/portfolio" target="_blank" class="portfolio-btn">For the full selection of listings, visit the LunaMar portfolio</a>
-        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-btn">Got questions? Contact me directly</a>
+        <a href="https://lunamarestates.com" target="_blank" class="portfolio-btn">For the full selection of listings, visit the LunaMar portfolio</a>
+        <a href="https://wa.me/523221014263" target="_blank" class="whatsapp-btn">Got questions? Contact me directly</a>
       </div>
     </div>
   </section>

@@ -1,13 +1,13 @@
 <template>
-  <section class="message-section">
+  <section id="about" class="message-section">
     <div class="left" data-animation="fade-right">
-      <h2 class="title">Welcome Home</h2>
+      <h2 class="title" data-animation="text-underline">Welcome Home</h2>
     </div>
     <div class="right">
       <div class="body">
-        <p class="subtitle" data-animation="fade-up">Real estate with heart, clarity, and local soul</p>
+        <p class="subtitle" data-animation="text-gradient">Real estate with heart, clarity, and local soul</p>
         
-        <p data-animation="fade-up" class="delay-100">
+        <p data-animation="blur-in" class="delay-100">
           I'm Olivia, an <strong>AMPI-certified real estate agent</strong> at LunaMar Estates, passionate about helping you find not just a property, but a lifestyle.
         </p>
         
@@ -15,22 +15,22 @@
           With a background in journalism, hospitality, and luxury service, I guide my clients with care, discretion, and vision — from first-time buyers to seasoned investors. I speak your language (and Spanish too), and I know this town like home — because it is.
         </p>
         
-        <p data-animation="fade-up" class="delay-300">
+        <p data-animation="slide-up" class="delay-300">
           Let's make the journey smooth, meaningful, and maybe even fun.
         </p>
         
-        <h3 class="section-heading" data-animation="fade-up">
+        <h3 class="section-heading" data-animation="scale-in" data-text-animation="true">
           My values
         </h3>
-        <p class="values delay-100" data-animation="fade-up">Trust | Connection | Local Insight | Intuitive Care | Calm Guidance</p>
+        <p class="values delay-100" data-animation="blur-in">Trust | Connection | Local Insight | Intuitive Care | Calm Guidance</p>
         
-        <h3 class="section-heading" data-animation="fade-up">
+        <h3 class="section-heading" data-animation="rotate-in">
           Services
         </h3>
-        <ul class="services-list">
-          <li data-animation="fade-left" class="delay-100">Personalized real estate guidance</li>
-          <li data-animation="fade-left" class="delay-200">Curated property showings</li>
-          <li data-animation="fade-left" class="delay-300">Investment &amp; lifestyle consulting</li>
+        <ul class="services-list stagger-children" data-animation="fade-up">
+          <li>Personalized real estate guidance</li>
+          <li>Curated property showings</li>
+          <li>Investment &amp; lifestyle consulting</li>
         </ul>
       </div>
     </div>

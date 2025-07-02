@@ -7,11 +7,11 @@
     
   <section class="meetme-section">
     <div class="left" data-animation="fade-right">
-      <h2 class="title">Meet Me</h2>
+      <h2 class="title" data-animation="text-underline" data-text-animation="true">Meet Olivia</h2>
       
       <!-- Left side image and content -->
       <div class="left-showcase" data-animation="fade-up">
-        <img src="https://images.unsplash.com/photo-1582271903785-a1a1158852c7?q=80&w=2069&auto=format&fit=crop" alt="Sayulita Beach View" class="left-image">
+        <img src="https://images.unsplash.com/photo-1559825481-12a05cc00344?q=80&w=2069&auto=format&fit=crop" alt="Sayulita Beach View" class="left-image">
         <div class="experience-badge">
           <span class="number">10+</span>
           <span class="text">Years in Real Estate</span>
@@ -26,69 +26,69 @@
         <div class="profile-image" data-animation="fade-right">
           <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" alt="Olivia Matheson - Real Estate Agent" class="main-profile-image" />
           <div class="featured-property">
-            <img src="https://images.unsplash.com/photo-1600607687644-a7e0722b3256?q=80&w=2070&auto=format&fit=crop" alt="Featured Sayulita Property" class="featured-image" />
-            <a href="#" class="portfolio-button">View Portfolio</a>
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2070&auto=format&fit=crop" alt="Featured Sayulita Property" class="featured-image" />
+            <a href="https://lunamarestates.com/" target="_blank" class="portfolio-button">View Portfolio</a>
           </div>
         </div>
         <div class="profile-info">
-          <p class="subtitle" data-animation="fade-up">Olivia Matheson</p>
+          <p class="subtitle" data-animation="text-gradient">Olivia Matheson</p>
           
-          <p data-animation="fade-up" class="delay-100">I'm Olivia Matheson, a Canadian-born, Sayulita-based AMPI-certified agent with a heart for helping people feel at home — literally.</p>
+          <p data-animation="blur-in" class="delay-100">I'm Olivia Matheson, a Canadian-born, Sayulita-based AMPI-certified agent with a heart for helping people feel at home — literally.</p>
           
-          <p data-animation="fade-up" class="delay-200">My journey began in journalism and luxury hospitality, where I learned to listen deeply, care intuitively, and notice every detail. Today, I bring that same attention and calm confidence to real estate, helping clients navigate each step with clarity and trust.</p>
+          <p data-animation="slide-up" class="delay-200">My journey began in journalism and luxury hospitality, where I learned to listen deeply, care intuitively, and notice every detail. Today, I bring that same attention and calm confidence to real estate, helping clients navigate each step with clarity and trust.</p>
           
-          <p data-animation="fade-up" class="delay-300">Whether you're buying your dream beach home or listing a legacy property, my goal is to create an experience that feels thoughtful, smooth, and truly yours.</p>
+          <p data-animation="scale-in" class="delay-300">Whether you're buying your dream beach home or listing a legacy property, my goal is to create an experience that feels thoughtful, smooth, and truly yours.</p>
           
-          <p data-animation="fade-up" class="delay-400">Outside of real estate, I love the jungle trails, hidden coves, and artisan markets that make this town so special — and I bring that same love of place to every client I work with.</p>
+          <p data-animation="rotate-in" class="delay-400">Outside of real estate, I love the jungle trails, hidden coves, and artisan markets that make this town so special — and I bring that same love of place to every client I work with.</p>
           
-          <p data-animation="fade-up" class="delay-500">Let's connect — and find the life you're dreaming of.</p>
+          <p data-animation="text-underline" data-text-animation="true" class="delay-500">Let's connect — and find the life you're dreaming of.</p>
           
-          <div class="values-section" data-animation="fade-up">
-            <h3 class="section-heading">The Values Behind My Work</h3>
-            <p>Every client, every home, and every journey is unique — but the way I show up remains constant. My work is guided by a mix of professionalism, care, and a genuine love for this community.</p>
+          <div class="values-section" data-animation="slide-up">
+            <h3 class="section-heading" data-animation="text-underline">The Values Behind My Work</h3>
+            <p data-animation="blur-in" class="delay-100">Every client, every home, and every journey is unique — but the way I show up remains constant. My work is guided by a mix of professionalism, care, and a genuine love for this community.</p>
             
-            <div class="values-grid">
-              <div class="value-item delay-100" data-animation="fade-up">
+            <div class="values-grid stagger-children" data-animation="fade-up">
+              <div class="value-item">
                 <div class="value-image">
                   <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop" alt="Trust and Integrity" />
                 </div>
-                <h4>Trust & Integrity</h4>
+                <h4 data-animation="text-gradient">Trust & Integrity</h4>
                 <p>As an AMPI-certified agent, my clients know they can count on me — always.</p>
               </div>
               
-              <div class="value-item delay-200 white-background" data-animation="fade-up">
-                <h4>Calm, Grounded Guidance</h4>
+              <div class="value-item white-background">
+                <h4 data-animation="text-gradient">Calm, Grounded Guidance</h4>
                 <p>I approach every step with clarity, patience, and calm professionalism, no matter how big or small the decision.</p>
               </div>
               
-              <div class="value-item delay-300" data-animation="fade-up">
-                <h4>Intuitive, Heartfelt Care</h4>
+              <div class="value-item">
+                <h4 data-animation="text-gradient">Intuitive, Heartfelt Care</h4>
                 <p>I don't just check boxes — I listen deeply, understand your needs, and support you with genuine care.</p>
               </div>
               
-              <div class="value-item delay-400" data-animation="fade-up">
-                <h4>Obsessed with Details</h4>
+              <div class="value-item">
+                <h4 data-animation="text-gradient">Obsessed with Details</h4>
                 <p>From the right property to the perfect closing process, I focus on details that make your experience seamless.</p>
               </div>
               
-              <div class="value-item delay-100" data-animation="fade-up">
-                <h4>Discretion & Clear Communication</h4>
+              <div class="value-item">
+                <h4 data-animation="text-gradient">Discretion & Clear Communication</h4>
                 <p>You'll always know where we stand. Transparent, honest, and respectful of your privacy.</p>
               </div>
               
-              <div class="value-item delay-200" data-animation="fade-up">
-                <h4>Local Knowledge, Global Mindset</h4>
+              <div class="value-item">
+                <h4 data-animation="text-gradient">Local Knowledge, Global Mindset</h4>
                 <p>Fluent in Spanish, deeply connected to Sayulita, and tuned into what life here truly means.</p>
               </div>
               
-              <div class="value-item delay-300" data-animation="fade-up">
-                <h4>Ease, Comfort & Connection</h4>
+              <div class="value-item">
+                <h4 data-animation="text-gradient">Ease, Comfort & Connection</h4>
                 <p>I aim to make this process feel like a natural, exciting next step — not a stressful transaction.</p>
               </div>
               
               
-              <div class="value-item delay-500" data-animation="fade-up">
-                <h4>Adaptable, Always</h4>
+              <div class="value-item white-background">
+                <h4 data-animation="text-gradient">Adaptable, Always</h4>
                 <p>My diverse background allows me to pivot, adapt, and meet your needs — however unique they are.</p>
               </div>
             </div>
