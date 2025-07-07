@@ -67,9 +67,8 @@
   gap: 7rem;
   width: 100%;
   max-width: 100%;
-  margin: 8rem 0;
+  margin: 0;
   padding: 4rem 5%;
-  font-family: "Times New Roman", Times, serif;
   color: var(--color-text-light);
   justify-content: space-between;
   min-height: 500px;
@@ -87,12 +86,17 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(120deg,
+    rgba(254, 232, 203, 0.55) 0%,   /* #FEE8CB */
+    rgba(248, 184, 135, 0.55) 30%,  /* #F8B887 */
+    rgba(242, 150, 153, 0.5) 65%,   /* #F29699 */
+    rgba(224, 174, 208, 0.5) 100%   /* #E0AED0 */);
+  mix-blend-mode: multiply;
   z-index: 0;
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   font-weight: 500;
   color: var(--color-text-light);
   margin: 0;
@@ -102,6 +106,7 @@
   padding-bottom: 8px;
   z-index: 1;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .title::after {
@@ -111,7 +116,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-blue);
+  background-color: #F29699;
   transition: width 0.6s ease;
 }
 
@@ -146,7 +151,8 @@
 }
 
 .contact-card {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(254, 232, 203, 0.9); /* pastel peach */
+  border-left: 4px solid #F29699;
   border-radius: 5px;
   padding: 1.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -162,7 +168,7 @@
 }
 
 .option-title {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 500;
   color: var(--color-text-dark);
   letter-spacing: 0.02em;
@@ -170,6 +176,7 @@
   display: inline-block;
   padding-bottom: 6px;
   margin: 0;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .option-title::after {
@@ -179,7 +186,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-beige);
+  background-color: #F8B887;
   transition: width 0.6s ease;
 }
 
@@ -215,7 +222,7 @@
 }
 
 .contact-link:hover {
-  background-color: var(--color-beige);
+  background-color: #F8B887;
   color: var(--color-text-light);
 }
 

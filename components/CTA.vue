@@ -38,11 +38,10 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  margin-top: 8rem;
+  margin-top: 0;
   margin-bottom: 8rem;
   padding: 8rem 0;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
   color: var(--color-text-light);
   overflow: hidden;
   background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
@@ -74,7 +73,7 @@
 }
 
 .cta-heading h2 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 600;
   color: #ffffff;
   margin: 0 0 2rem;
@@ -85,6 +84,7 @@
   display: inline-block;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   padding: 0 1rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .cta-heading h2::after {

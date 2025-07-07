@@ -33,9 +33,8 @@
 <style scoped>
 .cta2-section {
   width: 100%;
-  margin: 8rem 0;
+  margin: 0;
   padding: 0;
-  font-family: "Times New Roman", Times, serif;
   color: var(--color-text-dark);
 }
 
@@ -43,7 +42,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  background-color: var(--color-light-beige);
+  background: linear-gradient(90deg,
+    #FEE8CB 0%,   /* light peach */
+    #F8B887 33%,  /* pastel orange */
+    #F29699 66%,  /* soft pink */
+    #E0AED0 100%  /* lavender */
+  );
   overflow: hidden;
   width: 100%;
 }
@@ -54,14 +58,21 @@
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  background-color: #f5f5f5; /* Light grey background */
+  background-color: rgba(255, 255, 255, 0.85); /* frosted white for readability */
 }
 
 .cta2-heading {
-  font-size: 2rem;
+  background: linear-gradient(90deg, #F8B887, #F29699, #E0AED0, #F8B887);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 100%;
+  animation: gradientShift 6s linear infinite;
+  font-size: 2.4rem;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .cta2-message {
@@ -94,7 +105,7 @@
 }
 
 .contact-info a:hover {
-  border-bottom-color: var(--color-blue);
+  border-bottom-color: #F29699;
 }
 
 .social {
@@ -127,8 +138,9 @@
 
 .quote {
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .attribution {
@@ -165,4 +177,13 @@
     display: inline-block;
   }
 }
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 </style>

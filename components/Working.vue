@@ -57,13 +57,12 @@
   max-width: 100%;
   margin: 8rem 0;
   padding: 0 5%;
-  font-family: "Times New Roman", Times, serif;
   color: var(--color-text-dark);
   justify-content: space-between;
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: var(--color-text-dark);
   margin: 0;
@@ -71,6 +70,7 @@
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .title::after {
@@ -80,7 +80,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-blue);
+  background-color: var(--color-yellow);
   transition: width 0.6s ease;
 }
 
@@ -102,13 +102,14 @@
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 1.8rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .subtitle::after {
@@ -118,7 +119,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-beige);
+  background-color: var(--color-pink);
   transition: width 0.6s ease;
 }
 
@@ -138,8 +139,8 @@
   flex-direction: column;
   gap: 0.8rem;
   padding: 1.5rem;
-  background-color: var(--color-light-blue);
-  border-left: 3px solid var(--color-beige);
+  background-color: rgba(254, 232, 203, 0.9);
+  border-left: 3px solid #F29699;
   transition: border-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -157,11 +158,12 @@
 }
 
 .service-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 500;
   margin: 0;
   color: var(--color-text-dark);
   position: relative;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .service-title::before {
@@ -193,8 +195,8 @@
   font-style: italic;
   color: var(--color-text-dark);
   padding: 1.5rem 0;
-  border-top: 1px solid var(--color-beige);
-  border-bottom: 1px solid var(--color-beige);
+  border-top: 1px solid #F8B887;
+  border-bottom: 1px solid #F8B887;
   text-align: center;
 }
 
@@ -212,4 +214,24 @@
     grid-template-columns: 1fr;
   }
 }
+.working-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,
+    rgba(254, 232, 203, 0.6) 0%,   /* peach */
+    rgba(248, 184, 135, 0.6) 30%,  /* orange */
+    rgba(242, 150, 153, 0.6) 65%,  /* pink */
+    rgba(224, 174, 208, 0.55) 100% /* lavender */);
+  mix-blend-mode: multiply;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* elevate content above overlay */
+.working-section > * {
+  position: relative;
+  z-index: 1;
+}
+
 </style>

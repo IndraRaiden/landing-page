@@ -11,7 +11,7 @@
         <div class="property-card delay-100" data-animation="fade-up">
           <div class="property-image casa-arbol"></div>
           <div class="property-content">
-            <h3>🔸 Casa Árbol</h3>
+            <h3>Casa Árbol</h3>
             <p>A hidden gem nestled in nature, designed for peace, flow, and inspired living.</p>
             <a href="#casa-arbol" class="explore-link">View Details →</a>
           </div>
@@ -20,7 +20,7 @@
         <div class="property-card delay-200" data-animation="fade-up">
           <div class="property-image lote-omana"></div>
           <div class="property-content">
-            <h3>🔸 Lote Omana</h3>
+            <h3>Lote Omana</h3>
             <p>A rare opportunity to build your vision from the ground up — in a location full of potential.</p>
             <a href="#lote-omana" class="explore-link">View Details →</a>
           </div>
@@ -28,7 +28,7 @@
       </div>
       
       <div class="cta-buttons" data-animation="fade-up">
-        <a href="https://lunamarestates.com" target="_blank" class="portfolio-btn">For the full selection of listings, visit the LunaMar portfolio</a>
+        <a href="https://lunamarestates.com/idx/search/?SavedSearch=20250605183630259633000000&Limit=10&SubdivisionName=Sayulita" target="_blank" class="portfolio-btn">For the full selection of listings, visit the LunaMar portfolio</a>
         <a href="https://wa.me/523221014263" target="_blank" class="whatsapp-btn">Got questions? Contact me directly</a>
       </div>
     </div>
@@ -41,11 +41,12 @@
 
 <style scoped>
 .find-place-section {
+  overflow: hidden;
   width: 100%;
   padding: 8rem 0;
-  background-color: var(--color-light-beige);
+  background-color: #FEE8CB; /* base peach */
+  position: relative; /* for overlay */
   color: var(--color-text-dark);
-  font-family: "Times New Roman", Times, serif;
 }
 
 .find-place-container {
@@ -60,18 +61,20 @@
 }
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-weight: 500;
   margin-bottom: 1rem;
   letter-spacing: 0.02em;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .section-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   max-width: 600px;
   margin: 0 auto 1rem;
   line-height: 1.6;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .section-description {
@@ -93,7 +96,7 @@
 .property-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-light-blue);
+  background-color: rgba(254,232,203,0.9);
   border: 1px solid var(--color-beige);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -131,8 +134,9 @@
 
 .property-content h3 {
   margin: 0 0 1rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .property-content p {
@@ -153,7 +157,7 @@
 }
 
 .explore-link:hover {
-  border-bottom-color: var(--color-blue);
+  border-bottom-color: #F29699;
 }
 
 .cta-buttons {
@@ -190,12 +194,12 @@
 .whatsapp-btn {
   background-color: transparent;
   color: var(--color-text-dark);
-  border: 1px solid var(--color-beige);
+  border: 1px solid #F29699; /* pastel pink */
 }
 
 .whatsapp-btn:hover {
-  border-color: var(--color-blue);
-  background-color: var(--color-peach);
+  border-color: #F8B887; /* pastel peach */
+  background-color: #F29699; /* pastel pink */
   transform: translateY(-2px);
 }
 
@@ -222,5 +226,23 @@
   .section-description {
     padding: 0 1rem;
   }
+}
+.find-place-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(254, 232, 203, 0.6) 0%,
+    rgba(248, 184, 135, 0.6) 30%,
+    rgba(242, 150, 153, 0.6) 65%,
+    rgba(224, 174, 208, 0.55) 100%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.find-place-section > * {
+  position: relative;
+  z-index: 1;
 }
 </style>

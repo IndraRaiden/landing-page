@@ -18,14 +18,21 @@
 }
 
 .line {
-  height: 1px;
+  height: 4px;
   width: 0;
-  background-color: #888;
+  background: linear-gradient(90deg, #FEE8CB 0%, #F8B887 25%, #F29699 60%, #E0AED0 100%);
+  background-size: 300% 100%;
+  animation: gradientShift 6s linear infinite;
   transition: width 1s ease-out;
 }
 
 .animated-divider[data-animation="grow"] .line {
   animation: grow 1.5s ease-out forwards;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 @keyframes grow {

@@ -77,12 +77,30 @@ onUnmounted(() => {
   align-items: center;
   padding: 1rem 2rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: var(--color-white);
-  border-bottom: 1px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
   z-index: 1000;
   box-sizing: border-box;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
+/* Accent stripe */
+.nav-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg,
+    #FEE8CB 0%,
+    #F8B887 35%,
+    #F29699 70%,
+    #E0AED0 100%);
+  pointer-events: none;
+}
+
 
 .logo {
   font-size: 1.75rem;
@@ -117,7 +135,7 @@ onUnmounted(() => {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #888; /* Changed from blue to grey */
+  background-color: #F8B887; /* underline accent */
   transition: width 0.3s ease;
 }
 

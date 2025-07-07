@@ -43,21 +43,21 @@
 
 <style scoped>
 .message-section {
-  background-color: var(--color-white);
+  background-color: #FEE8CB;
   padding: 6rem 5%;
   position: relative;
   overflow: hidden;
-  font-family: "Times New Roman", Times, serif;
   color: var(--color-text-dark);
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 4rem;
-  max-width: 1400px;
-  margin: 0 auto;
+
+  width: 100%;
+  margin: 0;
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: var(--color-text-dark);
   margin: 0;
@@ -65,6 +65,7 @@
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .highlight {
@@ -91,7 +92,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-blue);
+  background-color: #F8B887;
   transition: width 0.6s ease;
 }
 
@@ -112,13 +113,14 @@
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 1.8rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .subtitle::after {
@@ -128,7 +130,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-blue-medium);
+  background-color: #F29699;
   transition: width 0.6s ease;
 }
 
@@ -145,7 +147,7 @@
 }
 
 .section-heading {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   margin: 2rem 0 0.75rem;
   font-weight: 500;
   color: var(--color-text-dark);
@@ -153,6 +155,7 @@
   position: relative;
   display: inline-block;
   padding-bottom: 6px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .section-heading::after {
@@ -162,7 +165,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-blue);
+  background-color: #F8B887;
   transition: width 0.6s ease;
 }
 
@@ -195,5 +198,23 @@
   .right {
     max-width: 100%;
   }
+}
+.message-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(254,232,203,0.65) 0%,   /* peach */
+    rgba(248,184,135,0.65) 30%,  /* orange */
+    rgba(242,150,153,0.65) 65%,  /* pink */
+    rgba(224,174,208,0.6) 100%   /* lavender */);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.message-section > * {
+  position: relative;
+  z-index: 1;
 }
 </style>

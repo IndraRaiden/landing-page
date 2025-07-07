@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="hero-section">
 
     <!-- Hero Image -->
     <img
@@ -8,6 +8,8 @@
       alt="Beautiful Sayulita Beachfront Property"
       data-animation="zoom-in"
     />
+    <!-- Colored gradient overlay -->
+    <div class="color-overlay"></div>
   </section>
 </template>
 
@@ -17,9 +19,10 @@
 
 <style scoped>
 .hero-section {
-  background-color: var(--color-blue-light);
+  position: relative;
   width: 100%;
   height: 100vh;
+  background-color: var(--color-blue-light);
 }
 
 .nav-bar {
@@ -66,7 +69,24 @@
 
 .hero-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.color-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(135deg,
+    rgba(254, 232, 203, 0.55) 0%,   /* #FEE8CB */
+    rgba(248, 184, 135, 0.55) 25%,  /* #F8B887 */
+    rgba(242, 150, 153, 0.55) 60%,  /* #F29699 */
+    rgba(224, 174, 208, 0.55) 100%  /* #E0AED0 */);
+  mix-blend-mode: multiply;
+  backdrop-filter: brightness(0.9);
 }
 </style>
