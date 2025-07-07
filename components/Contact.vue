@@ -69,12 +69,12 @@
   max-width: 100%;
   margin: 0;
   padding: 4rem 5%;
-  color: var(--color-text-light);
+  color: black;
   justify-content: space-between;
   min-height: 500px;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2070&auto=format&fit=crop');
+  background-image: url('https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=2070&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
   background-color: var(--color-light-beige);
@@ -98,7 +98,7 @@
 .title {
   font-size: 2.0rem;
   font-weight: 500;
-  color: var(--color-text-light);
+  color: black;
   margin: 0;
   letter-spacing: 0.03em;
   position: relative;

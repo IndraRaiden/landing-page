@@ -44,9 +44,10 @@
   overflow: hidden;
   width: 100%;
   padding: 8rem 0;
-  background-color: #FEE8CB; /* base peach */
-  position: relative; /* for overlay */
-  color: var(--color-text-dark);
+  background: var(--gradient-warm);
+  position: relative;
+  color: var(--color-text-primary);
+  box-shadow: inset 0 0 100px rgba(255, 214, 10, 0.1);
 }
 
 .find-place-container {
@@ -96,8 +97,10 @@
 .property-card {
   display: flex;
   flex-direction: column;
-  background-color: rgba(254,232,203,0.9);
-  border: 1px solid var(--color-beige);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: var(--shadow-soft);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

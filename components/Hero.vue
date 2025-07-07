@@ -8,8 +8,10 @@
       alt="Beautiful Sayulita Beachfront Property"
       data-animation="zoom-in"
     />
-    <!-- Colored gradient overlay -->
-    <div class="color-overlay"></div>
+    <!-- Multiple layered color overlays for depth and visual interest -->
+    <div class="color-overlay primary-overlay"></div>
+    <div class="color-overlay secondary-overlay"></div>
+    <div class="color-overlay accent-overlay"></div>
   </section>
 </template>
 
@@ -22,7 +24,19 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: var(--color-blue-light);
+  background-color: var(--color-deep-purple);
+  overflow: hidden;
+}
+
+@keyframes slow-pulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+@keyframes subtle-scale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
 
 .nav-bar {
@@ -58,13 +72,26 @@
 .hero-overlay a {
   margin-top: 2rem;
   padding: 0.75rem 2rem;
-  background-color: var(--color-blue-medium);
-  color: var(--color-text-light);
+  background: linear-gradient(135deg, var(--color-electric-yellow) 0%, var(--color-sunset-orange) 150%);
+  color: var(--color-black);
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: bold;
   letter-spacing: 1px;
   transition: all 0.3s ease;
   border-radius: 3px;
+  box-shadow: var(--shadow-vibrant);
+  border: 2px solid transparent;
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+}
+
+.hero-overlay a:hover {
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-deep);
+  border: 2px solid var(--color-electric-yellow);
+  background-position: 100% 0%;
 }
 
 .hero-img {
@@ -74,19 +101,41 @@
   display: block;
   position: relative;
   z-index: 1;
+  filter: saturate(1.1) contrast(1.05);
+  animation: subtle-scale 20s infinite ease-in-out;
 }
 
 .color-overlay {
   position: absolute;
   inset: 0;
-  z-index: 2;
   pointer-events: none;
-  background: linear-gradient(135deg,
-    rgba(254, 232, 203, 0.55) 0%,   /* #FEE8CB */
-    rgba(248, 184, 135, 0.55) 25%,  /* #F8B887 */
-    rgba(242, 150, 153, 0.55) 60%,  /* #F29699 */
-    rgba(224, 174, 208, 0.55) 100%  /* #E0AED0 */);
+}
+
+.primary-overlay {
+  z-index: 2;
+  background: radial-gradient(circle at 30% 30%, 
+    rgba(255, 214, 10, 0.4) 0%,      /* Electric Yellow */
+    rgba(255, 0, 110, 0.6) 70%,      /* Hot Pink */
+    rgba(60, 9, 108, 0.4) 100%);     /* Deep Purple */
+  mix-blend-mode: screen;
+}
+
+.secondary-overlay {
+  z-index: 3;
+  background: linear-gradient(215deg,
+    transparent 25%,
+    rgba(255, 133, 0, 0.45) 40%,     /* Sunset Orange */
+    rgba(199, 125, 255, 0.35) 75%);  /* Magenta */
   mix-blend-mode: multiply;
-  backdrop-filter: brightness(0.9);
+  opacity: 0.8;
+}
+
+.accent-overlay {
+  z-index: 4;
+  background: 
+    linear-gradient(90deg, transparent 50%, rgba(255, 214, 10, 0.3) 100%),
+    linear-gradient(180deg, rgba(255, 122, 90, 0.3) 0%, transparent 100%);
+  mix-blend-mode: color-dodge;
+  backdrop-filter: contrast(1.05) brightness(1.05);
 }
 </style>

@@ -1,15 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Color palette */
+/* Vibrant Gang-Inspired Color Palette */
 :root {
-  --color-blue-dark: #1e3a8a;
-  --color-blue-medium: #3b82f6;
-  --color-blue: #60a5fa;
-  --color-blue-light: #93c5fd;
-  --color-white: #ffffff;
+  /* Primary Colors - Vibrant Core */
+  --color-electric-yellow: #FFD60A;
+  --color-sunset-orange: #FF8500;
+  --color-hot-pink: #FF006E;
+  --color-magenta: #C77DFF;
+  --color-electric-purple: #7209B7;
   
-  --color-text-dark: #1e293b;
-  --color-text-light: #ffffff;
+  /* Secondary Colors - Supporting Tones */
+  --color-coral: #FF7A5A;
+  --color-lime: #CCFF00;
+  --color-neon-blue: #00F5FF;
+  --color-deep-purple: #3C096C;
+  
+  /* Neutral Base Colors */
+  --color-cream: #FFF8DC;
+  --color-warm-beige: #F5E6D3;
+  --color-soft-peach: #FEE8CB;
+  --color-white: #FFFFFF;
+  --color-black: #1A1A1A;
+  --color-charcoal: #2D2D2D;
+  
+  /* Text Colors */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #2D2D2D;
+  --color-text-light: #FFFFFF;
+  --color-text-muted: rgba(26, 26, 26, 0.7);
+  
+  /* Background Gradients */
+  --gradient-sunset: linear-gradient(135deg, var(--color-electric-yellow) 0%, var(--color-sunset-orange) 50%, var(--color-hot-pink) 100%);
+  --gradient-electric: linear-gradient(135deg, var(--color-magenta) 0%, var(--color-electric-purple) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--color-soft-peach) 0%, var(--color-warm-beige) 100%);
+  
+  /* Interactive States */
+  --color-hover-overlay: rgba(255, 214, 10, 0.2);
+  --color-active-overlay: rgba(255, 0, 110, 0.3);
+  --color-focus-ring: var(--color-electric-yellow);
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(255, 214, 10, 0.15);
+  --shadow-vibrant: 0 8px 32px rgba(255, 0, 110, 0.25);
+  --shadow-deep: 0 12px 40px rgba(60, 9, 108, 0.3);
 }
 
 /* Global CSS to prevent horizontal scrolling */
@@ -20,7 +53,7 @@ html, body {
   max-width: 100%;
   box-sizing: border-box;
   background-color: var(--color-white);
-    color: var(--color-text-dark);
+  color: var(--color-text-primary);
   font-family: 'Libre Baskerville', serif;
   font-family: 'Libre Baskerville', serif;
 }

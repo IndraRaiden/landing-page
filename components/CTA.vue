@@ -39,12 +39,12 @@
   margin-left: -50vw;
   margin-right: -50vw;
   margin-top: 0;
-  margin-bottom: 8rem;
+  margin-bottom: 0;
   padding: 8rem 0;
   text-align: center;
   color: var(--color-text-light);
   overflow: hidden;
-  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+  background: url('https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
   position: relative;
 }
 
@@ -56,7 +56,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 

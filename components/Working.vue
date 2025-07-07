@@ -54,9 +54,15 @@
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 7rem;
-  max-width: 100%;
-  margin: 8rem 0;
-  padding: 0 5%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 8rem 5%;
   color: var(--color-text-dark);
   justify-content: space-between;
 }
