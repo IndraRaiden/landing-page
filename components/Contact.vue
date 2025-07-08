@@ -69,7 +69,7 @@
   max-width: 100%;
   margin: 0;
   padding: 4rem 5%;
-  color: black;
+  color: #333333;
   justify-content: space-between;
   min-height: 500px;
   box-sizing: border-box;
@@ -77,7 +77,7 @@
   background-image: url('https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=2070&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
-  background-color: var(--color-light-beige);
+  background-color: #FFFFFF;
 }
 
 .background-overlay {
@@ -86,26 +86,22 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(120deg,
-    rgba(254, 232, 203, 0.55) 0%,   /* #FEE8CB */
-    rgba(248, 184, 135, 0.55) 30%,  /* #F8B887 */
-    rgba(242, 150, 153, 0.5) 65%,   /* #F29699 */
-    rgba(224, 174, 208, 0.5) 100%   /* #E0AED0 */);
-  mix-blend-mode: multiply;
+  background: rgba(245, 245, 245, 0.7);
+  mix-blend-mode: normal;
   z-index: 0;
 }
 
 .title {
   font-size: 2.0rem;
   font-weight: 500;
-  color: black;
+  color: #333333;
   margin: 0;
   letter-spacing: 0.03em;
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
   z-index: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -116,7 +112,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #F29699;
+  background-color: #E0E0E0;
   transition: width 0.6s ease;
 }
 
@@ -151,15 +147,15 @@
 }
 
 .contact-card {
-  background-color: rgba(254, 232, 203, 0.9); /* pastel peach */
-  border-left: 4px solid #F29699;
+  background-color: #FFFFFF;
+  border-left: 2px solid #E0E0E0;
   border-radius: 5px;
   padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   z-index: 1;
-  color: var(--color-text-dark);
+  color: #333333;
 }
 
 .contact-card:hover {
@@ -170,7 +166,7 @@
 .option-title {
   font-size: 1.35rem;
   font-weight: 500;
-  color: var(--color-text-dark);
+  color: #333333;
   letter-spacing: 0.02em;
   position: relative;
   display: inline-block;
@@ -186,7 +182,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #F8B887;
+  background-color: #E0E0E0;
   transition: width 0.6s ease;
 }
 
@@ -209,8 +205,8 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--color-text-dark);
-  border: 1px solid var(--color-beige);
+  color: #333333;
+  border: 1px solid #E0E0E0;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -222,8 +218,8 @@
 }
 
 .contact-link:hover {
-  background-color: #F8B887;
-  color: var(--color-text-light);
+  background-color: #F5F5F5;
+  color: #555555;
 }
 
 .contact-link svg {

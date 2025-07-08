@@ -7,13 +7,16 @@
           <a href="#about" :class="{ active: activeSection === 'about' }" @click.prevent="scrollToSection('about')">About</a>
         </li>
         <li data-animation="fade-down" class="delay-200">
-          <a href="#projects" :class="{ active: activeSection === 'projects' }" @click.prevent="scrollToSection('projects')">Projects</a>
+          <a href="#contact" :class="{ active: activeSection === 'contact' }" @click.prevent="scrollToSection('contact')">Contact</a>
         </li>
         <li data-animation="fade-down" class="delay-300">
-          <a href="#press" :class="{ active: activeSection === 'press' }" @click.prevent="scrollToSection('press')">Press</a>
+          <a href="#meetme" :class="{ active: activeSection === 'meetme' }" @click.prevent="scrollToSection('meetme')">Meet Olivia</a>
         </li>
         <li data-animation="fade-down" class="delay-400">
-          <a href="#contact" :class="{ active: activeSection === 'contact' }" @click.prevent="scrollToSection('contact')">Contact</a>
+          <a href="#press" :class="{ active: activeSection === 'press' }" @click.prevent="scrollToSection('press')">Working</a>
+        </li>
+        <li data-animation="fade-down" class="delay-500">
+          <a href="#projects" :class="{ active: activeSection === 'projects' }" @click.prevent="scrollToSection('projects')">Find Your Place</a>
         </li>
       </ul>
     </nav>
@@ -27,26 +30,55 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const activeSection = ref('');
 
 const scrollToSection = (sectionId: string) => {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    window.scrollTo({
-      top: section.offsetTop - 80, // Adjust for navbar height
-      behavior: 'smooth'
-    });
-    activeSection.value = sectionId;
-  }
+  console.log('Attempting to scroll to section:', sectionId);
+  
+  // Add a small delay to ensure DOM is fully loaded
+  setTimeout(() => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      console.log('Found section element:', section);
+      const offsetTop = section.getBoundingClientRect().top + window.pageYOffset;
+      console.log('Scrolling to position:', offsetTop - 80);
+      
+      window.scrollTo({
+        top: offsetTop - 80, // Adjust for navbar height
+        behavior: 'smooth'
+      });
+      
+      activeSection.value = sectionId;
+    } else {
+      console.error('Section not found:', sectionId);
+      // Fallback approach - try to find by query selector
+      const altSection = document.querySelector(`#${sectionId}, [id='${sectionId}']`);
+      if (altSection) {
+        console.log('Found section using alternative selector:', altSection);
+        const offsetTop = altSection.getBoundingClientRect().top + window.pageYOffset;
+        
+        window.scrollTo({
+          top: offsetTop - 80,
+          behavior: 'smooth'
+        });
+        
+        activeSection.value = sectionId;
+      }
+    }
+  }, 100);
 };
 
 // Update active section on scroll
 const handleScroll = () => {
-  const sections = ['about', 'projects', 'press', 'contact'];
+  const sections = ['about', 'contact', 'meetme', 'press', 'projects'];
   const scrollPosition = window.scrollY + 200; // Add offset for better detection
   
   for (const section of sections) {
-    const element = document.getElementById(section);
+    // Try both getElementById and querySelector for better compatibility
+    const element = document.getElementById(section) || document.querySelector(`[id='${section}']`);
+    
     if (element) {
-      const offsetTop = element.offsetTop;
-      const offsetBottom = offsetTop + element.offsetHeight;
+      // Use getBoundingClientRect for more accurate positioning
+      const rect = element.getBoundingClientRect();
+      const offsetTop = rect.top + window.pageYOffset;
+      const offsetBottom = offsetTop + rect.height;
       
       if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
         activeSection.value = section;
@@ -92,12 +124,8 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg,
-    #FEE8CB 0%,
-    #F8B887 35%,
-    #F29699 70%,
-    #E0AED0 100%);
+  height: 2px;
+  background: #E0E0E0;
   pointer-events: none;
 }
 
@@ -106,7 +134,7 @@ onUnmounted(() => {
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: var(--color-text-dark);
+  color: #333333;
 }
 
 .nav-links {
@@ -120,11 +148,12 @@ onUnmounted(() => {
 .nav-links a {
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: var(--color-text-dark);
+  color: #555555;
   text-decoration: none;
   letter-spacing: 1px;
   position: relative;
-  padding-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
   transition: all 0.3s ease;
 }
 
@@ -135,8 +164,12 @@ onUnmounted(() => {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #F8B887; /* underline accent */
+  background: linear-gradient(90deg, rgba(255,240,210,1) 0%, rgba(255,220,180,1) 100%);
   transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-magenta-dark);
 }
 
 .nav-links a:hover:after,
@@ -146,6 +179,7 @@ onUnmounted(() => {
 
 .nav-links a.active {
   font-weight: 600;
+  color: var(--accent-magenta-dark);
 }
 
 </style>

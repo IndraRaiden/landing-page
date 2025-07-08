@@ -24,8 +24,9 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: var(--color-deep-purple);
+  background-color: #FFFFFF;
   overflow: hidden;
+  border-bottom: 2px solid var(--accent-magenta);
 }
 
 @keyframes slow-pulse {
@@ -72,25 +73,25 @@
 .hero-overlay a {
   margin-top: 2rem;
   padding: 0.75rem 2rem;
-  background: linear-gradient(135deg, var(--color-electric-yellow) 0%, var(--color-sunset-orange) 150%);
-  color: var(--color-black);
+  background: #FFFFFF;
+  color: #333333;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 1px;
   transition: all 0.3s ease;
   border-radius: 3px;
-  box-shadow: var(--shadow-vibrant);
-  border: 2px solid transparent;
+  box-shadow: 0 4px 16px rgba(200, 200, 200, 0.2);
+  border: 1px solid #F0F0F0;
   background-size: 200% 100%;
   background-position: 0% 0%;
 }
 
 .hero-overlay a:hover {
-  color: var(--color-white);
+  color: #555555;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-deep);
-  border: 2px solid var(--color-electric-yellow);
+  box-shadow: 0 6px 20px rgba(200, 200, 200, 0.3);
+  border: 1px solid #E0E0E0;
   background-position: 100% 0%;
 }
 
@@ -101,7 +102,7 @@
   display: block;
   position: relative;
   z-index: 1;
-  filter: saturate(1.1) contrast(1.05);
+  filter: brightness(1.05) contrast(0.95) saturate(1.1);
   animation: subtle-scale 20s infinite ease-in-out;
 }
 
@@ -113,29 +114,32 @@
 
 .primary-overlay {
   z-index: 2;
-  background: radial-gradient(circle at 30% 30%, 
-    rgba(255, 214, 10, 0.4) 0%,      /* Electric Yellow */
-    rgba(255, 0, 110, 0.6) 70%,      /* Hot Pink */
-    rgba(60, 9, 108, 0.4) 100%);     /* Deep Purple */
-  mix-blend-mode: screen;
+  background: linear-gradient(135deg, rgba(255,240,210,0.5) 0%, rgba(255,220,180,0.4) 100%);
+  mix-blend-mode: overlay;
 }
 
 .secondary-overlay {
   z-index: 3;
+  background: linear-gradient(45deg, rgba(255,180,120,0.2) 0%, rgba(255,100,150,0.1) 100%);
+  mix-blend-mode: soft-light;
+}
+
+.accent-overlay {
+  z-index: 3;
   background: linear-gradient(215deg,
     transparent 25%,
-    rgba(255, 133, 0, 0.45) 40%,     /* Sunset Orange */
-    rgba(199, 125, 255, 0.35) 75%);  /* Magenta */
-  mix-blend-mode: multiply;
-  opacity: 0.8;
+    rgba(250, 250, 250, 0.45) 40%,
+    rgba(245, 245, 245, 0.35) 75%);
+  mix-blend-mode: overlay;
+  opacity: 0.5;
 }
 
 .accent-overlay {
   z-index: 4;
   background: 
-    linear-gradient(90deg, transparent 50%, rgba(255, 214, 10, 0.3) 100%),
-    linear-gradient(180deg, rgba(255, 122, 90, 0.3) 0%, transparent 100%);
-  mix-blend-mode: color-dodge;
-  backdrop-filter: contrast(1.05) brightness(1.05);
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.3) 100%),
+    linear-gradient(180deg, rgba(250, 250, 250, 0.3) 0%, transparent 100%);
+  mix-blend-mode: overlay;
+  backdrop-filter: brightness(1.02);
 }
 </style>

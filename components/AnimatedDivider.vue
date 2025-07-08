@@ -18,9 +18,9 @@
 }
 
 .line {
-  height: 4px;
+  height: 2px;
   width: 0;
-  background: linear-gradient(90deg, #FEE8CB 0%, #F8B887 25%, #F29699 60%, #E0AED0 100%);
+  background: linear-gradient(90deg, #F0F0F0 0%, #E8E8E8 25%, #E0E0E0 60%, #D8D8D8 100%);
   background-size: 300% 100%;
   animation: gradientShift 6s linear infinite;
   transition: width 1s ease-out;

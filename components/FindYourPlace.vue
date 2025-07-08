@@ -44,10 +44,10 @@
   overflow: hidden;
   width: 100%;
   padding: 8rem 0;
-  background: var(--gradient-warm);
+  background: #FFFFFF;
   position: relative;
-  color: var(--color-text-primary);
-  box-shadow: inset 0 0 100px rgba(255, 214, 10, 0.1);
+  color: #333333;
+  box-shadow: inset 0 0 100px rgba(240, 240, 240, 0.1);
 }
 
 .find-place-container {
@@ -97,10 +97,10 @@
 .property-card {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.95);
-  border: 2px solid transparent;
+  background: #FFFFFF;
+  border: 1px solid #F5F5F5;
   background-clip: padding-box;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 4px 16px rgba(200, 200, 200, 0.15);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -160,7 +160,7 @@
 }
 
 .explore-link:hover {
-  border-bottom-color: #F29699;
+  border-bottom-color: #E0E0E0;
 }
 
 .cta-buttons {
@@ -183,26 +183,26 @@
 
 .portfolio-btn {
   background-color: transparent;
-  color: var(--color-text-dark);
-  border: 1px solid var(--color-beige);
+  color: #555555;
+  border: 1px solid #F0F0F0;
   font-weight: 500;
 }
 
 .portfolio-btn:hover {
-  background-color: #f5f5f5; /* Light grey background on hover */
-  border-color: #888; /* Slightly darker grey border on hover */
+  background-color: #FAFAFA;
+  border-color: #E0E0E0;
   transform: translateY(-2px);
 }
 
 .whatsapp-btn {
   background-color: transparent;
-  color: var(--color-text-dark);
-  border: 1px solid #F29699; /* pastel pink */
+  color: #555555;
+  border: 1px solid #F0F0F0;
 }
 
 .whatsapp-btn:hover {
-  border-color: #F8B887; /* pastel peach */
-  background-color: #F29699; /* pastel pink */
+  border-color: #E0E0E0;
+  background-color: #FAFAFA;
   transform: translateY(-2px);
 }
 
@@ -234,12 +234,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-    rgba(254, 232, 203, 0.6) 0%,
-    rgba(248, 184, 135, 0.6) 30%,
-    rgba(242, 150, 153, 0.6) 65%,
-    rgba(224, 174, 208, 0.55) 100%);
-  mix-blend-mode: multiply;
+  background: #FFFFFF;
   pointer-events: none;
   z-index: 0;
 }

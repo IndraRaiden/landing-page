@@ -1,5 +1,5 @@
 <template>
-  <section id="press" class="working-section" style="background-image: url('https://images.unsplash.com/photo-1555519653-1f5372ce6a3f?q=80&w=2060&auto=format&fit=crop'); background-size: cover; background-attachment: fixed; background-position: center; background-blend-mode: overlay; background-color: var(--color-peach);">
+  <section id="press" class="working-section">
     <div class="left" data-animation="fade-right">
       <h2 class="title">Working Together</h2>
     </div>
@@ -63,20 +63,24 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 8rem 5%;
-  color: var(--color-text-dark);
+  color: #333333;
   justify-content: space-between;
+  background: linear-gradient(135deg, rgba(255,240,210,0.5) 0%, rgba(255,220,180,0.4) 100%);
+  border-top: 2px solid var(--accent-yellow);
+  border-bottom: 2px solid var(--accent-magenta);
 }
 
 .title {
   font-size: 1.6rem;
   font-weight: 500;
-  color: var(--color-text-dark);
+  color: var(--accent-magenta-dark);
   margin: 0;
   letter-spacing: 0.03em;
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
   font-family: "Times New Roman", Times, serif;
+  text-shadow: 1px 1px 0px rgba(255, 220, 180, 0.3);
 }
 
 .title::after {
@@ -84,14 +88,16 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--color-yellow);
-  transition: width 0.6s ease;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-yellow) 0%, var(--accent-orange) 50%, var(--accent-magenta) 100%);
+  transition: transform 0.6s ease;
+  transform-origin: left;
+  transform: scaleX(0.7);
 }
 
 .title:hover::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 .right {
@@ -125,7 +131,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-pink);
+  background-color: #E0E0E0;
   transition: width 0.6s ease;
 }
 
@@ -145,10 +151,11 @@
   flex-direction: column;
   gap: 0.8rem;
   padding: 1.5rem;
-  background-color: rgba(254, 232, 203, 0.9);
-  border-left: 3px solid #F29699;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-left: 2px solid var(--accent-orange);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
 }
 
 .service-image {
@@ -160,14 +167,16 @@
 }
 
 .service-item:hover {
-  border-left-color: var(--color-blue);
+  border-left-color: var(--accent-magenta);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
 }
 
 .service-title {
   font-size: 1.3rem;
   font-weight: 500;
   margin: 0;
-  color: var(--color-text-dark);
+  color: var(--accent-magenta-dark);
   position: relative;
   font-family: "Times New Roman", Times, serif;
 }
@@ -176,7 +185,7 @@
   content: '✓';
   position: absolute;
   left: -1.5rem;
-  color: var(--color-beige);
+  color: var(--accent-yellow);
   font-weight: normal;
   opacity: 0;
   transform: translateX(-10px);
@@ -192,18 +201,21 @@
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.6;
-  color: var(--color-text-dark);
+  color: #555555;
 }
 
 .closing-statement {
   margin-top: 4rem;
   font-size: 1.05rem;
   font-style: italic;
-  color: var(--color-text-dark);
+  color: var(--accent-magenta-dark);
   padding: 1.5rem 0;
-  border-top: 1px solid #F8B887;
-  border-bottom: 1px solid #F8B887;
+  border-top: 1px solid var(--accent-yellow);
+  border-bottom: 1px solid var(--accent-magenta);
   text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  padding: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -224,14 +236,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg,
-    rgba(254, 232, 203, 0.6) 0%,   /* peach */
-    rgba(248, 184, 135, 0.6) 30%,  /* orange */
-    rgba(242, 150, 153, 0.6) 65%,  /* pink */
-    rgba(224, 174, 208, 0.55) 100% /* lavender */);
-  mix-blend-mode: multiply;
-  z-index: 0;
   pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 220, 180, 0.3), rgba(255, 180, 220, 0.3));
+  mix-blend-mode: overlay;
+  z-index: 0;
 }
 
 /* elevate content above overlay */

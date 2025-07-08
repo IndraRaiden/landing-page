@@ -1,48 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Vibrant Gang-Inspired Color Palette */
+/* White Color Palette */
 :root {
-  /* Primary Colors - Vibrant Core */
-  --color-electric-yellow: #FFD60A;
-  --color-sunset-orange: #FF8500;
-  --color-hot-pink: #FF006E;
-  --color-magenta: #C77DFF;
-  --color-electric-purple: #7209B7;
+  /* Primary Colors - White Core */
+  --color-electric-yellow: #FFFFFF;
+  --color-sunset-orange: #FFFFFF;
+  --color-hot-pink: #FFFFFF;
+  --color-magenta: #FFFFFF;
+  --color-electric-purple: #FFFFFF;
   
   /* Secondary Colors - Supporting Tones */
-  --color-coral: #FF7A5A;
-  --color-lime: #CCFF00;
-  --color-neon-blue: #00F5FF;
-  --color-deep-purple: #3C096C;
+  --color-coral: #FFFFFF;
+  --color-lime: #FFFFFF;
+  --color-neon-blue: #FFFFFF;
+  --color-deep-purple: #FFFFFF;
   
   /* Neutral Base Colors */
-  --color-cream: #FFF8DC;
-  --color-warm-beige: #F5E6D3;
-  --color-soft-peach: #FEE8CB;
+  --color-cream: #FFFFFF;
+  --color-warm-beige: #FFFFFF;
+  --color-soft-peach: #FFFFFF;
   --color-white: #FFFFFF;
-  --color-black: #1A1A1A;
-  --color-charcoal: #2D2D2D;
+  --color-black: #F0F0F0;
+  --color-charcoal: #F8F8F8;
   
   /* Text Colors */
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #2D2D2D;
+  --color-text-primary: #333333;
+  --color-text-secondary: #555555;
   --color-text-light: #FFFFFF;
-  --color-text-muted: rgba(26, 26, 26, 0.7);
+  --color-text-muted: rgba(85, 85, 85, 0.7);
   
-  /* Background Gradients */
-  --gradient-sunset: linear-gradient(135deg, var(--color-electric-yellow) 0%, var(--color-sunset-orange) 50%, var(--color-hot-pink) 100%);
-  --gradient-electric: linear-gradient(135deg, var(--color-magenta) 0%, var(--color-electric-purple) 100%);
-  --gradient-warm: linear-gradient(135deg, var(--color-soft-peach) 0%, var(--color-warm-beige) 100%);
+  /* Background Gradients - All White */
+  --gradient-sunset: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100%);
+  --gradient-electric: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%);
+  --gradient-warm: linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 100%);
   
   /* Interactive States */
-  --color-hover-overlay: rgba(255, 214, 10, 0.2);
-  --color-active-overlay: rgba(255, 0, 110, 0.3);
-  --color-focus-ring: var(--color-electric-yellow);
+  --color-hover-overlay: rgba(240, 240, 240, 0.2);
+  --color-active-overlay: rgba(230, 230, 230, 0.3);
+  --color-focus-ring: #F0F0F0;
   
   /* Shadows */
-  --shadow-soft: 0 4px 20px rgba(255, 214, 10, 0.15);
-  --shadow-vibrant: 0 8px 32px rgba(255, 0, 110, 0.25);
-  --shadow-deep: 0 12px 40px rgba(60, 9, 108, 0.3);
+  --shadow-soft: 0 4px 20px rgba(200, 200, 200, 0.15);
+  --shadow-vibrant: 0 8px 32px rgba(180, 180, 180, 0.25);
+  --shadow-deep: 0 12px 40px rgba(160, 160, 160, 0.3);
 }
 
 /* Global CSS to prevent horizontal scrolling */

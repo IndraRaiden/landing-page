@@ -42,9 +42,9 @@
   margin-bottom: 0;
   padding: 8rem 0;
   text-align: center;
-  color: var(--color-text-light);
+  color: #333333;
   overflow: hidden;
-  background: url('https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover no-repeat;
+  background: #FFFFFF;
   position: relative;
 }
 
@@ -56,7 +56,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(240, 240, 240, 0.4);
   z-index: 1;
 }
 
@@ -75,14 +75,14 @@
 .cta-heading h2 {
   font-size: 4rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #333333;
   margin: 0 0 2rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
   max-width: 900px;
   position: relative;
   display: inline-block;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
   padding: 0 1rem;
   font-family: "Times New Roman", Times, serif;
 }
@@ -94,7 +94,7 @@
   bottom: -15px;
   width: 80px;
   height: 1px;
-  background-color: var(--color-blue);
+  background-color: #E0E0E0;
   transform: translateX(-50%);
 }
 
@@ -105,10 +105,10 @@
 .cta-message p {
   font-size: 1.4rem;
   line-height: 1.8;
-  color: var(--color-text-light);
+  color: #555555;
   margin: 0;
   font-weight: 300;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .cta-contact {
@@ -120,16 +120,16 @@
 
 .contact-email {
   font-size: 1.7rem;
-  color: var(--color-text-light);
+  color: #333333;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   padding-bottom: 5px;
   transition: border-color 0.3s ease;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .contact-email:hover {
-  border-color: var(--color-blue);
+  border-color: #E0E0E0;
 }
 
 .contact-social {
@@ -141,8 +141,8 @@
 
 .contact-social > span {
   font-size: 1.1rem;
-  color: var(--color-text-light);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  color: #555555;
+  text-shadow: none;
 }
 
 .social-links {
@@ -153,20 +153,20 @@
 
 .social-links a {
   font-size: 1.2rem;
-  color: var(--color-text-light);
+  color: #333333;
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 0 0.5rem;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: none;
 }
 
 .social-links a:hover {
-  color: var(--color-blue);
+  color: #999999;
 }
 
 .dot {
   font-size: 1rem;
-  color: var(--color-beige);
+  color: #AAAAAA;
 }
 
 @media (max-width: 768px) {
