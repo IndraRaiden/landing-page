@@ -2,10 +2,10 @@
   <section id="press" class="working-section">
     <div class="left" data-animation="fade-right">
       <h2 class="title">Working Together</h2>
+      <h3 class="subtitle" data-animation="fade-up">Tailored guidance for every step of your journey.</h3>
     </div>
     <div class="right">
       <div class="working-content">
-        <h3 class="subtitle" data-animation="fade-up">Tailored guidance for every step of your journey.</h3>
         
         <p data-animation="fade-up" class="delay-100">
           From our first conversation to closing day (and beyond), I'm here to walk with you through a real estate experience that's thoughtful, streamlined, and fully customized to you. Here's what I offer:
@@ -114,14 +114,16 @@
 }
 
 .subtitle {
-  font-size: 1.4rem;
-  margin-bottom: 1.8rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  font-weight: 400;
   letter-spacing: 0.02em;
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
   font-family: "Times New Roman", Times, serif;
+  color: var(--accent-orange-dark);
 }
 
 .subtitle::after {
@@ -153,9 +155,10 @@
   padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.7);
   border-left: 2px solid var(--accent-orange);
-  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
+  transform-origin: center;
 }
 
 .service-image {
@@ -168,8 +171,9 @@
 
 .service-item:hover {
   border-left-color: var(--accent-magenta);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 100, 180, 0.15);
+  transform: translateY(-5px) rotate(1deg);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .service-title {
