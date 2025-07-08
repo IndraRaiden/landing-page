@@ -2,7 +2,7 @@
   <section id="projects" class="find-place-section">
     <div class="find-place-container">
       <div class="find-place-header" data-animation="fade-up">
-        <h2 class="section-title">Find Your Place</h2>
+        <h2 class="section-title" data-animation="text-gradient">Find Your Place</h2>
         <p class="section-subtitle">Handpicked homes that reflect your lifestyle.</p>
         <p class="section-description delay-100" data-animation="fade-up">Here's a glimpse of a few special properties I've selected for you — each one reflecting the magic and opportunity of coastal living. Whether you're looking for a serene retreat, a smart investment, or a place to build your dream life, there's something waiting for you here.</p>
       </div>
@@ -62,6 +62,12 @@
 }
 
 .section-title {
+  background: linear-gradient(90deg, #F8B887, #F29699, #E0AED0, #F8B887);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 100%;
+  animation: gradientShift 6s linear infinite;
   font-size: 2.6rem;
   font-weight: 500;
   margin-bottom: 1rem;
@@ -242,5 +248,14 @@
 .find-place-section > * {
   position: relative;
   z-index: 1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 </style>

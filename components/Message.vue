@@ -1,11 +1,11 @@
 <template>
   <section id="about" class="message-section">
     <div class="left" data-animation="fade-right">
-      <h2 class="title" data-animation="text-underline">Welcome Home</h2>
+      <h2 class="title" data-animation="text-gradient">Welcome Home</h2>
+      <p class="subtitle" data-animation="text-gradient">Real estate with heart, clarity, and local soul</p>
     </div>
     <div class="right">
       <div class="body">
-        <p class="subtitle" data-animation="text-gradient">Real estate with heart, clarity, and local soul</p>
         
         <p data-animation="blur-in" class="delay-100">
           I'm Olivia, an <strong>AMPI-certified real estate agent</strong> at LunaMar Estates, passionate about helping you find not just a property, but a lifestyle.
@@ -57,9 +57,14 @@
 }
 
 .title {
+  background: linear-gradient(90deg, #F8B887, #F29699, #E0AED0, #F8B887);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300% 100%;
+  animation: gradientShift 6s linear infinite;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #333333;
   margin: 0;
   letter-spacing: 0.03em;
   position: relative;
@@ -100,6 +105,14 @@
   width: 100%;
 }
 
+.left {
+  max-width: 200px;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .right {
   max-width: 800px;
   padding-right: 5%;
@@ -113,14 +126,16 @@
 }
 
 .subtitle {
-  font-size: 1.4rem;
-  margin-bottom: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
   font-family: "Times New Roman", Times, serif;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  line-height: 1.4;
 }
 
 .subtitle::after {
@@ -195,8 +210,17 @@
     gap: 2rem;
   }
   
+  .left {
+    max-width: 100%;
+  }
+  
   .right {
     max-width: 100%;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    margin-top: 0.25rem;
   }
 }
 .message-section::before {
@@ -212,5 +236,14 @@
 .message-section > * {
   position: relative;
   z-index: 1;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 </style>
