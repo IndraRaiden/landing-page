@@ -102,7 +102,7 @@
   display: block;
   position: relative;
   z-index: 1;
-  filter: brightness(1.05) contrast(0.95) saturate(1.1);
+  filter: brightness(0.95) contrast(0.98) saturate(1.05);
   animation: subtle-scale 20s infinite ease-in-out;
 }
 
@@ -114,32 +114,32 @@
 
 .primary-overlay {
   z-index: 2;
-  background: linear-gradient(135deg, rgba(255,240,210,0.5) 0%, rgba(255,220,180,0.4) 100%);
-  mix-blend-mode: overlay;
+  background: linear-gradient(135deg, rgba(255,240,210,0.3) 0%, rgba(255,220,180,0.25) 100%);
+  mix-blend-mode: soft-light;
 }
 
 .secondary-overlay {
   z-index: 3;
-  background: linear-gradient(45deg, rgba(255,180,120,0.2) 0%, rgba(255,100,150,0.1) 100%);
-  mix-blend-mode: soft-light;
+  background: linear-gradient(45deg, rgba(255,180,120,0.15) 0%, rgba(255,100,150,0.08) 100%);
+  mix-blend-mode: multiply;
 }
 
 .accent-overlay {
   z-index: 3;
   background: linear-gradient(215deg,
     transparent 25%,
-    rgba(250, 250, 250, 0.45) 40%,
-    rgba(245, 245, 245, 0.35) 75%);
-  mix-blend-mode: overlay;
-  opacity: 0.5;
+    rgba(250, 250, 250, 0.25) 40%,
+    rgba(245, 245, 245, 0.2) 75%);
+  mix-blend-mode: screen;
+  opacity: 0.4;
 }
 
 .accent-overlay {
   z-index: 4;
   background: 
-    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.3) 100%),
-    linear-gradient(180deg, rgba(250, 250, 250, 0.3) 0%, transparent 100%);
-  mix-blend-mode: overlay;
-  backdrop-filter: brightness(1.02);
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.15) 100%),
+    linear-gradient(180deg, rgba(250, 250, 250, 0.15) 0%, transparent 100%);
+  mix-blend-mode: color-dodge;
+  backdrop-filter: brightness(0.98);
 }
 </style>

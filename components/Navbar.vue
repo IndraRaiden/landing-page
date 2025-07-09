@@ -2,7 +2,8 @@
   <div>
     <nav class="nav-bar">
       <div class="logo" data-animation="fade-down">HWD</div>
-      <ul class="nav-links">
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links desktop-nav">
         <li data-animation="fade-down" class="delay-100">
           <a href="#about" :class="{ active: activeSection === 'about' }" @click.prevent="scrollToSection('about')">About</a>
         </li>
@@ -19,8 +20,42 @@
           <a href="#projects" :class="{ active: activeSection === 'projects' }" @click.prevent="scrollToSection('projects')">Find Your Place</a>
         </li>
       </ul>
+      
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-menu" @click="toggleSidebar" :class="{ active: isSidebarOpen }" aria-label="Menu">
+        <div class="hamburger-icon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
     </nav>
 
+    <!-- Mobile Sidebar Menu -->
+    <div class="sidebar-overlay" v-if="isSidebarOpen" @click="closeSidebar"></div>
+    <div class="sidebar" :class="{ active: isSidebarOpen }">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">HWD</div>
+        <div class="close-btn" @click="closeSidebar">&times;</div>
+      </div>
+      <ul class="sidebar-links">
+        <li>
+          <a href="#about" :class="{ active: activeSection === 'about' }" @click="handleSidebarNavigation('about')">About</a>
+        </li>
+        <li>
+          <a href="#contact" :class="{ active: activeSection === 'contact' }" @click="handleSidebarNavigation('contact')">Contact</a>
+        </li>
+        <li>
+          <a href="#meetme" :class="{ active: activeSection === 'meetme' }" @click="handleSidebarNavigation('meetme')">Meet Olivia</a>
+        </li>
+        <li>
+          <a href="#press" :class="{ active: activeSection === 'press' }" @click="handleSidebarNavigation('press')">Working</a>
+        </li>
+        <li>
+          <a href="#projects" :class="{ active: activeSection === 'projects' }" @click="handleSidebarNavigation('projects')">Find Your Place</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -28,6 +63,29 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const activeSection = ref('');
+const isSidebarOpen = ref(false);
+
+// Toggle sidebar visibility
+const toggleSidebar = () => {
+  isSidebarOpen.value = !isSidebarOpen.value;
+  if (isSidebarOpen.value) {
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when sidebar is open
+  } else {
+    document.body.style.overflow = ''; // Re-enable scrolling when sidebar is closed
+  }
+};
+
+// Close sidebar
+const closeSidebar = () => {
+  isSidebarOpen.value = false;
+  document.body.style.overflow = '';
+};
+
+// Handle sidebar navigation
+const handleSidebarNavigation = (sectionId: string) => {
+  scrollToSection(sectionId);
+  closeSidebar();
+};
 
 const scrollToSection = (sectionId: string) => {
   console.log('Attempting to scroll to section:', sectionId);
@@ -111,7 +169,7 @@ onUnmounted(() => {
   font-family: "Helvetica Neue", Arial, sans-serif;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: saturate(180%) blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid var(--accent-orange-light);
   z-index: 1000;
   box-sizing: border-box;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -125,10 +183,9 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #E0E0E0;
+  background: linear-gradient(90deg, var(--accent-yellow) 0%, var(--accent-orange) 100%);
   pointer-events: none;
 }
-
 
 .logo {
   font-size: 1.75rem;
@@ -180,6 +237,153 @@ onUnmounted(() => {
 .nav-links a.active {
   font-weight: 600;
   color: var(--accent-magenta-dark);
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1001;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  margin-left: auto;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 280px;
+  height: 100%;
+  background: white;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  z-index: 1002;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  padding: 2rem 0;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1001;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #333333;
+}
+
+.close-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--accent-magenta-dark);
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-links a {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555555;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a.active {
+  background: rgba(0,0,0,0.05);
+  color: var(--accent-magenta-dark);
+  border-left-color: var(--accent-magenta-dark);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  .nav-bar {
+    padding: 0.75rem 1.25rem;
+  }
 }
 
 </style>
