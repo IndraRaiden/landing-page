@@ -185,20 +185,25 @@
   font-family: "Times New Roman", Times, serif;
 }
 
-.service-title::before {
-  content: '✓';
-  position: absolute;
-  left: -1.5rem;
-  color: var(--accent-yellow);
-  font-weight: normal;
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
+.service-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
-.service-item:hover .service-title::before {
-  opacity: 1;
-  transform: translateX(0);
+.service-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-orange) 0%, var(--accent-magenta) 100%);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-item:hover .service-title::after {
+  width: 100%;
 }
 
 .service-desc {
