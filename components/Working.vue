@@ -1,44 +1,53 @@
 <template>
   <section id="press" class="working-section">
-    <div class="left" data-animation="fade-right">
-      <h2 class="title">Working Together</h2>
-      <h3 class="subtitle" data-animation="fade-up">Tailored guidance for every step of your journey.</h3>
-    </div>
-    <div class="right">
-      <div class="working-content">
+    <div class="working-container">
+      <!-- Left side - Title section -->
+      <div class="working-left">
+        <h2 class="working-title">Working<br>Together</h2>
+      </div>
+      
+      <!-- Right side - Content section -->
+      <div class="working-right">
+        <h3 class="working-headline">Tailored guidance for every step of your journey</h3>
         
-        <p data-animation="fade-up" class="delay-100">
-          From our first conversation to closing day (and beyond), I'm here to walk with you through a real estate experience that's thoughtful, streamlined, and fully customized to you. Here's what I offer:
+        <p class="working-text">
+          From our first conversation to closing day (and beyond), I'm here 
+          to walk with you through a real estate experience that's thoughtful, 
+          streamlined, and fully customized to you. Here's what I offer:
         </p>
         
-        <div class="service-grid">
-          <div class="service-item delay-100" data-animation="fade-up">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Curated Property Showings" class="service-image">
-            <h4 class="service-title">Curated Property Showings</h4>
-            <p class="service-desc">Thoughtfully selected listings that reflect your lifestyle, goals, and taste.</p>
+        <!-- Service cards grid -->
+        <div class="service-cards-grid">
+          <!-- Card 1 -->
+          <div class="service-card">
+            <h4 class="service-card-title">Curated Property Showings</h4>
+            <p class="service-card-text">Thoughtfully selected listings that reflect your lifestyle, goals, and taste.</p>
           </div>
           
-          <div class="service-item delay-200" data-animation="fade-up">
-            <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Local Market Insight" class="service-image">
-            <h4 class="service-title">Local Market Insight</h4>
-            <p class="service-desc">Honest, up-to-date knowledge of Sayulita and the surrounding areas.</p>
+          <!-- Card 2 -->
+          <div class="service-card">
+            <h4 class="service-card-title">Local Market Insight</h4>
+            <p class="service-card-text">Honest, up-to-date knowledge of Sayulita and the surrounding areas.</p>
           </div>
           
-          <div class="service-item delay-300" data-animation="fade-up">
-            <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Real Estate Guidance" class="service-image">
-            <h4 class="service-title">Real Estate Guidance</h4>
-            <p class="service-desc">Whether buying or selling, I help you navigate every step with clarity and calm.</p>
+          <!-- Card 3 -->
+          <div class="service-card">
+            <h4 class="service-card-title">Real Estate Guidance</h4>
+            <p class="service-card-text">Whether buying or selling, I help you navigate every step with clarity and calm.</p>
           </div>
           
-          <div class="service-item delay-400" data-animation="fade-up">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Investment Support" class="service-image">
-            <h4 class="service-title">Investment Support</h4>
-            <p class="service-desc">Looking for ROI or long-term value? I help you make smart, confident choices.</p>
+          <!-- Card 4 -->
+          <div class="service-card">
+            <h4 class="service-card-title">Investment Support</h4>
+            <p class="service-card-text">Looking for ROI or long-term value? I help you make smart, confident choices.</p>
           </div>
         </div>
         
-        <p class="closing-statement delay-200" data-animation="fade-up">
-          Every service I provide is grounded in communication, care, and connection — because that's how you build trust, and beautiful outcomes.
+        <!-- Footer message -->
+        <p class="working-footer-text">
+          Every service I provide is grounded in communication, 
+          care, and connection — because that's how you build 
+          trust, and beautiful outcomes
         </p>
       </div>
     </div>
@@ -46,215 +55,141 @@
 </template>
 
 <script setup lang="ts">
-// Working component - displaying the process and approach
+// Working component - displaying services and approach
 </script>
 
 <style scoped>
 .working-section {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 7rem;
   width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 8rem 5%;
+  padding: 5rem 8%;
   color: #333333;
-  justify-content: space-between;
-  background: linear-gradient(135deg, rgba(255,240,210,0.5) 0%, rgba(255,220,180,0.4) 100%);
-  border-top: 2px solid var(--accent-yellow);
-  border-bottom: 2px solid var(--accent-magenta);
+  background: #ffffff;
+  border-top: 1px solid rgba(233, 71, 131, 0.3);
+  border-bottom: 1px solid rgba(233, 71, 131, 0.3);
+  overflow: hidden;
 }
 
-.title {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--accent-magenta-dark);
-  margin: 0;
-  letter-spacing: 0.03em;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 8px;
-  font-family: "Times New Roman", Times, serif;
-  text-shadow: 1px 1px 0px rgba(255, 220, 180, 0.3);
-}
-
-.title::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent-yellow) 0%, var(--accent-orange) 50%, var(--accent-magenta) 100%);
-  transition: transform 0.6s ease;
-  transform-origin: left;
-  transform: scaleX(0.7);
-}
-
-.title:hover::after {
-  transform: scaleX(1);
-}
-
-.right {
-  max-width: 800px;
-  margin-left: auto;
-  padding-right: 5%;
-}
-
-.working-content {
-  max-width: 700px;
-  line-height: 1.7;
-  font-size: 0.95rem;
-  letter-spacing: 0.01em;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 8px;
-  font-family: "Times New Roman", Times, serif;
-  color: var(--accent-orange-dark);
-}
-
-.subtitle::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: #E0E0E0;
-  transition: width 0.6s ease;
-}
-
-.subtitle:hover::after {
-  width: 100%;
-}
-
-.service-grid {
+.working-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem 2rem;
-  margin: 4rem 0;
+  grid-template-columns: 300px 1fr;
+  gap: 5rem;
 }
 
-.service-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-left: 2px solid var(--accent-orange);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  transform-origin: center;
+/* Left side styling */
+.working-left {
+  align-self: start;
 }
 
-.service-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
-
-.service-item:hover {
-  border-left-color: var(--accent-magenta);
-  box-shadow: 0 8px 20px rgba(255, 100, 180, 0.15);
-  transform: translateY(-5px) rotate(1deg);
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.service-title {
-  font-size: 1.3rem;
-  font-weight: 500;
+.working-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #E94783; /* Updated to match the image's pink color */
   margin: 0;
-  color: var(--accent-magenta-dark);
-  position: relative;
+  line-height: 1.1;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+/* Right side styling */
+.working-right {
+  max-width: 800px;
+}
+
+.working-headline {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+  color: #333;
   font-family: "Times New Roman", Times, serif;
 }
 
-.service-title {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 4px;
-}
-
-.service-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-orange) 0%, var(--accent-magenta) 100%);
-  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.service-item:hover .service-title::after {
-  width: 100%;
-}
-
-.service-desc {
-  margin: 0;
-  font-size: 0.9rem;
+.working-text {
+  font-size: 1.1rem;
   line-height: 1.6;
-  color: #555555;
+  color: #444;
+  margin-bottom: 3rem;
 }
 
-.closing-statement {
-  margin-top: 4rem;
-  font-size: 1.05rem;
+/* Service cards styling */
+.service-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.service-card {
+  background-color: #C95E95; /* Updated to match the exact magenta/pink color from the image */
+  color: white;
+  border-radius: 8px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 15px rgba(201, 94, 149, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(201, 94, 149, 0.3);
+}
+
+.service-card-title {
+  font-size: 1.4rem;
+  margin: 0 0 0.8rem 0;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.service-card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.working-footer-text {
+  font-size: 1.2rem;
+  color: #E94783; /* Updated to match the image's pink color */
+  line-height: 1.6;
   font-style: italic;
-  color: var(--accent-magenta-dark);
-  padding: 1.5rem 0;
-  border-top: 1px solid var(--accent-yellow);
-  border-bottom: 1px solid var(--accent-magenta);
-  text-align: center;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
-  padding: 1.5rem;
+  max-width: 90%;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .service-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .working-section {
+  .working-container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   
-  .right {
-    max-width: 100%;
+  .working-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
   }
   
-  .service-grid {
-    grid-template-columns: 1fr;
+  .working-headline {
+    font-size: 1.6rem;
   }
-}
-.working-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(135deg, rgba(255, 220, 180, 0.3), rgba(255, 180, 220, 0.3));
-  mix-blend-mode: overlay;
-  z-index: 0;
-}
-
-/* elevate content above overlay */
-.working-section > * {
-  position: relative;
-  z-index: 1;
+  
+  .working-text,
+  .working-footer-text {
+    font-size: 1rem;
+  }
 }
 
 </style>

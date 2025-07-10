@@ -18,11 +18,6 @@
         <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1984&auto=format&fit=crop" alt="Beautiful Sayulita Beach House" class="real-image">
       </div>
     </div>
-    
-    <div class="testimonial delay-300" data-animation="rotate-in">
-      <p class="quote">"Working with this agent changed our entire experience. They made the impossible possible."</p>
-      <p class="attribution delay-400" data-animation="fade-up">— Recent Client</p>
-    </div>
   </section>
 </template>
 
@@ -128,25 +123,7 @@
   object-position: center;
 }
 
-.testimonial {
-  margin-top: 3rem;
-  text-align: center;
-  width: 100%;
-  padding: 0 5%;
-  box-sizing: border-box;
-}
 
-.quote {
-  font-style: italic;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.attribution {
-  font-weight: 500;
-  opacity: 0.7;
-}
 
 @media (max-width: 768px) {
   .cta2-container {

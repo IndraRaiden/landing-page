@@ -57,20 +57,19 @@
 }
 
 .title {
-  background: linear-gradient(90deg, #F8B887, #F29699, #E0AED0, #F8B887);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 300% 100%;
-  animation: gradientShift 6s linear infinite;
-  font-size: 1.6rem;
+  font-size: 4rem;
   font-weight: 500;
+  color: #ff0066;
   margin: 0;
   letter-spacing: 0.03em;
   position: relative;
   display: inline-block;
-  padding-bottom: 8px;
+  line-height: 1.1;
   font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(255, 100, 180, 0.4);
+  -webkit-text-fill-color: initial;
+  background: none;
 }
 
 .highlight {

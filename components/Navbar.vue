@@ -167,31 +167,20 @@ onUnmounted(() => {
   align-items: center;
   padding: 1rem 2rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: saturate(180%) blur(10px);
-  border-bottom: 1px solid var(--accent-orange-light);
+  background: linear-gradient(90deg, #ffb700 0%, #ff8a00 50%, #e5387e 100%);
   z-index: 1000;
   box-sizing: border-box;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-/* Accent stripe */
-.nav-bar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-yellow) 0%, var(--accent-orange) 100%);
-  pointer-events: none;
-}
+/* Accent stripe - removed as we now have a gradient background */
 
 .logo {
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #333333;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .nav-links {
@@ -205,38 +194,43 @@ onUnmounted(() => {
 .nav-links a {
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: #555555;
+  color: #ffffff;
   text-decoration: none;
   letter-spacing: 1px;
   position: relative;
   padding: 5px 10px;
   border-radius: 4px;
   transition: all 0.3s ease;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
 .nav-links a:after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(90deg, rgba(255,240,210,1) 0%, rgba(255,220,180,1) 100%);
-  transition: width 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transform-origin: left center;
 }
 
 .nav-links a:hover {
-  color: var(--accent-magenta-dark);
+  color: #ffffff;
+  opacity: 0.9;
 }
 
 .nav-links a:hover:after,
 .nav-links a.active:after {
   width: 100%;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
 }
 
 .nav-links a.active {
   font-weight: 600;
-  color: var(--accent-magenta-dark);
+  color: #ffffff;
 }
 
 /* Hamburger Menu Button */
@@ -268,7 +262,7 @@ onUnmounted(() => {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #000000;
+  background-color: #ffffff;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -292,12 +286,12 @@ onUnmounted(() => {
   right: -300px;
   width: 280px;
   height: 100%;
-  background: white;
-  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #ffb700 0%, #ff8a00 50%, #e5387e 100%);
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
   z-index: 1002;
   transition: right 0.3s ease;
   overflow-y: auto;
-  padding: 2rem 0;
+  padding: 0;
 }
 
 .sidebar.active {
@@ -327,19 +321,22 @@ onUnmounted(() => {
   padding: 0 1.5rem 1.5rem;
   border-bottom: 1px solid rgba(0,0,0,0.1);
   margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #ffb700 0%, #ff8a00 50%, #e5387e 100%);
+  padding-top: 1.5rem;
 }
 
 .sidebar-logo {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #333333;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .close-btn {
   font-size: 2rem;
   cursor: pointer;
-  color: var(--accent-magenta-dark);
+  color: #ffffff;
 }
 
 .sidebar-links {
@@ -358,17 +355,19 @@ onUnmounted(() => {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #555555;
+  color: #ffffff;
   text-decoration: none;
   transition: all 0.3s ease;
-  border-left: 4px solid transparent;
+  border-left: 2px solid transparent;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
 .sidebar-links a:hover,
 .sidebar-links a.active {
-  background: rgba(0,0,0,0.05);
-  color: var(--accent-magenta-dark);
-  border-left-color: var(--accent-magenta-dark);
+  background: rgba(255,255,255,0.1);
+  color: #ffffff;
+  border-left-color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive Styles */

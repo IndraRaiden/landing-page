@@ -1,6 +1,17 @@
 <template>
   <div class="animated-divider" data-animation="grow">
-    <div class="line"></div>
+    <div class="testimonial-container">
+      <div class="testimonial-box">
+        <p class="quote">"Working with this agent changed our entire experience. They made the impossible possible."</p>
+        <p class="attribution">— Recent Client</p>
+      </div>
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,22 +23,19 @@
 .animated-divider {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  background-color: #F03E81; /* Vibrant pink background */
   overflow: hidden;
 }
 
-.line {
-  height: 2px;
-  width: 0;
-  background: linear-gradient(90deg, #F0F0F0 0%, #E8E8E8 25%, #E0E0E0 60%, #D8D8D8 100%);
-  background-size: 300% 100%;
-  animation: gradientShift 6s linear infinite;
-  transition: width 1s ease-out;
-}
-
-.animated-divider[data-animation="grow"] .line {
-  animation: grow 1.5s ease-out forwards;
+.testimonial-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
 }
 
 @keyframes gradientShift {
@@ -35,12 +43,56 @@
   100% { background-position: 100% 50%; }
 }
 
-@keyframes grow {
-  from {
-    width: 0;
+.testimonial-box {
+  background-color: rgba(255, 192, 203, 0.7); /* Light pink with transparency */
+  border-radius: 2rem;
+  padding: 2.5rem 2rem;
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+  line-height: 1.4;
+}
+
+.attribution {
+  font-weight: 500;
+  color: white;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .testimonial-box {
+    width: 90%;
+    padding: 2rem 1.5rem;
   }
-  to {
-    width: 80%;
+  
+  .quote {
+    font-size: 1.2rem;
   }
 }
 </style>

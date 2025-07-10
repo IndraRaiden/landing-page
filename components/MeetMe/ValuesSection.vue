@@ -1,14 +1,13 @@
 <template>
   <div class="values-section" data-animation="slide-up">
-    <h3 class="section-heading" data-animation="text-underline">The Values Behind My Work</h3>
-    <p data-animation="blur-in" class="delay-100">Every client, every home, and every journey is unique — but the way I show up remains constant. My work is guided by a mix of professionalism, care, and a genuine love for this community.</p>
+    <div class="values-header">
+      <h3 class="section-heading">Values behind<br>my work</h3>
+      <p data-animation="blur-in" class="values-intro">Every client, every home, and every journey is unique — but the way I show up remains constant. My work is guided by a mix of professionalism, care, and a genuine love for this community.</p>
+    </div>
     
     <div class="values-grid stagger-children" data-animation="fade-up">
-      <div class="value-item" v-for="(value, index) in values" :key="index" :class="{ 'white-background': value.whiteBackground }">
-        <div class="value-image" v-if="value.image">
-          <img :src="value.image" :alt="value.title" />
-        </div>
-        <h4 data-animation="text-gradient" style="font-family: 'Times New Roman', Times, serif;">{{ value.title }}</h4>
+      <div class="value-item" v-for="(value, index) in values" :key="index">
+        <h4>{{ value.title }}</h4>
         <p>{{ value.description }}</p>
       </div>
     </div>
@@ -19,166 +18,122 @@
 const values = [
   {
     title: 'Trust & Integrity',
-    description: 'As an AMPI-certified agent, my clients know they can count on me - always.',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop',
-    whiteBackground: false
-  },
-  {
-    title: 'Calm, Grounded Guidance',
-    description: 'I approach every step with clarity, patience, and calm professionalism, no matter how big or small the decision.',
-    whiteBackground: true
+    description: 'As an AMPI-certified agent, my clients know they can count on me — always.'
   },
   {
     title: 'Intuitive, Heartfelt Care',
-    description: "I don't just check boxes - I listen deeply, understand your needs, and support you with genuine care.",
-    whiteBackground: false
-  },
-  {
-    title: 'Obsessed with Details',
-    description: 'From the right property to the perfect closing process, I focus on details that make your experience seamless.',
-    whiteBackground: false
+    description: "I don't just check boxes — I listen deeply, understand your needs, and support you with genuine care."
   },
   {
     title: 'Discretion & Clear Communication',
-    description: "You'll always know where we stand. Transparent, honest, and respectful of your privacy.",
-    whiteBackground: false
+    description: "You'll always know where we stand. Transparent, honest, and respectful of your privacy."
   },
   {
     title: 'Local Knowledge, Global Mindset',
-    description: 'Fluent in Spanish, deeply connected to Sayulita, and tuned into what life here truly means.',
-    whiteBackground: false
+    description: "Fluent in Spanish, deeply connected to Sayulita, and tuned into what life here truly means."
   },
   {
     title: 'Ease, Comfort & Connection',
-    description: 'I aim to make this process feel like a natural, exciting next step - not a stressful transaction.',
-    whiteBackground: false
+    description: "I aim to make this process feel like a natural, exciting next step - not a stressful transaction."
   },
   {
-    title: 'Adaptable, Always',
-    description: 'My diverse background allows me to pivot, adapt, and meet your needs - however unique they are.',
-    whiteBackground: true
+    title: 'Rooted in Community',
+    description: "I believe in supporting local businesses, culture, and people — because that's what makes this place magic."
   }
 ];
 </script>
 
 <style scoped>
-.section-heading {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--accent-magenta-dark);
-  margin: 0 0 1.5rem 0;
-  letter-spacing: 0.02em;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-  font-family: "Times New Roman", Times, serif;
-}
-
-.section-heading::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
+.values-section {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-yellow) 0%, var(--accent-orange) 50%, var(--accent-magenta) 100%);
-  transition: transform 0.6s ease;
-  transform-origin: left;
-  transform: scaleX(0.7);
+  padding: 1rem 0;
 }
 
-.section-heading:hover::after {
-  transform: scaleX(1);
+.values-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  gap: 3rem;
+}
+
+.section-heading {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #ff3366;
+  margin: 0;
+  line-height: 1.1;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  flex-shrink: 0;
+  width: 350px;
+}
+
+.values-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+  max-width: 600px;
 }
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 3.5rem;
 }
 
 .value-item {
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 6px;
-  padding: 1.2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  background-color: #f8a0a0;
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.8);
   position: relative;
   overflow: hidden;
-  height: 220px; /* Fixed height for all cards */
   display: flex;
   flex-direction: column;
+  min-height: 160px;
 }
 
-.value-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+.value-item:nth-child(odd) {
+  background-color: #f8a0a0;
 }
 
-.value-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent-yellow) 0%, var(--accent-orange) 50%, var(--accent-magenta) 100%);
-}
-
-.white-background {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.value-image {
-  width: 100%;
-  height: 120px;
-  margin-bottom: 0.8rem;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.value-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-  max-width: 100%;
-}
-
-.value-item:hover .value-image img {
-  transform: scale(1.1);
+.value-item:nth-child(even) {
+  background-color: #f8a0a0;
 }
 
 .value-item h4 {
-  font-size: 1.1rem;
-  margin: 0 0 0.8rem 0;
+  font-size: 1.35rem;
+  margin: 0 0 1rem 0;
   font-weight: 600;
-  color: var(--accent-magenta-dark);
-  background: linear-gradient(90deg, var(--accent-magenta-dark), var(--accent-orange));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  height: 40px; /* Fixed height for titles */
-  display: flex;
-  align-items: center;
+  color: #333;
+  font-family: "Arial", sans-serif;
 }
 
 .value-item p {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   margin: 0;
   line-height: 1.5;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
+  color: #333;
 }
 
-.stagger-children > * {
-  animation-delay: calc(var(--i, 0) * 100ms);
+@media (max-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .values-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .section-heading {
+    width: 100%;
+  }
 }
-
-.delay-100 { animation-delay: 100ms; }
 
 @media (max-width: 768px) {
   .values-grid {
@@ -190,15 +145,6 @@ const values = [
     margin-left: auto;
     margin-right: auto;
     display: block;
-  }
-
-  .section-heading::after {
-    left: 50%;
-    transform: translateX(-50%) scaleX(0.7);
-  }
-
-  .section-heading:hover::after {
-    transform: translateX(-50%) scaleX(1);
   }
 }
 </style>

@@ -64,16 +64,18 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
 }
 
 .title {
-  font-size: 3.2rem; /* Increased from 2rem to 3.2rem */
-  font-weight: 700;
-  color: var(--accent-magenta-dark);
+  font-size: 4rem;
+  font-weight: 500;
+  color: #ff0066;
   margin: 0 0 2.5rem 0;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   position: relative;
   display: inline-block;
-  padding-bottom: 15px;
+  line-height: 1.1;
   font-family: "Times New Roman", Times, serif;
-  text-shadow: 2px 2px 0px rgba(255, 220, 180, 0.3);
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(255, 100, 180, 0.4);
+  white-space: nowrap;
 }
 
 .title::after {

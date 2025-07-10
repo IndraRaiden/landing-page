@@ -62,17 +62,34 @@
 }
 
 .section-title {
-  background: linear-gradient(90deg, #F8B887, #F29699, #E0AED0, #F8B887);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 300% 100%;
-  animation: gradientShift 6s linear infinite;
-  font-size: 2.6rem;
+  font-size: 4rem;
   font-weight: 500;
-  margin-bottom: 1rem;
-  letter-spacing: 0.02em;
+  color: #ff0066;
+  margin: 0 0 1rem;
+  letter-spacing: 0.03em;
+  position: relative;
+  display: inline-block;
+  line-height: 1.1;
   font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(255, 100, 180, 0.4);
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #E0E0E0;
+  transition: width 0.6s ease;
+}
+
+.section-title:hover::after {
+  width: 100%;
 }
 
 .section-subtitle {
@@ -184,31 +201,32 @@
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.3s ease;
-  border-radius: 3px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
 }
 
 .portfolio-btn {
-  background-color: transparent;
-  color: #555555;
-  border: 1px solid #F0F0F0;
+  background-color: #FFCBA4;
+  color: #333333;
+  border: none;
   font-weight: 500;
 }
 
 .portfolio-btn:hover {
-  background-color: #FAFAFA;
-  border-color: #E0E0E0;
+  background-color: #FFD8B9;
   transform: translateY(-2px);
 }
 
 .whatsapp-btn {
-  background-color: transparent;
-  color: #555555;
-  border: 1px solid #F0F0F0;
+  background-color: #FFCBA4;
+  color: #333333;
+  border: none;
 }
 
 .whatsapp-btn:hover {
-  border-color: #E0E0E0;
-  background-color: #FAFAFA;
+  background-color: #FFD8B9;
   transform: translateY(-2px);
 }
 
@@ -250,12 +268,5 @@
   z-index: 1;
 }
 
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
+
 </style>

@@ -2,7 +2,7 @@
   <section id="contact" class="contact-section">
     <div class="background-overlay"></div>
     <div class="left" data-animation="fade-right">
-      <h2 class="title">Get in Touch</h2>
+      <h2 class="title">Contact</h2>
     </div>
     <div class="right">
       <div class="contact-options">
