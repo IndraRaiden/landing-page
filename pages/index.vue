@@ -9,6 +9,7 @@
   <CTA2 />
   <AnimatedDivider />
   <FindYourPlace />
+  <Footer />
 </template>
 
 <script setup lang="ts">
@@ -22,6 +23,7 @@ import Working from '~/components/Working.vue';
 import CTA2 from '~/components/CTA2.vue';
 import AnimatedDivider from '~/components/AnimatedDivider.vue';
 import FindYourPlace from '~/components/FindYourPlace.vue';
+import Footer from '~/components/Footer.vue';
 </script>
 
 
