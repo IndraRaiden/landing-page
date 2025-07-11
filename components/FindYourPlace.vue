@@ -2,9 +2,9 @@
   <section id="projects" class="find-place-section">
     <div class="find-place-container">
       <div class="find-place-header" data-animation="fade-up">
-        <h2 class="section-title" data-animation="text-gradient">Find Your Place</h2>
+        <h2 class="section-title" data-animation="text-underline">Find Your Place</h2>
         <p class="section-subtitle">Handpicked homes that reflect your lifestyle.</p>
-        <p class="section-description delay-100" data-animation="fade-up">Here's a glimpse of a few special properties I've selected for you — each one reflecting the magic and opportunity of coastal living. Whether you're looking for a serene retreat, a smart investment, or a place to build your dream life, there's something waiting for you here.</p>
+        <p class="section-description">Here's a glimpse of a few special properties I've selected for you — each one reflecting the magic and opportunity of coastal living. Whether you're looking for a serene retreat, a smart investment, or a place to build your dream life, there's something waiting for you here.</p>
       </div>
       
       <div class="property-grid">

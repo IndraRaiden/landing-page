@@ -1,11 +1,12 @@
 <template>
   <section id="about" class="message-section">
-    <div class="left" data-animation="fade-right">
-      <h2 class="title" data-animation="text-gradient">Welcome Home</h2>
-      <p class="subtitle" data-animation="text-gradient">Real estate with heart, clarity, and local soul</p>
-    </div>
-    <div class="right">
-      <div class="body">
+    <div class="container">
+      <div class="left" data-animation="fade-right">
+        <h2 class="title" data-animation="text-gradient">Welcome Home</h2>
+        <p class="subtitle" data-animation="text-gradient">Real estate with heart, clarity, and local soul</p>
+      </div>
+      <div class="right">
+        <div class="body">
         
         <p data-animation="blur-in" class="delay-100">
           I'm Olivia, an <strong>AMPI-certified real estate agent</strong> at LunaMar Estates, passionate about helping you find not just a property, but a lifestyle.
@@ -32,6 +33,7 @@
           <li>Curated property showings</li>
           <li>Investment &amp; lifestyle consulting</li>
         </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -44,14 +46,10 @@
 <style scoped>
 .message-section {
   background-color: #FFFFFF;
-  padding: 6rem 5%;
+  padding: 6rem 0;
   position: relative;
   overflow: hidden;
   color: #333333;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 4rem;
-
   width: 100%;
   margin: 0;
 }
@@ -104,24 +102,34 @@
   width: 100%;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 8rem;
+  width: 95%;
+  margin: 0 auto;
+  padding-left: 5%;
+}
+
 .left {
-  max-width: 200px;
-  padding-right: 5%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-right: 1rem;
 }
 
 .right {
-  max-width: 800px;
-  padding-right: 5%;
+  width: 100%;
 }
 
 .body {
-  max-width: 700px;
+  width: 100%;
   line-height: 1.7;
   font-size: 0.95rem;
   letter-spacing: 0.01em;
+  text-align: left;
+  padding-right: 0;
 }
 
 .subtitle {
@@ -192,9 +200,10 @@
 }
 
 .services-list {
-  list-style: disc;
+  list-style-position: outside;
   padding-left: 1.25rem;
   margin: 0;
+  text-align: left;
 }
 
 .services-list li {
@@ -205,16 +214,21 @@
 
 @media (max-width: 768px) {
   .message-section {
+    padding: 4rem 0;
+  }
+  
+  .container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   
   .left {
-    max-width: 100%;
+    margin-bottom: 1rem;
   }
   
-  .right {
-    max-width: 100%;
+  .body {
+    text-align: left;
+    padding-right: 0;
   }
   
   .subtitle {

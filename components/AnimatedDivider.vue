@@ -1,5 +1,5 @@
 <template>
-  <div class="animated-divider" data-animation="grow">
+  <div class="animated-divider" data-animation="fade-up">
     <div class="testimonial-container">
       <div class="testimonial-box">
         <p class="quote">"Working with this agent changed our entire experience. They made the impossible possible."</p>
