@@ -2,8 +2,8 @@
   <div class="animated-divider" data-animation="fade-up">
     <div class="testimonial-container">
       <div class="testimonial-box">
-        <p class="quote">"Working with this agent changed our entire experience. They made the impossible possible."</p>
-        <p class="attribution">— Recent Client</p>
+        <p class="quote">{{ $t('animatedDivider.quote') }}</p>
+        <p class="attribution">{{ $t('animatedDivider.attribution') }}</p>
       </div>
       <div class="dots">
         <span class="dot"></span>

@@ -3,51 +3,47 @@
     <div class="working-container">
       <!-- Left side - Title section -->
       <div class="working-left">
-        <h2 class="working-title">Working<br>Together</h2>
+        <h2 class="working-title" v-html="$t('working.title')"></h2>
       </div>
       
       <!-- Right side - Content section -->
       <div class="working-right">
-        <h3 class="working-headline">Tailored guidance for every step of your journey</h3>
+        <h3 class="working-headline">{{ $t('working.headline') }}</h3>
         
         <p class="working-text">
-          From our first conversation to closing day (and beyond), I'm here 
-          to walk with you through a real estate experience that's thoughtful, 
-          streamlined, and fully customized to you. Here's what I offer:
+          {{ $t('working.description') }}
         </p>
         
         <!-- Service cards grid -->
         <div class="service-cards-grid">
           <!-- Card 1 -->
           <div class="service-card">
-            <h4 class="service-card-title">Curated Property Showings</h4>
-            <p class="service-card-text">Thoughtfully selected listings that reflect your lifestyle, goals, and taste.</p>
+            <h4 class="service-card-title">{{ $t('working.services.property.title') }}</h4>
+            <p class="service-card-text">{{ $t('working.services.property.text') }}</p>
           </div>
           
           <!-- Card 2 -->
           <div class="service-card">
-            <h4 class="service-card-title">Local Market Insight</h4>
-            <p class="service-card-text">Honest, up-to-date knowledge of Sayulita and the surrounding areas.</p>
+            <h4 class="service-card-title">{{ $t('working.services.market.title') }}</h4>
+            <p class="service-card-text">{{ $t('working.services.market.text') }}</p>
           </div>
           
           <!-- Card 3 -->
           <div class="service-card">
-            <h4 class="service-card-title">Real Estate Guidance</h4>
-            <p class="service-card-text">Whether buying or selling, I help you navigate every step with clarity and calm.</p>
+            <h4 class="service-card-title">{{ $t('working.services.guidance.title') }}</h4>
+            <p class="service-card-text">{{ $t('working.services.guidance.text') }}</p>
           </div>
           
           <!-- Card 4 -->
           <div class="service-card">
-            <h4 class="service-card-title">Investment Support</h4>
-            <p class="service-card-text">Looking for ROI or long-term value? I help you make smart, confident choices.</p>
+            <h4 class="service-card-title">{{ $t('working.services.investment.title') }}</h4>
+            <p class="service-card-text">{{ $t('working.services.investment.text') }}</p>
           </div>
         </div>
         
         <!-- Footer message -->
         <p class="working-footer-text">
-          Every service I provide is grounded in communication, 
-          care, and connection — because that's how you build 
-          trust, and beautiful outcomes
+          {{ $t('working.footer') }}
         </p>
       </div>
     </div>

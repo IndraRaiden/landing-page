@@ -5,7 +5,7 @@
       <!-- First row with title and content -->
       <div class="content-row">
         <div class="left" data-animation="fade-right">
-          <h1 class="title" data-animation="text-underline" data-text-animation="true">Meet Olivia</h1>
+          <h1 class="title" data-animation="text-underline" data-text-animation="true">{{ $t('meetme.title') }}</h1>
           
           <!-- Left side image and content -->
           <LeftShowcase />

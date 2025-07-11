@@ -4,13 +4,13 @@
     <div class="cta-content">
       <div class="left-column">
         <div class="cta-heading" data-animation="text-gradient">
-          <h2 data-text-animation="true">Let's make your next move feel like coming home</h2>
+          <h2 data-text-animation="true">{{ $t('cta.heading') }}</h2>
         </div>
         
         <div class="accent-line"></div>
         
         <div class="cta-message" data-animation="blur-in">
-          <p>Whether you're just beginning or already dreaming of your next chapter,<br>I'm here to guide you every step of the way.</p>
+          <p>{{ $t('cta.message') }}</p>
         </div>
         
         <div class="cta-contact" data-animation="slide-up">
@@ -19,7 +19,7 @@
           </a>
           
           <div class="contact-social">
-            <p>Or say hi on:</p>
+            <p>{{ $t('cta.socialIntro') }}</p>
             <div class="social-links" data-animation="fade-up">
               <a href="https://instagram.com/livewillsellit" target="_blank" rel="noopener noreferrer" class="social-link instagram">@livewillsellit</a>
               <a href="https://wa.me/523221014263" target="_blank" rel="noopener noreferrer" class="social-link whatsapp">WhatsApp Icon</a>
@@ -30,7 +30,7 @@
       
       <div class="right-column">
         <div class="profile-image">
-          <div class="image-placeholder">Foto de Olivia</div>
+          <div class="image-placeholder">{{ $t('cta.photoPlaceholder') }}</div>
         </div>
       </div>
     </div>

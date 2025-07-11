@@ -5,19 +5,19 @@
       <!-- Desktop Navigation Links -->
       <ul class="nav-links desktop-nav">
         <li data-animation="fade-down" class="delay-100">
-          <a href="#about" :class="{ active: activeSection === 'about' }" @click.prevent="scrollToSection('about')">About</a>
+          <a href="#about" :class="{ active: activeSection === 'about' }" @click.prevent="scrollToSection('about')">{{ t('navbar.about') }}</a>
         </li>
         <li data-animation="fade-down" class="delay-200">
-          <a href="#contact" :class="{ active: activeSection === 'contact' }" @click.prevent="scrollToSection('contact')">Contact</a>
+          <a href="#contact" :class="{ active: activeSection === 'contact' }" @click.prevent="scrollToSection('contact')">{{ t('navbar.contact') }}</a>
         </li>
         <li data-animation="fade-down" class="delay-300">
-          <a href="#meetme" :class="{ active: activeSection === 'meetme' }" @click.prevent="scrollToSection('meetme')">Meet Olivia</a>
+          <a href="#meetme" :class="{ active: activeSection === 'meetme' }" @click.prevent="scrollToSection('meetme')">{{ t('navbar.meetOlivia') }}</a>
         </li>
         <li data-animation="fade-down" class="delay-400">
-          <a href="#press" :class="{ active: activeSection === 'press' }" @click.prevent="scrollToSection('press')">Working</a>
+          <a href="#press" :class="{ active: activeSection === 'press' }" @click.prevent="scrollToSection('press')">{{ t('navbar.working') }}</a>
         </li>
         <li data-animation="fade-down" class="delay-500">
-          <a href="#projects" :class="{ active: activeSection === 'projects' }" @click.prevent="scrollToSection('projects')">Find Your Place</a>
+          <a href="#projects" :class="{ active: activeSection === 'projects' }" @click.prevent="scrollToSection('projects')">{{ t('navbar.findYourPlace') }}</a>
         </li>
         <li data-animation="fade-down" class="delay-600 whatsapp-icon">
           <a href="https://wa.me/523221014263" target="_blank" aria-label="Contact on WhatsApp">
@@ -26,6 +26,11 @@
               <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/>
             </svg>
           </a>
+        </li>
+        <li data-animation="fade-down" class="delay-700 language-toggle">
+          <button @click="toggleLanguage()" aria-label="Toggle language" :title="currentLanguage === 'en' ? 'Cambiar a español' : 'Switch to English'">
+            {{ currentLanguage === 'en' ? 'ES' : 'EN' }}
+          </button>
         </li>
       </ul>
       
@@ -48,19 +53,19 @@
       </div>
       <ul class="sidebar-links">
         <li>
-          <a href="#about" :class="{ active: activeSection === 'about' }" @click="handleSidebarNavigation('about')">About</a>
+          <a href="#about" :class="{ active: activeSection === 'about' }" @click="handleSidebarNavigation('about')">{{ t('navbar.about') }}</a>
         </li>
         <li>
-          <a href="#contact" :class="{ active: activeSection === 'contact' }" @click="handleSidebarNavigation('contact')">Contact</a>
+          <a href="#contact" :class="{ active: activeSection === 'contact' }" @click="handleSidebarNavigation('contact')">{{ t('navbar.contact') }}</a>
         </li>
         <li>
-          <a href="#meetme" :class="{ active: activeSection === 'meetme' }" @click="handleSidebarNavigation('meetme')">Meet Olivia</a>
+          <a href="#meetme" :class="{ active: activeSection === 'meetme' }" @click="handleSidebarNavigation('meetme')">{{ t('navbar.meetOlivia') }}</a>
         </li>
         <li>
-          <a href="#press" :class="{ active: activeSection === 'press' }" @click="handleSidebarNavigation('press')">Working</a>
+          <a href="#press" :class="{ active: activeSection === 'press' }" @click="handleSidebarNavigation('press')">{{ t('navbar.working') }}</a>
         </li>
         <li>
-          <a href="#projects" :class="{ active: activeSection === 'projects' }" @click="handleSidebarNavigation('projects')">Find Your Place</a>
+          <a href="#projects" :class="{ active: activeSection === 'projects' }" @click="handleSidebarNavigation('projects')">{{ t('navbar.findYourPlace') }}</a>
         </li>
         <li>
           <a href="https://wa.me/523221014263" target="_blank" class="whatsapp-sidebar-link">
@@ -71,6 +76,11 @@
             WhatsApp
           </a>
         </li>
+        <li class="language-toggle-mobile">
+          <button @click="toggleLanguage(); closeSidebar();" aria-label="Toggle language">
+            {{ currentLanguage === 'en' ? 'Español' : 'English' }}
+          </button>
+        </li>
       </ul>
     </div>
   </div>
@@ -78,6 +88,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
+import { currentLanguage, toggleLanguage, t } from '../utils/translationStore';
 
 const activeSection = ref('');
 const isSidebarOpen = ref(false);
@@ -275,6 +286,48 @@ onUnmounted(() => {
 
 .whatsapp-sidebar-link:hover svg {
   transform: scale(1.1);
+}
+
+/* Language Toggle Styling */
+.language-toggle button {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.language-toggle button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.language-toggle-mobile {
+  margin-top: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.language-toggle-mobile button {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
 }
 
 /* Hamburger Menu Button */

@@ -2,15 +2,15 @@
   <section id="contact" class="contact-section">
     <div class="background-overlay"></div>
     <div class="left" data-animation="fade-right">
-      <h2 class="title">Contact</h2>
+      <h2 class="title">{{ $t('contact.title') }}</h2>
     </div>
     <div class="right">
       <div class="contact-options">
         <!-- Email Option -->
         <div class="contact-option contact-card" data-animation="fade-up">
-          <h3 class="option-title">Email</h3>
+          <h3 class="option-title">{{ $t('contact.emailTitle') }}</h3>
           <div class="option-content">
-            <p>Write to me at</p>
+            <p>{{ $t('contact.emailText') }}</p>
             <a href="mailto:olivia@lunamarestates.com" class="contact-link">
               <span>olivia@lunamarestates.com</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -23,9 +23,9 @@
         
         <!-- WhatsApp Option -->
         <div class="contact-option contact-card delay-100" data-animation="fade-up">
-          <h3 class="option-title">WhatsApp</h3>
+          <h3 class="option-title">{{ $t('contact.whatsappTitle') }}</h3>
           <div class="option-content">
-            <p>Or say hi on WhatsApp</p>
+            <p>{{ $t('contact.whatsappText') }}</p>
             <a href="https://wa.me/523221014263" target="_blank" class="contact-link">
               <span>(+52) 322-101-4263</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -37,9 +37,9 @@
 
         <!-- Instagram Option -->
         <div class="contact-option contact-card delay-200" data-animation="fade-up">
-          <h3 class="option-title">Instagram</h3>
+          <h3 class="option-title">{{ $t('contact.instagramTitle') }}</h3>
           <div class="option-content">
-            <p>Or say hi on Instagram</p>
+            <p>{{ $t('contact.instagramText') }}</p>
             <a href="https://instagram.com/olivia.lunamar" target="_blank" class="contact-link">
               <span>@olivia.lunamar</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -56,7 +56,7 @@
 </template>
 
 <script setup lang="ts">
-// No script logic needed for static contact component
+// Using global translation function from the i18n plugin
 </script>
 
 <style scoped>

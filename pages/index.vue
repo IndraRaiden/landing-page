@@ -24,6 +24,24 @@ import CTA2 from '~/components/CTA2.vue';
 import AnimatedDivider from '~/components/AnimatedDivider.vue';
 import FindYourPlace from '~/components/FindYourPlace.vue';
 import Footer from '~/components/Footer.vue';
+
+// Import the translation utilities so they're available globally
+import { currentLanguage, toggleLanguage, t } from '~/utils/translationStore';
+
+// Make translation functions available to all components in this page
+// This allows child components to access them via inject
+defineExpose({ currentLanguage, toggleLanguage, t });
 </script>
+
+<style>
+/* Define any global styles for translations if needed */
+[lang="es"] .en-only {
+  display: none;
+}
+
+[lang="en"] .es-only {
+  display: none;
+}
+</style>
 
 

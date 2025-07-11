@@ -1,8 +1,8 @@
 <template>
   <div class="values-section" data-animation="slide-up">
     <div class="values-header">
-      <h3 class="section-heading">Values behind<br>my work</h3>
-      <p data-animation="blur-in" class="values-intro">Every client, every home, and every journey is unique — but the way I show up remains constant. My work is guided by a mix of professionalism, care, and a genuine love for this community.</p>
+      <h3 class="section-heading">{{ $t('meetme.valuesSection.heading') }}</h3>
+      <p data-animation="blur-in" class="values-intro">{{ $t('meetme.valuesSection.intro') }}</p>
     </div>
     
     <div class="values-grid stagger-children" data-animation="fade-up">
@@ -15,32 +15,37 @@
 </template>
 
 <script setup>
-const values = [
+import { computed } from 'vue';
+import { useNuxtApp } from '#app';
+
+const { $t } = useNuxtApp();
+
+const values = computed(() => [
   {
-    title: 'Trust & Integrity',
-    description: 'As an AMPI-certified agent, my clients know they can count on me — always.'
+    title: $t('meetme.valuesSection.values.trust.title'),
+    description: $t('meetme.valuesSection.values.trust.description')
   },
   {
-    title: 'Intuitive, Heartfelt Care',
-    description: "I don't just check boxes — I listen deeply, understand your needs, and support you with genuine care."
+    title: $t('meetme.valuesSection.values.care.title'),
+    description: $t('meetme.valuesSection.values.care.description')
   },
   {
-    title: 'Discretion & Clear Communication',
-    description: "You'll always know where we stand. Transparent, honest, and respectful of your privacy."
+    title: $t('meetme.valuesSection.values.communication.title'),
+    description: $t('meetme.valuesSection.values.communication.description')
   },
   {
-    title: 'Local Knowledge, Global Mindset',
-    description: "Fluent in Spanish, deeply connected to Sayulita, and tuned into what life here truly means."
+    title: $t('meetme.valuesSection.values.knowledge.title'),
+    description: $t('meetme.valuesSection.values.knowledge.description')
   },
   {
-    title: 'Ease, Comfort & Connection',
-    description: "I aim to make this process feel like a natural, exciting next step - not a stressful transaction."
+    title: $t('meetme.valuesSection.values.comfort.title'),
+    description: $t('meetme.valuesSection.values.comfort.description')
   },
   {
-    title: 'Rooted in Community',
-    description: "I believe in supporting local businesses, culture, and people — because that's what makes this place magic."
+    title: $t('meetme.valuesSection.values.community.title'),
+    description: $t('meetme.valuesSection.values.community.description')
   }
-];
+]);
 </script>
 
 <style scoped>

@@ -2,36 +2,34 @@
   <section id="about" class="message-section">
     <div class="container">
       <div class="left" data-animation="fade-right">
-        <h2 class="title" data-animation="text-gradient">Welcome Home</h2>
-        <p class="subtitle" data-animation="text-gradient">Real estate with heart, clarity, and local soul</p>
+        <h2 class="title" data-animation="text-gradient">{{ $t('message.title') }}</h2>
+        <p class="subtitle" data-animation="text-gradient">{{ $t('message.subtitle') }}</p>
       </div>
       <div class="right">
         <div class="body">
         
-        <p data-animation="blur-in" class="delay-100">
-          I'm Olivia, an <strong>AMPI-certified real estate agent</strong> at LunaMar Estates, passionate about helping you find not just a property, but a lifestyle.
-        </p>
+        <p data-animation="blur-in" class="delay-100" v-html="$t('message.intro')"></p>
         
         <p data-animation="fade-up" class="delay-200">
-          With a background in journalism, hospitality, and luxury service, I guide my clients with care, discretion, and vision — from first-time buyers to seasoned investors. I speak your language (and Spanish too), and I know this town like home — because it is.
+          {{ $t('message.background') }}
         </p>
         
         <p data-animation="slide-up" class="delay-300">
-          Let's make the journey smooth, meaningful, and maybe even fun.
+          {{ $t('message.journey') }}
         </p>
         
         <h3 class="section-heading" data-animation="scale-in" data-text-animation="true">
-          My values
+          {{ $t('message.valuesHeading') }}
         </h3>
-        <p class="values delay-100" data-animation="blur-in">Trust | Connection | Local Insight | Intuitive Care | Calm Guidance</p>
+        <p class="values delay-100" data-animation="blur-in">{{ $t('message.valuesList') }}</p>
         
         <h3 class="section-heading" data-animation="rotate-in">
-          Services
+          {{ $t('message.servicesHeading') }}
         </h3>
         <ul class="services-list stagger-children" data-animation="fade-up">
-          <li>Personalized real estate guidance</li>
-          <li>Curated property showings</li>
-          <li>Investment &amp; lifestyle consulting</li>
+          <li>{{ $t('message.services.guidance') }}</li>
+          <li>{{ $t('message.services.showings') }}</li>
+          <li>{{ $t('message.services.consulting') }}</li>
         </ul>
         </div>
       </div>
@@ -40,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-// static content; no script logic needed
+// Using the global $t function from the plugin
 </script>
 
 <style scoped>

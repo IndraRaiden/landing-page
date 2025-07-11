@@ -1,12 +1,12 @@
 <template>
   <div class="left-showcase" data-animation="fade-up">
-    <img src="https://images.unsplash.com/photo-1559825481-12a05cc00344?q=80&w=2069&auto=format&fit=crop" alt="Sayulita Beach View" class="left-image">
+    <img src="https://images.unsplash.com/photo-1559825481-12a05cc00344?q=80&w=2069&auto=format&fit=crop" alt="{{ $t('meetme.leftShowcase.imageAlt') }}" class="left-image">
     <div class="experience-badge">
       <span class="number">10+</span>
-      <span class="text">Years in Real Estate</span>
+      <span class="text">{{ $t('meetme.leftShowcase.yearsExperience') }}</span>
     </div>
     <div class="certification-badge">
-      <span class="text">AMPI Certified</span>
+      <span class="text">{{ $t('meetme.leftShowcase.certified') }}</span>
     </div>
   </div>
 </template>

@@ -1,16 +1,16 @@
 <template>
   <div class="profile-info">
-    <p class="subtitle" data-animation="text-gradient">Olivia Matheson</p>
+    <p class="subtitle" data-animation="text-gradient">{{ $t('meetme.profileInfo.name') }}</p>
     
-    <p data-animation="blur-in" class="delay-100">I'm Olivia Matheson, a Canadian-born, Sayulita-based AMPI-certified agent with a heart for helping people feel at home — literally.</p>
+    <p data-animation="blur-in" class="delay-100">{{ $t('meetme.profileInfo.intro') }}</p>
     
-    <p data-animation="slide-up" class="delay-200">My journey began in journalism and luxury hospitality, where I learned to listen deeply, care intuitively, and notice every detail. Today, I bring that same attention and calm confidence to real estate, helping clients navigate each step with clarity and trust.</p>
+    <p data-animation="slide-up" class="delay-200">{{ $t('meetme.profileInfo.background') }}</p>
     
-    <p data-animation="scale-in" class="delay-300">Whether you're buying your dream beach home or listing a legacy property, my goal is to create an experience that feels thoughtful, smooth, and truly yours.</p>
+    <p data-animation="scale-in" class="delay-300">{{ $t('meetme.profileInfo.approach') }}</p>
     
-    <p data-animation="rotate-in" class="delay-400">Outside of real estate, I love the jungle trails, hidden coves, and artisan markets that make this town so special — and I bring that same love of place to every client I work with.</p>
+    <p data-animation="rotate-in" class="delay-400">{{ $t('meetme.profileInfo.personal') }}</p>
     
-    <p data-animation="text-underline" data-text-animation="true" class="delay-500">Let's connect — and find the life you're dreaming of.</p>
+    <p data-animation="text-underline" data-text-animation="true" class="delay-500">{{ $t('meetme.profileInfo.callToAction') }}</p>
   </div>
 </template>
 

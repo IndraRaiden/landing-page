@@ -2,34 +2,34 @@
   <section id="projects" class="find-place-section">
     <div class="find-place-container">
       <div class="find-place-header" data-animation="fade-up">
-        <h2 class="section-title" data-animation="text-underline">Find Your Place</h2>
-        <p class="section-subtitle">Handpicked homes that reflect your lifestyle.</p>
-        <p class="section-description">Here's a glimpse of a few special properties I've selected for you — each one reflecting the magic and opportunity of coastal living. Whether you're looking for a serene retreat, a smart investment, or a place to build your dream life, there's something waiting for you here.</p>
+        <h2 class="section-title" data-animation="text-underline">{{ $t('findYourPlace.title') }}</h2>
+        <p class="section-subtitle">{{ $t('findYourPlace.subtitle') }}</p>
+        <p class="section-description">{{ $t('findYourPlace.description') }}</p>
       </div>
       
       <div class="property-grid">
         <div class="property-card delay-100" data-animation="fade-up">
           <div class="property-image casa-arbol"></div>
           <div class="property-content">
-            <h3>Casa Árbol</h3>
-            <p>A hidden gem nestled in nature, designed for peace, flow, and inspired living.</p>
-            <a href="#casa-arbol" class="explore-link">View Details →</a>
+            <h3>{{ $t('findYourPlace.properties.casaArbol.title') }}</h3>
+            <p>{{ $t('findYourPlace.properties.casaArbol.description') }}</p>
+            <a href="#casa-arbol" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
           </div>
         </div>
         
         <div class="property-card delay-200" data-animation="fade-up">
           <div class="property-image lote-omana"></div>
           <div class="property-content">
-            <h3>Lote Omana</h3>
-            <p>A rare opportunity to build your vision from the ground up — in a location full of potential.</p>
-            <a href="#lote-omana" class="explore-link">View Details →</a>
+            <h3>{{ $t('findYourPlace.properties.loteOmana.title') }}</h3>
+            <p>{{ $t('findYourPlace.properties.loteOmana.description') }}</p>
+            <a href="#lote-omana" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
           </div>
         </div>
       </div>
       
       <div class="cta-buttons" data-animation="fade-up">
-        <a href="https://lunamarestates.com/idx/search/?SavedSearch=20250605183630259633000000&Limit=10&SubdivisionName=Sayulita" target="_blank" class="portfolio-btn">For the full selection of listings, visit the LunaMar portfolio</a>
-        <a href="https://wa.me/523221014263" target="_blank" class="whatsapp-btn">Got questions? Contact me directly</a>
+        <a href="https://lunamarestates.com/idx/search/?SavedSearch=20250605183630259633000000&Limit=10&SubdivisionName=Sayulita" target="_blank" class="portfolio-btn">{{ $t('findYourPlace.portfolioButton') }}</a>
+        <a href="https://wa.me/523221014263" target="_blank" class="whatsapp-btn">{{ $t('findYourPlace.contactButton') }}</a>
       </div>
     </div>
   </section>

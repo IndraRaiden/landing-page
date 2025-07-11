@@ -3,23 +3,23 @@
     <div class="footer-content">
       <div class="footer-brand">
         <div class="footer-logo">HWD</div>
-        <p class="footer-tagline">Helping you find your perfect place in paradise.</p>
+        <p class="footer-tagline">{{ $t('footer.tagline') }}</p>
       </div>
       
       <div class="footer-links">
         <div class="footer-column">
-          <h3>Navigation</h3>
+          <h3>{{ $t('footer.navigation.title') }}</h3>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#meetme">Meet Olivia</a></li>
-            <li><a href="#press">Working</a></li>
-            <li><a href="#projects">Find Your Place</a></li>
+            <li><a href="#about">{{ $t('footer.navigation.about') }}</a></li>
+            <li><a href="#contact">{{ $t('footer.navigation.contact') }}</a></li>
+            <li><a href="#meetme">{{ $t('footer.navigation.meetOlivia') }}</a></li>
+            <li><a href="#press">{{ $t('footer.navigation.working') }}</a></li>
+            <li><a href="#projects">{{ $t('footer.navigation.findYourPlace') }}</a></li>
           </ul>
         </div>
         
         <div class="footer-column">
-          <h3>Contact</h3>
+          <h3>{{ $t('footer.contact.title') }}</h3>
           <ul>
             <li><a href="mailto:olivia@lunamarestates.com">olivia@lunamarestates.com</a></li>
             <li><a href="https://wa.me/523221014263">(+52) 322-101-4263</a></li>
@@ -28,7 +28,7 @@
         </div>
         
         <div class="footer-column">
-          <h3>Follow</h3>
+          <h3>{{ $t('footer.follow.title') }}</h3>
           <div class="social-icons">
             <a href="https://instagram.com/olivia.lunamar" target="_blank" aria-label="Instagram">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -47,9 +47,9 @@
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; {{ new Date().getFullYear() }} LunaMar Estates. All rights reserved.</p>
-      <p>Designed with ♥ in Puerto Vallarta</p>
-      <p>Developed By Digital Sands</p>
+      <p>&copy; {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}</p>
+      <p>{{ $t('footer.designedWith') }}</p>
+      <p>{{ $t('footer.developedBy') }}</p>
     </div>
   </footer>
 </template>
