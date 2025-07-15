@@ -41,7 +41,7 @@
 
 /* Text gradient animation - simplified */
 [data-animation="text-gradient"] {
-  background: linear-gradient(90deg, #000, #666, #000);
+  background: linear-gradient(90deg, #ffffff, #f0f0f0, #ffffff);
   background-size: 200% 100%;
   background-clip: text;
   -webkit-background-clip: text;

@@ -22,7 +22,7 @@
             <p>{{ $t('cta.socialIntro') }}</p>
             <div class="social-links" data-animation="fade-up">
               <a href="https://instagram.com/livewillsellit" target="_blank" rel="noopener noreferrer" class="social-link instagram">@livewillsellit</a>
-              <a href="https://wa.me/523221014263" target="_blank" rel="noopener noreferrer" class="social-link whatsapp">WhatsApp Icon</a>
+              <a href="https://wa.me/523221014263" target="_blank" rel="noopener noreferrer" class="social-link whatsapp">WhatsApp</a>
             </div>
           </div>
         </div>

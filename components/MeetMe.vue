@@ -42,7 +42,7 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   overflow-x: hidden;
   max-width: 100%;
   box-sizing: border-box;
-  background: linear-gradient(135deg, rgba(255,240,210,0.5) 0%, rgba(255,220,180,0.4) 100%);
+  background: white;
   border-top: 2px solid var(--accent-yellow);
   border-bottom: 2px solid var(--accent-magenta);
 }
@@ -153,8 +153,7 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(135deg, rgba(255, 220, 180, 0.3), rgba(255, 180, 220, 0.3));
-  mix-blend-mode: overlay;
+  background: white;
   z-index: 0;
 }
 

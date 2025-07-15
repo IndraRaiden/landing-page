@@ -3,10 +3,10 @@
     <div class="container">
       <div class="left" data-animation="fade-right">
         <h2 class="title" data-animation="text-gradient">{{ $t('message.title') }}</h2>
-        <p class="subtitle" data-animation="text-gradient">{{ $t('message.subtitle') }}</p>
       </div>
       <div class="right">
         <div class="body">
+          <p class="subtitle" data-animation="text-gradient">{{ $t('message.subtitle') }}</p>
         
         <p data-animation="blur-in" class="delay-100" v-html="$t('message.intro')"></p>
         
@@ -130,32 +130,37 @@
   padding-right: 0;
 }
 
+
+
 .subtitle {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   position: relative;
-  display: inline-block;
+  display: block;
   padding-bottom: 8px;
   font-family: "Times New Roman", Times, serif;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
+  margin: 0 0 2rem 0;
   line-height: 1.4;
+  text-align: left;
+  color: #ff0066;
 }
 
 .subtitle::after {
   content: '';
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: 0;
-  height: 1px;
-  background-color: #E0E0E0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffcc00, #ff0066);
   transition: width 0.6s ease;
 }
 
 .subtitle:hover::after {
   width: 100%;
+  left: auto;
+  right: 0;
 }
 
 .body p {

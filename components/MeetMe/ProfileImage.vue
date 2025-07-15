@@ -1,6 +1,5 @@
 <template>
   <div class="profile-image-container" data-animation="fade-right">
-    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" alt="Olivia Matheson - Real Estate Agent" class="main-profile-image" />
     <div class="featured-property">
       <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2070&auto=format&fit=crop" alt="Featured Sayulita Property" class="featured-image" />
       <a href="https://lunamarestates.com/idx/search/?SavedSearch=20250605183630259633000000&Limit=10&SubdivisionName=Sayulita" target="_blank" class="portfolio-button">View Portfolio</a>
@@ -9,21 +8,7 @@
 </template>
 
 <style scoped>
-.profile-image-container .main-profile-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-  border: 2px solid var(--accent-orange);
-  transition: transform 0.4s ease;
-}
 
-.profile-image-container .main-profile-image:hover {
-  transform: scale(1.02);
-}
 
 .featured-property {
   position: relative;

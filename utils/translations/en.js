@@ -156,8 +156,8 @@ export default {
     follow: {
       title: 'Follow'
     },
-    copyright: 'LunaMar Estates. All rights reserved.',
+    copyright: 'Livwillsellit Estates. All rights reserved.',
     designedWith: 'Designed with ♥ in Puerto Vallarta',
-    developedBy: 'Developed By Digital Sands'
+    developedBy: 'Developed By Digital Sands & dalocalway'
   }
 }
