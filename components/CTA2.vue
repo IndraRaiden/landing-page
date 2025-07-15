@@ -10,7 +10,7 @@
         
         <div class="contact-info delay-200" data-animation="slide-up">
           <p class="email">Write to me at <a href="mailto:olivia@lunamarestates.com" data-animation="text-underline">olivia@lunamarestates.com</a></p>
-          <p class="social">Or say hi on <a href="https://instagram.com/lunamarestates" target="_blank" data-animation="text-underline">Instagram</a> and <a href="https://wa.me/523221014263" target="_blank" data-animation="text-underline">What'sApp</a></p>
+          <p class="social">Or say hi on <a href="https://instagram.com/livwillsellit" target="_blank" data-animation="text-underline">Instagram</a> and <a href="https://wa.me/523221014263" target="_blank" data-animation="text-underline">What'sApp</a></p>
         </div>
       </div>
       

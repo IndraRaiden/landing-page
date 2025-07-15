@@ -40,8 +40,8 @@
           <h3 class="option-title">{{ $t('contact.instagramTitle') }}</h3>
           <div class="option-content">
             <p>{{ $t('contact.instagramText') }}</p>
-            <a href="https://instagram.com/olivia.lunamar" target="_blank" class="contact-link">
-              <span>@olivia.lunamar</span>
+            <a href="https://instagram.com/livwillsellit" target="_blank" class="contact-link">
+              <span>@livwillsellit</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
