@@ -6,7 +6,7 @@
       </div>
       <div class="right">
         <div class="body">
-          <p class="subtitle">{{ $t('message.subtitle') }}</p>
+          <p class="subtitle" data-animation="fade-right">{{ $t('message.subtitle') }}</p>
         
         <p data-animation="blur-in" class="delay-100" v-html="$t('message.intro')"></p>
         
@@ -142,10 +142,13 @@
 
 
 .subtitle {
-  font-size: 1rem;
-  font-weight: normal;
+  font-size: 1.8rem;
+  font-weight: 500;
   margin: 0 0 1.5rem 0;
-  color: #000000;
+  color: #333333;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  display: inline-block;
 }
 
 .body p {
@@ -251,7 +254,7 @@
   }
   
   .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-top: 0.25rem;
   }
 }

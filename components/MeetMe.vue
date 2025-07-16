@@ -31,8 +31,6 @@
         </div>
       </div>
       
-      <!-- Footer text -->
-      <p class="footer-text">Let's make your next move feel like coming home</p>
       
       <!-- Values section full width -->
       <div class="values-full-width">
@@ -129,20 +127,20 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   width: 100%;
   box-sizing: border-box;
   padding-left: 2%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .left {
-  position: absolute;
-  left: 2%;
-  top: 0;
   width: 150px;
+  margin-right: 50px;
 }
 
 .right {
-  margin-left: 800px;
   flex: 1;
   text-align: left;
   max-width: 800px;
+  margin-left: 650px;
 }
 
 .values-full-width {
@@ -238,7 +236,29 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
     padding: 5rem 2rem;
   }
   
-  .content-row, .image-values-row, .portfolio-photo-row {
+  .content-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .left {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .right {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  
+  .portfolio-photo-row {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -248,6 +268,7 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
     margin-left: auto;
     margin-right: auto;
     display: block;
+    font-size: 3.5rem;
   }
 
   .title::after {

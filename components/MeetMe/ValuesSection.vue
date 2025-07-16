@@ -90,6 +90,7 @@ const values = computed(() => [
   max-width: 700px;
   margin-left: auto;
   margin-right: 0;
+  width: 100%;
 }
 
 .value-item {
@@ -103,7 +104,7 @@ const values = computed(() => [
   display: flex;
   flex-direction: column;
   min-height: 140px;
-  max-width: 220px;
+  width: 100%;
 }
 
 .value-item:nth-child(odd) {
@@ -132,6 +133,9 @@ const values = computed(() => [
 @media (max-width: 1024px) {
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
   }
   
   .values-header {
@@ -147,6 +151,8 @@ const values = computed(() => [
 @media (max-width: 768px) {
   .values-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
   }
   
   .section-heading {
@@ -154,6 +160,29 @@ const values = computed(() => [
     margin-left: auto;
     margin-right: auto;
     display: block;
+    font-size: 2.8rem;
+  }
+  
+  .values-intro {
+    text-align: center;
+  }
+  
+  .value-item {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 1.2rem;
+  }
+  
+  .value-item h4 {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .value-item p {
+    text-align: center;
+    font-size: 0.9rem;
   }
 }
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div>
     <nav class="nav-bar">
-      <div class="logo" data-animation="fade-down">HWD</div>
+      <div class="g16-logo" data-animation="fade-down"><img src="/navbar/g16.svg" alt="G16 Logo" /></div>
+      <div class="by-text" data-animation="fade-down">by</div>
+      <div class="logo" data-animation="fade-down"><img src="/navbar/Transparent White Logo.png" alt="HWD Logo" /></div>
       <!-- Desktop Navigation Links -->
       <ul class="nav-links desktop-nav">
         <li data-animation="fade-down" class="delay-100">
@@ -48,7 +50,9 @@
     <div class="sidebar-overlay" v-if="isSidebarOpen" @click="closeSidebar"></div>
     <div class="sidebar" :class="{ active: isSidebarOpen }">
       <div class="sidebar-header">
-        <div class="sidebar-logo">HWD</div>
+        <div class="sidebar-g16-logo"><img src="/navbar/g16.svg" alt="G16 Logo" /></div>
+        <div class="sidebar-by-text">by</div>
+        <div class="sidebar-logo"><img src="/navbar/Transparent White Logo.png" alt="HWD Logo" /></div>
         <div class="close-btn" @click="closeSidebar">&times;</div>
       </div>
       <ul class="sidebar-links">
@@ -191,7 +195,7 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Changed from space-between to align logos to the left */
   align-items: center;
   padding: 1rem 2rem;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -203,12 +207,50 @@ onUnmounted(() => {
 
 /* Accent stripe - removed as we now have a gradient background */
 
+.g16-logo {
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-right: 3px; /* Add tiny space after first logo */
+}
+
+.g16-logo img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+}
+
+.by-text {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #ffffff;
+  margin: 0 5px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: 2px;
   color: #ffffff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Push other elements to the right */
+  margin-left: 10px; /* Add small spacing between logos */
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
 }
 
 .nav-links {
@@ -421,11 +463,40 @@ onUnmounted(() => {
   background: #ffffff;
 }
 
+.sidebar-g16-logo {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 2px; /* Add tiny space after first logo in sidebar */
+}
+
+.sidebar-g16-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.sidebar-by-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-style: italic;
+  color: #000000;
+  margin: 0 3px;
+  display: inline-flex;
+  align-items: center;
+}
+
 .sidebar-logo {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
   color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-logo img {
+  height: 60px;
+  width: auto;
+  filter: brightness(0);
 }
 
 .close-btn {
