@@ -50,6 +50,9 @@
       <p>&copy; {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}</p>
       <p>{{ $t('footer.designedWith') }}</p>
       <p>{{ $t('footer.developedBy') }}</p>
+      <div class="footer-certifications">
+        <img src="/img/ampi.png" alt="AMPI Certified" class="certification-logo" />
+      </div>
     </div>
   </footer>
 </template>
@@ -195,6 +198,24 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-certifications {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.certification-logo {
+  height: 60px;
+  width: auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--accent-orange);
 }
 
 @media (max-width: 900px) {

@@ -87,19 +87,23 @@ const values = computed(() => [
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .value-item {
   background-color: #f8a0a0;
   border-radius: 10px;
-  padding: 1.75rem;
+  padding: 1.5rem;
   box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 160px;
+  min-height: 140px;
+  max-width: 220px;
 }
 
 .value-item:nth-child(odd) {
@@ -111,17 +115,17 @@ const values = computed(() => [
 }
 
 .value-item h4 {
-  font-size: 1.35rem;
-  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  margin: 0 0 0.8rem 0;
   font-weight: 600;
   color: #333;
   font-family: "Arial", sans-serif;
 }
 
 .value-item p {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #333;
 }
 

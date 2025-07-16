@@ -6,7 +6,7 @@
       </div>
       <div class="right">
         <div class="body">
-          <p class="subtitle" data-animation="text-gradient">{{ $t('message.subtitle') }}</p>
+          <p class="subtitle">{{ $t('message.subtitle') }}</p>
         
         <p data-animation="blur-in" class="delay-100" v-html="$t('message.intro')"></p>
         
@@ -26,11 +26,20 @@
         <h3 class="section-heading" data-animation="rotate-in">
           {{ $t('message.servicesHeading') }}
         </h3>
-        <ul class="services-list stagger-children" data-animation="fade-up">
-          <li>{{ $t('message.services.guidance') }}</li>
-          <li>{{ $t('message.services.showings') }}</li>
-          <li>{{ $t('message.services.consulting') }}</li>
-        </ul>
+        <div class="services-grid">
+          <div class="service-card">
+            <img src="/img/1.jpg" alt="Personalized Real Estate Guidance" class="service-image">
+            <h4 class="service-title">{{ $t('message.services.guidanceTitle') }}</h4>
+          </div>
+          <div class="service-card">
+            <img src="/img/2.jpg" alt="Curated Property Showings" class="service-image">
+            <h4 class="service-title">{{ $t('message.services.showingsTitle') }}</h4>
+          </div>
+          <div class="service-card">
+            <img src="/img/3.jpeg" alt="Investment & Lifestyle Consulting" class="service-image">
+            <h4 class="service-title">{{ $t('message.services.consultingTitle') }}</h4>
+          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -133,34 +142,10 @@
 
 
 .subtitle {
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  position: relative;
-  display: block;
-  padding-bottom: 8px;
-  font-family: "Times New Roman", Times, serif;
-  margin: 0 0 2rem 0;
-  line-height: 1.4;
-  text-align: left;
-  color: #ff0066;
-}
-
-.subtitle::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #ffcc00, #ff0066);
-  transition: width 0.6s ease;
-}
-
-.subtitle:hover::after {
-  width: 100%;
-  left: auto;
-  right: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0 0 1.5rem 0;
+  color: #000000;
 }
 
 .body p {
@@ -202,15 +187,46 @@
   margin-bottom: 2rem;
 }
 
-.services-list {
-  list-style-position: outside;
-  padding-left: 1.25rem;
-  margin: 0;
-  text-align: left;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.services-list li {
-  margin-bottom: 0.5rem;
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.03);
+}
+
+.service-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 

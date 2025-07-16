@@ -22,7 +22,10 @@ export default {
     services: {
       guidance: "Asesoría personalizada en bienes raíces",
       showings: "Presentaciones selectas de propiedades",
-      consulting: "Consultoría en inversiones y estilo de vida"
+      consulting: "Consultoría en inversiones y estilo de vida",
+      guidanceTitle: "Asesoría Personalizada en Bienes Raíces",
+      showingsTitle: "Presentaciones Selectas de Propiedades",
+      consultingTitle: "Consultoría en Inversiones y Estilo de Vida"
     }
   },
   about: {

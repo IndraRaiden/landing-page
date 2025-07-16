@@ -22,7 +22,10 @@ export default {
     services: {
       guidance: "Personalized real estate guidance",
       showings: "Curated property showings",
-      consulting: "Investment & lifestyle consulting"
+      consulting: "Investment & lifestyle consulting",
+      guidanceTitle: "Personalized Real Estate Guidance",
+      showingsTitle: "Curated Property Showings",
+      consultingTitle: "Investment & Lifestyle Consulting"
     }
   },
   about: {

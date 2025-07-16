@@ -1,10 +1,13 @@
 <template>
   <section id="projects" class="find-place-section">
+    <h2 class="section-title absolute-title" data-animation="text-underline">{{ $t('findYourPlace.title') }}</h2>
     <div class="find-place-container">
       <div class="find-place-header" data-animation="fade-up">
-        <h2 class="section-title" data-animation="text-underline">{{ $t('findYourPlace.title') }}</h2>
-        <p class="section-subtitle">{{ $t('findYourPlace.subtitle') }}</p>
-        <p class="section-description">{{ $t('findYourPlace.description') }}</p>
+        <div class="title-placeholder"></div>
+        <div class="text-container">
+          <p class="section-subtitle">{{ $t('findYourPlace.subtitle') }}</p>
+          <p class="section-description">{{ $t('findYourPlace.description') }}</p>
+        </div>
       </div>
       
       <div class="property-grid">
@@ -41,7 +44,6 @@
 
 <style scoped>
 .find-place-section {
-  overflow: hidden;
   width: 100%;
   padding: 8rem 0;
   background: #FFFFFF;
@@ -57,8 +59,11 @@
 }
 
 .find-place-header {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   margin-bottom: 4rem;
+  position: relative;
 }
 
 .section-title {
@@ -75,6 +80,8 @@
   text-shadow: 2px 2px 4px rgba(255, 100, 180, 0.4);
   -webkit-text-fill-color: initial;
   background: none;
+  z-index: 10;
+  white-space: nowrap;
 }
 
 .section-title::after {
@@ -96,18 +103,19 @@
   font-size: 1.4rem;
   font-weight: 500;
   max-width: 600px;
-  margin: 0 auto 1rem;
+  margin: 0 0 1rem;
   line-height: 1.6;
   font-family: "Times New Roman", Times, serif;
+  text-align: right;
 }
 
 .section-description {
   font-size: 1rem;
   opacity: 0.8;
   max-width: 800px;
-  margin: 0 auto 2rem;
+  margin: 0 0 2rem;
   line-height: 1.6;
-  text-align: center;
+  text-align: right;
 }
 
 .property-grid {
@@ -143,13 +151,13 @@
 
 /* Placeholder colored backgrounds for each property */
 .casa-arbol {
-  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop');
+  background-image: url('/img/CasaDelArbol_1.JPG');
   background-position: center;
   background-size: cover;
 }
 
 .lote-omana {
-  background-image: url('https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=2070&auto=format&fit=crop');
+  background-image: url('/img/Lote_Omana_1.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -230,6 +238,34 @@
   transform: translateY(-2px);
 }
 
+.title-placeholder {
+  height: 5rem;
+}
+
+.absolute-title {
+  position: absolute;
+  left: 0;
+  top: 8rem;
+  z-index: 10;
+  margin-left: 5%;
+}
+
+.text-container {
+  /* occupy full width of its grid column */
+  width: 100%;
+  max-width: 100%;
+
+  /* align the block to the far right */
+  margin-left: auto; /* push the element to the end in block layouts */
+  justify-self: end; /* push element to the end in grid layouts */
+
+  /* flexbox to right-align internal content too */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* place children at far right */
+  text-align: right;
+}
+
 @media (max-width: 900px) {
   .property-grid {
     grid-template-columns: 1fr;
@@ -252,6 +288,25 @@
   
   .section-description {
     padding: 0 1rem;
+    text-align: right;
+  }
+  
+  .find-place-header {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .title-placeholder,
+  .text-container {
+    width: 100%;
+  }
+  
+  .absolute-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-left: 0;
+    margin-bottom: 2rem;
   }
 }
 .find-place-section::before {
