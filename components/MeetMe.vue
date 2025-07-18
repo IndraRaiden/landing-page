@@ -17,9 +17,9 @@
       
       <!-- Portfolio and Photo row -->
       <div class="portfolio-photo-row">
-        <div class="portfolio-container">
+        <a href="https://lunamarestates.com/idx/search/?SavedSearch=20250605183630259633000000&Limit=10&SubdivisionName=Sayulita" target="_blank" class="portfolio-container">
           <h3 class="section-label">Portfolio</h3>
-        </div>
+        </a>
         
         <div class="photo-container">
           <div class="photo-gallery">
@@ -178,6 +178,15 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.portfolio-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #ffa06c; /* Slightly darker orange on hover */
 }
 
 .photo-container {
@@ -353,17 +362,23 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   }
   
   .photo-container {
-    height: 380px; /* Reduced height */
+    height: auto;
+    min-height: 300px;
+    padding-bottom: 2rem;
   }
   
   .photo-gallery {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+    gap: 0.5rem;
   }
   
   .photo-item {
     width: 100%;
-    height: 100px;
-    margin-bottom: 0.5rem;
+    aspect-ratio: 1/1;
+    height: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -403,11 +418,16 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   }
   
   .photo-container {
-    height: 320px; /* Reduced height */
+    height: auto;
+    min-height: 280px;
+  }
+  
+  .photo-gallery {
+    gap: 0.3rem;
   }
   
   .photo-item {
-    height: 90px;
+    aspect-ratio: 1/1;
   }
 }
 
@@ -419,6 +439,12 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   gap: 0.5rem;
   margin-top: 1rem;
   justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .photo-gallery {
+    height: auto;
+  }
 }
 
 .photo-item {
