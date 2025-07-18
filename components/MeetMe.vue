@@ -22,15 +22,9 @@
         </a>
         
         <div class="photo-container">
-          <div class="photo-gallery">
-            <div class="photo-item">
-              <img src="/meet/WhatsApp Image 2025-07-09 at 15.30.10.jpeg" alt="Olivia Photo 1" class="olivia-photo" />
-            </div>
-            <div class="photo-item">
-              <img src="/meet/WhatsApp Image 2025-07-09 at 15.30.10 (2).jpeg" alt="Olivia Photo 2" class="olivia-photo" />
-            </div>
-            <div class="photo-item">
-              <img src="/meet/WhatsApp Image 2025-07-09 at 15.30.35.jpeg" alt="Olivia Photo 3" class="olivia-photo" />
+          <div class="photo-gallery single-photo">
+            <div class="photo-item full-width">
+              <img src="/meet/Meet_Olivia.jpeg" alt="Olivia Photo" class="olivia-photo" />
             </div>
           </div>
           <div class="ampi-badge">
@@ -204,6 +198,30 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.photo-gallery {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.photo-gallery.single-photo {
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.photo-item.full-width {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-item.full-width img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
 .section-label {
   font-size: 1.8rem;
   font-style: italic;
@@ -372,6 +390,11 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
     grid-template-columns: repeat(3, 1fr);
     height: auto;
     gap: 0.5rem;
+  }
+  
+  .photo-gallery.single-photo {
+    grid-template-columns: 1fr;
+    width: 100%;
   }
   
   .photo-item {
