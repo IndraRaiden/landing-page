@@ -142,7 +142,22 @@ export default {
   },
   animatedDivider: {
     quote: '"Working with this agent changed our entire experience. They made the impossible possible."',
-    attribution: '— Recent Client'
+    attribution: '— Recent Client',
+    card1: {
+      title: 'Client Success Stories',
+      text: '"Working with Olivia changed our entire experience. She made the impossible possible and found us our dream home."',
+      attribution: '— Maria & John, New Homeowners'
+    },
+    card2: {
+      title: 'Local Expertise',
+      text: '"Olivia\'s knowledge of Sayulita is unmatched. She showed us neighborhoods we never would have found on our own."',
+      attribution: '— The Rodriguez Family'
+    },
+    card3: {
+      title: 'Seamless Process',
+      text: '"From our first meeting to closing day, Olivia made everything smooth and stress-free. We couldn\'t be happier."',
+      attribution: '— Sarah T., Property Investor'
+    }
   },
   footer: {
     tagline: 'Helping you find your perfect place in paradise.',

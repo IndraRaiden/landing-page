@@ -424,8 +424,8 @@ onUnmounted(() => {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -300px;
-  width: 280px;
+  right: -350px;
+  width: 330px;
   height: 100%;
   background: #ffffff;
   box-shadow: -5px 0 15px rgba(0,0,0,0.2);
@@ -459,53 +459,66 @@ onUnmounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5rem;
-  background: #ffffff;
+  background: #000000;
+  position: relative;
+  height: 80px;
 }
 
 .sidebar-g16-logo {
   display: inline-flex;
   align-items: center;
   margin-right: 2px; /* Add tiny space after first logo in sidebar */
+  position: relative;
+  z-index: 1;
 }
 
 .sidebar-g16-logo img {
-  height: 40px;
+  height: 30px;
   width: auto;
+  max-width: none;
 }
 
 .sidebar-by-text {
   font-size: 0.9rem;
   font-weight: 500;
   font-style: italic;
-  color: #000000;
+  color: #ffffff;
   margin: 0 3px;
   display: inline-flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .sidebar-logo {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #000000;
+  color: #ffffff;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .sidebar-logo img {
-  height: 60px;
+  height: 35px;
   width: auto;
-  filter: brightness(0);
+  filter: brightness(1);
+  max-width: none;
+  object-fit: contain;
 }
 
 .close-btn {
   font-size: 2rem;
-  color: #000000;
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .sidebar-links {

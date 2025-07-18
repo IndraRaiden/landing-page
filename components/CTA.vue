@@ -30,7 +30,7 @@
       
       <div class="right-column">
         <div class="profile-image">
-          <div class="image-placeholder">{{ $t('cta.photoPlaceholder') }}</div>
+          <img src="/hero/WhatsApp Image 2025-07-09 at 15.30.10 (1).jpeg" alt="Olivia Profile" class="actual-image" />
         </div>
       </div>
     </div>
@@ -254,6 +254,19 @@ onMounted(() => {
   justify-content: center;
 }
 
+.actual-image {
+  width: 350px;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.actual-image:hover {
+  transform: scale(1.02);
+}
+
 .image-placeholder {
   width: 280px;
   height: 380px;
@@ -286,6 +299,11 @@ onMounted(() => {
   .image-placeholder {
     width: 240px;
     height: 320px;
+  }
+  
+  .actual-image {
+    width: 300px;
+    height: 400px;
   }
 }
 
@@ -351,6 +369,11 @@ onMounted(() => {
     width: 220px;
     height: 300px;
   }
+  
+  .actual-image {
+    width: 220px;
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -376,6 +399,11 @@ onMounted(() => {
   }
   
   .image-placeholder {
+    width: 180px;
+    height: 240px;
+  }
+  
+  .actual-image {
     width: 180px;
     height: 240px;
   }

@@ -22,7 +22,17 @@
         </div>
         
         <div class="photo-container">
-          <h3 class="section-label">Foto de Olivia</h3>
+          <div class="photo-gallery">
+            <div class="photo-item">
+              <img src="/meet/WhatsApp Image 2025-07-09 at 15.30.10.jpeg" alt="Olivia Photo 1" class="olivia-photo" />
+            </div>
+            <div class="photo-item">
+              <img src="/meet/WhatsApp Image 2025-07-09 at 15.30.10 (2).jpeg" alt="Olivia Photo 2" class="olivia-photo" />
+            </div>
+            <div class="photo-item">
+              <img src="/meet/WhatsApp Image 2025-07-09 at 15.30.35.jpeg" alt="Olivia Photo 3" class="olivia-photo" />
+            </div>
+          </div>
           <div class="ampi-badge">
             <div class="ampi-badge-inner">
               <img src="/img/ampi.png" alt="AMPI Certified" class="ampi-logo" />
@@ -157,15 +167,30 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   margin-top: 3rem;
 }
 
-.portfolio-container, .photo-container {
+.portfolio-container {
   background-color: #ffb88c; /* Light orange background */
   border-radius: 8px;
-  height: 220px;
+  height: 300px; /* Reduced height */
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.photo-container {
+  background-color: #ffb88c; /* Light orange background */
+  border-radius: 8px;
+  height: 300px; /* Reduced height */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -323,8 +348,22 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
     text-align: center;
   }
   
-  .portfolio-container, .photo-container {
-    height: 180px;
+  .portfolio-container {
+    height: 380px; /* Reduced height */
+  }
+  
+  .photo-container {
+    height: 380px; /* Reduced height */
+  }
+  
+  .photo-gallery {
+    flex-direction: column;
+  }
+  
+  .photo-item {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -359,9 +398,55 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
     font-size: 1.6rem;
   }
   
-  .portfolio-container, .photo-container {
-    height: 150px;
+  .portfolio-container {
+    height: 320px; /* Reduced height */
   }
+  
+  .photo-container {
+    height: 320px; /* Reduced height */
+  }
+  
+  .photo-item {
+    height: 90px;
+  }
+}
+
+/* Photo gallery styles */
+.photo-gallery {
+  display: flex;
+  width: 100%;
+  height: 180px; /* Reduced height */
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.photo-item {
+  flex: 1;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--accent-orange);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-magenta);
+}
+
+.olivia-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.photo-item:hover .olivia-photo {
+  transform: scale(1.05);
 }
 
 /* raise main content above overlay */
