@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav class="nav-bar">
-      <div class="g16-logo" data-animation="fade-down"><img src="/navbar/g16.svg" alt="G16 Logo" /></div>
+      <div class="g16-logo" data-animation="fade-down" @click="scrollToSection('hero')" style="cursor: pointer;"><img src="/navbar/g16.svg" alt="G16 Logo" /></div>
       <div class="by-text" data-animation="fade-down">by</div>
-      <div class="logo" data-animation="fade-down"><img src="/navbar/Transparent White Logo.png" alt="HWD Logo" /></div>
+      <div class="logo" data-animation="fade-down" @click="scrollToSection('hero')" style="cursor: pointer;"><img src="/navbar/Transparent White Logo.png" alt="HWD Logo" /></div>
       <!-- Desktop Navigation Links -->
       <ul class="nav-links desktop-nav">
         <li data-animation="fade-down" class="delay-100">
@@ -21,6 +21,7 @@
         <li data-animation="fade-down" class="delay-500">
           <a href="#projects" :class="{ active: activeSection === 'projects' }" @click.prevent="scrollToSection('projects')">{{ t('navbar.findYourPlace') }}</a>
         </li>
+
         <li data-animation="fade-down" class="delay-600 whatsapp-icon">
           <a href="https://wa.me/523221014263" target="_blank" aria-label="Contact on WhatsApp">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#ffffff">
@@ -71,6 +72,7 @@
         <li>
           <a href="#projects" :class="{ active: activeSection === 'projects' }" @click="handleSidebarNavigation('projects')">{{ t('navbar.findYourPlace') }}</a>
         </li>
+
         <li>
           <a href="https://wa.me/523221014263" target="_blank" class="whatsapp-sidebar-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366" style="margin-right: 10px; vertical-align: middle;">

@@ -4,7 +4,8 @@ export default {
     contact: 'Contacto',
     meetOlivia: 'Conoce a Olivia',
     working: 'Trabajo',
-    findYourPlace: 'Encuentra tu Lugar'
+    findYourPlace: 'Encuentra tu Lugar',
+    livwilsellit: 'Livwilsellit'
   },
   hero: {
     title: 'Bienvenido',

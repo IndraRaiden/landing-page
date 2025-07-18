@@ -106,7 +106,7 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
 }
 
 .process-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin: 0 0 1.5rem 0;
   font-weight: 500;
   color: #333;
@@ -126,21 +126,21 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 2%;
+  padding: 0 2%;
   display: flex;
-  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .left {
-  width: 150px;
+  width: 250px;
   margin-right: 50px;
 }
 
 .right {
-  flex: 1;
+  width: 100%;
   text-align: left;
   max-width: 800px;
-  margin-left: 650px;
+  margin-left: 350px;
 }
 
 .values-full-width {
@@ -219,14 +219,54 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   color: #555;
 }
 
+@media (max-width: 1200px) {
+  .meetme-section {
+    padding: 7rem 4%;
+    gap: 3.5rem;
+  }
+  
+  .right {
+    margin-left: 300px;
+  }
+}
+
 @media (max-width: 1024px) {
   .meetme-section {
     padding: 6rem 4%;
     gap: 3rem;
   }
   
+  .right {
+    margin-left: 250px;
+  }
+  
   .portfolio-photo-row {
     gap: 1.5rem;
+  }
+  
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-row {
+    flex-direction: column;
+  }
+  
+  .left {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .right {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .title {
+    font-size: 3.8rem;
   }
 }
 
@@ -255,7 +295,6 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 0;
   }
   
   .portfolio-photo-row {
@@ -296,6 +335,33 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   pointer-events: none;
   background: white;
   z-index: 0;
+}
+
+@media (max-width: 480px) {
+  .meetme-section {
+    padding: 4rem 1.5rem;
+    gap: 2.5rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .process-title {
+    font-size: 1.3rem;
+  }
+  
+  .connect-text {
+    font-size: 1.1rem;
+  }
+  
+  .section-label {
+    font-size: 1.6rem;
+  }
+  
+  .portfolio-container, .photo-container {
+    height: 150px;
+  }
 }
 
 /* raise main content above overlay */

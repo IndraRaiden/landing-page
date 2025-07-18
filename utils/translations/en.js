@@ -4,7 +4,8 @@ export default {
     contact: 'Contact',
     meetOlivia: 'Meet Olivia',
     working: 'Working',
-    findYourPlace: 'Find Your Place'
+    findYourPlace: 'Find Your Place',
+    livwilsellit: 'Livwilsellit'
   },
   hero: {
     title: 'Welcome',

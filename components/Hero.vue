@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-section">
+  <section id="hero" class="hero-section">
 
     <!-- Hero Image -->
     <img
