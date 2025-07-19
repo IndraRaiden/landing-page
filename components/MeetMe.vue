@@ -258,6 +258,11 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   font-family: "Times New Roman", Times, serif;
   position: absolute;
   z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
 }
 
 .ampi-badge {
@@ -466,6 +471,11 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   
   .section-label {
     font-size: 1.6rem;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   .portfolio-container {
