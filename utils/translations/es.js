@@ -144,19 +144,24 @@ export default {
     quote: '"Trabajar con esta agente cambió toda nuestra experiencia. Hizo posible lo imposible."',
     attribution: '— Cliente Reciente',
     card1: {
-      title: 'Historias de Éxito',
-      text: '"Trabajar con Olivia cambió toda nuestra experiencia. Hizo posible lo imposible y encontró nuestra casa soñada."',
-      attribution: '— María y Juan, Nuevos Propietarios'
+      title: 'Experiencia Transfronteriza',
+      text: '"Navegar por el papeleo transfronterizo se sentía abrumador, pero Olivia lo hizo sin problemas. Explicó cada documento claramente, señaló detalles importantes y tenía todo organizado como un reloj. Su conocimiento y profesionalismo hicieron que todo el proceso fuera libre de estrés."',
+      attribution: '— María y Luis V. Kelowna, BC'
     },
     card2: {
-      title: 'Experiencia Local',
-      text: '"El conocimiento de Olivia sobre Sayulita no tiene comparación. Nos mostró vecindarios que nunca hubiéramos encontrado por nuestra cuenta."',
-      attribution: '— La Familia Rodríguez'
+      title: 'Proceso de Compra de Propiedad',
+      text: '"Conocimos a Olivia en diciembre de 2022, y fue fundamental en nuestro viaje de compra de nuestra propiedad en Sayulita. En nuestras conversaciones con ella, pudo brindarnos orientación ya que entendió nuestros objetivos. Su conocimiento de bienes raíces en Sayulita es valioso. Una vez que decidimos una propiedad, nos guió a través del proceso, proporcionó respuestas a nuestras numerosas preguntas, hizo un seguimiento minucioso y siempre ha sido proactiva anticipando nuestras necesidades. Olivia realmente nos ha ayudado con todo desde que la conocimos y no podríamos haberlo hecho sin ella. ¡Absolutamente recomendamos trabajar con Olivia!"',
+      attribution: '— Marcela P. San Francisco, CA'
     },
     card3: {
-      title: 'Proceso Sin Complicaciones',
-      text: '"Desde nuestra primera reunión hasta el día del cierre, Olivia hizo que todo fuera fluido y libre de estrés. No podríamos estar más felices."',
-      attribution: '— Sara T., Inversionista Inmobiliaria'
+      title: 'Negociación Brillante',
+      text: '"Olivia es una negociadora brillante. Manejó múltiples ofertas con confianza, leyó la situación perfectamente y guió estratégicamente las cosas hacia un resultado mejor de lo esperado. Fue impresionante verla trabajar entre bastidores para proteger el valor sin parecer nunca insistente."',
+      attribution: '— Javier G. Calgary, AB'
+    },
+    card4: {
+      title: 'Confianza y Profesionalismo',
+      text: '"Olivia Matheson, nuestra agente inmobiliaria que gestionó la transacción, siempre fue rápida, servicial, conocedora y profesional, como se esperaba. Lo que superó agradablemente nuestras expectativas, sin embargo, fue su amabilidad, que para nosotros se tradujo en un nivel de confianza personal necesario para aliviar la mayor parte de la ansiedad y el miedo. Olivia realmente se preocupaba por gestionar una transacción fluida y rápida para el beneficio de todos. Fue importante y refrescante. Pudo elevar nuestra experiencia de una transacción meramente burocrática en la adquisición de una casa antigua a una adquisición agradable donde pudimos visualizar nuestros sueños y futuro nuevo hogar en México."',
+      attribution: '—Yuri M. Denver, CO'
     }
   },
   footer: {

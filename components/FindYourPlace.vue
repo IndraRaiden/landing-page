@@ -64,6 +64,7 @@
   gap: 2rem;
   margin-bottom: 4rem;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .section-title {
@@ -123,6 +124,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
   margin-bottom: 4rem;
+  width: 100%;
 }
 
 .property-card {
@@ -134,6 +136,7 @@
   box-shadow: 0 4px 16px rgba(200, 200, 200, 0.15);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .property-card:hover {
@@ -201,6 +204,8 @@
   max-width: 800px;
   margin: 0 auto 2rem;
   text-align: center;
+  transition: all 0.3s ease;
+  padding: 0 1rem;
 }
 
 .portfolio-btn, .whatsapp-btn {
@@ -264,41 +269,92 @@
   flex-direction: column;
   align-items: flex-end; /* place children at far right */
   text-align: right;
+  transition: all 0.3s ease; /* smooth transition for responsive changes */
 }
 
-@media (max-width: 900px) {
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .find-place-section {
+    padding: 6rem 0;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .property-grid {
+    gap: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .portfolio-btn, .whatsapp-btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .absolute-title {
+    top: 6rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .find-place-section {
+    padding: 4rem 0;
+  }
+  
   .property-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   
   .section-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
   
-  .cta-buttons {
-    padding: 0 1rem;
-  }
-  
-  .portfolio-btn, .whatsapp-btn {
-    padding: 1rem 1rem;
-    font-size: 0.9rem;
-    width: 100%;
+  .section-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .section-description {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
     padding: 0 1rem;
-    text-align: right;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .portfolio-btn, .whatsapp-btn {
+    padding: 1rem;
+    font-size: 0.9rem;
+    width: 100%;
   }
   
   .find-place-header {
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-bottom: 3rem;
   }
   
-  .title-placeholder,
   .text-container {
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
   
   .absolute-title {
@@ -306,7 +362,46 @@
     top: auto;
     left: auto;
     margin-left: 0;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 100%;
+    padding-top: 1rem;
+  }
+  
+  .property-image {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .find-place-section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .property-content {
+    padding: 1.2rem;
+  }
+  
+  .property-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .property-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 .find-place-section::before {

@@ -2,7 +2,7 @@
   <footer class="footer-section">
     <div class="footer-content">
       <div class="footer-brand">
-        <div class="footer-logo">HWD</div>
+        <div class="footer-logo"><img src="/navbar/g16.svg" alt="G16 Logo" class="g16-logo" /></div>
         <p class="footer-tagline">{{ $t('footer.tagline') }}</p>
       </div>
       
@@ -50,9 +50,6 @@
       <p>&copy; {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}</p>
       <p>{{ $t('footer.designedWith') }}</p>
       <p>{{ $t('footer.developedBy') }}</p>
-      <div class="footer-certifications">
-        <img src="/img/ampi.png" alt="AMPI Certified" class="certification-logo" />
-      </div>
     </div>
   </footer>
 </template>
@@ -216,6 +213,12 @@
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--accent-orange);
+}
+
+.g16-logo {
+  height: 50px;
+  width: auto;
+  filter: brightness(0) invert(1); /* Makes the SVG white */
 }
 
 @media (max-width: 900px) {

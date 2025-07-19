@@ -144,19 +144,24 @@ export default {
     quote: '"Working with this agent changed our entire experience. They made the impossible possible."',
     attribution: '— Recent Client',
     card1: {
-      title: 'Client Success Stories',
-      text: '"Working with Olivia changed our entire experience. She made the impossible possible and found us our dream home."',
-      attribution: '— Maria & John, New Homeowners'
+      title: 'Cross-Border Expertise',
+      text: '"Navigating cross-border paperwork felt overwhelming, but Olivia made it seamless. She explained every document clearly, flagged important details, and had everything organized like clockwork. Her knowledge and professionalism made the entire process stress-free."',
+      attribution: '— María & Luis V. Kelowna, BC'
     },
     card2: {
-      title: 'Local Expertise',
-      text: '"Olivia\'s knowledge of Sayulita is unmatched. She showed us neighborhoods we never would have found on our own."',
-      attribution: '— The Rodriguez Family'
+      title: 'Property Purchase Journey',
+      text: '"We met Olivia in December 2022, and she was instrumental in our journey of buying our property in Sayulita. In our conversations with her, she was able to provide guidance as she understood our goals. Her knowledge of Sayulita real estate is valuable. Once we decided on a property, she walked us through the process, provided responses to our numerous questions, thoroughly followed up, and has always been proactive in anticipating our needs. Olivia has truly helped us with everything since we met her and we couldn\'t have done it without her. We absolutely recommend working with Olivia!"',
+      attribution: '— Marcela P. San Francisco, CA'
     },
     card3: {
-      title: 'Seamless Process',
-      text: '"From our first meeting to closing day, Olivia made everything smooth and stress-free. We couldn\'t be happier."',
-      attribution: '— Sarah T., Property Investor'
+      title: 'Brilliant Negotiation',
+      text: '"Olivia is a brilliant negotiator. She handled multiple offers with confidence, read the situation perfectly, and strategically guided things to a better outcome than expected. It was impressive to watch her work behind the scenes to protect value without ever seeming pushy."',
+      attribution: '— Javier G. Calgary, AB'
+    },
+    card4: {
+      title: 'Trust & Professionalism',
+      text: '"Olivia Matheson, our real Estate Agent managing the transaction was always prompt, helpful, knowledgeable and professional, as expected. What pleasantly exceeded our expectations, however, was her kindness, which for us, translated into a level of personal trust needed to alleviate most anxiety and fear. Olivia genuinely cared about managing a smooth and fast transaction for everyone\'s benefit. It was important as well as refreshing. She was able to elevate our experience from a merely bureaucratic transaction in acquiring an older house to a pleasant acquisition where we could envision our dreams and future new home in Mexico."',
+      attribution: '—Yuri M. Denver, CO'
     }
   },
   footer: {

@@ -12,11 +12,19 @@
     <div class="color-overlay primary-overlay"></div>
     <div class="color-overlay secondary-overlay"></div>
     <div class="color-overlay accent-overlay"></div>
+    
+    <!-- Subtle Text at Bottom Right -->
+    <div class="hero-subtle-text">
+      <p class="hero-tagline-subtle">Your Perfect Place in Paradise</p>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
-// No script logic needed for static hero component
+import { t } from '../utils/translationStore';
+
+// Access the translation function for multilingual support
+const $t = (key: string) => t(key);
 </script>
 
 <style scoped>
@@ -143,5 +151,57 @@
   backdrop-filter: brightness(0.98);
 }
 
+.hero-subtle-text {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 5;
+  text-align: right;
+}
 
+.hero-tagline-subtle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  border-left: 2px solid var(--accent-yellow);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.hero-tagline-subtle:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-subtle-text {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .hero-tagline-subtle {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-subtle-text {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .hero-tagline-subtle {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+}
 </style>

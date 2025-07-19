@@ -5,7 +5,7 @@
       <!-- First row with title and content -->
       <div class="content-row">
         <div class="left" data-animation="fade-right">
-          <h1 class="title" data-animation="text-underline" data-text-animation="true">Meet Olivia</h1>
+          <h1 class="title" data-animation="text-underline" data-text-animation="true">Meet<br>Olivia</h1>
         </div>
         
         <div class="right">
@@ -17,19 +17,20 @@
       
       <!-- Portfolio and Photo row -->
       <div class="portfolio-photo-row">
-        <a href="https://lunamarestates.com/idx/search/?SavedSearch=20250605183630259633000000&Limit=10&SubdivisionName=Sayulita" target="_blank" class="portfolio-container">
-          <h3 class="section-label">Portfolio</h3>
-        </a>
+        <div class="portfolio-frame">
+          <a href="https://lunamarestates.com/idx/search/?SavedSearch=20250605183630259633000000&Limit=10&SubdivisionName=Sayulita" target="_blank" class="portfolio-container">
+            <img src="/img/Sayulita_sunset.jpg" alt="Sayulita Sunset" class="portfolio-image" />
+            <h3 class="section-label">Portfolio</h3>
+          </a>
+        </div>
         
-        <div class="photo-container">
-          <div class="photo-gallery single-photo">
-            <div class="photo-item full-width">
-              <img src="/meet/Meet_Olivia.jpeg" alt="Olivia Photo" class="olivia-photo" />
-            </div>
-          </div>
-          <div class="ampi-badge">
-            <div class="ampi-badge-inner">
-              <img src="/img/ampi.png" alt="AMPI Certified" class="ampi-logo" />
+        <div class="portfolio-frame">
+          <div class="portfolio-container">
+            <img src="/meet/Meet_Olivia.jpeg" alt="Olivia Photo" class="portfolio-image" />
+            <div class="ampi-badge">
+              <div class="ampi-badge-inner">
+                <img src="/img/ampi.png" alt="AMPI Certified" class="ampi-logo" />
+              </div>
             </div>
           </div>
         </div>
@@ -161,26 +162,50 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   margin-top: 3rem;
 }
 
-.portfolio-container {
-  background-color: #ffb88c; /* Light orange background */
+.portfolio-frame {
+  background-color: #ffb88c; /* Peach/orange background */
   border-radius: 8px;
-  height: 300px; /* Reduced height */
+  height: 300px; /* Same height as photo container */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+.portfolio-container {
+  width: 100%;
+  height: 100%;
   position: relative;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .portfolio-container:hover {
   transform: translateY(-5px);
+}
+
+.portfolio-container:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+.portfolio-frame:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  background-color: #ffa06c; /* Slightly darker orange on hover */
 }
 
 .photo-container {
@@ -206,8 +231,10 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
 }
 
 .photo-gallery.single-photo {
+  display: flex;
   grid-template-columns: 1fr;
   width: 100%;
+  height: 100%;
 }
 
 .photo-item.full-width {
@@ -225,9 +252,12 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
 .section-label {
   font-size: 1.8rem;
   font-style: italic;
-  color: #333;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   margin: 0;
   font-family: "Times New Roman", Times, serif;
+  position: absolute;
+  z-index: 2;
 }
 
 .ampi-badge {
@@ -244,6 +274,7 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 2px solid var(--accent-orange);
   padding: 8px;
+  z-index: 5;
 }
 
 .ampi-badge-inner {
@@ -261,6 +292,7 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   width: 100%;
   height: auto;
   object-fit: contain;
+  display: block;
 }
 
 .footer-text {
@@ -477,7 +509,7 @@ import ValuesSection from './MeetMe/ValuesSection.vue';
   overflow: hidden;
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border: 1px solid var(--accent-orange);
+  border: 2px solid var(--accent-orange);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
