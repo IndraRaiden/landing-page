@@ -9,7 +9,8 @@ export default {
   },
   hero: {
     title: 'Welcome',
-    subtitle: 'Your journey begins here'
+    subtitle: 'Your journey begins here',
+    perfectPlace: 'Your Perfect Place in Paradise'
   },
   message: {
     title: 'Welcome Home',

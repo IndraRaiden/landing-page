@@ -13,9 +13,10 @@
     <div class="color-overlay secondary-overlay"></div>
     <div class="color-overlay accent-overlay"></div>
     
-    <!-- Subtle Text at Bottom Right -->
-    <div class="hero-subtle-text">
-      <p class="hero-tagline-subtle">Your Perfect Place in Paradise</p>
+    <!-- Main Hero Text - Centered and Large -->
+    <div class="hero-main-text">
+      <h1 class="hero-phrase">{{ $t('hero.perfectPlace') }}</h1>
+      <div class="hero-accent-line"></div>
     </div>
   </section>
 </template>
@@ -35,6 +36,9 @@ const $t = (key: string) => t(key);
   background-color: #FFFFFF;
   overflow: hidden;
   border-bottom: 2px solid var(--accent-magenta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes slow-pulse {
@@ -48,59 +52,30 @@ const $t = (key: string) => t(key);
   100% { transform: scale(1); }
 }
 
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.logo {
-  font-size: 1.75rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  color: var(--color-text-dark);
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.hero-overlay a {
-  margin-top: 2rem;
-  padding: 0.75rem 2rem;
-  background: #FFFFFF;
-  color: #333333;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  border-radius: 3px;
-  box-shadow: 0 4px 16px rgba(200, 200, 200, 0.2);
-  border: 1px solid #F0F0F0;
-  background-size: 200% 100%;
-  background-position: 0% 0%;
-}
-
-.hero-overlay a:hover {
-  color: #555555;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(200, 200, 200, 0.3);
-  border: 1px solid #E0E0E0;
-  background-position: 100% 0%;
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.3),
+      0 0 30px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(255, 255, 255, 0.7),
+      0 0 30px rgba(255, 255, 255, 0.5),
+      0 0 45px rgba(255, 255, 255, 0.3);
+  }
 }
 
 .hero-img {
@@ -108,9 +83,11 @@ const $t = (key: string) => t(key);
   height: 100%;
   object-fit: cover;
   display: block;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1;
-  filter: brightness(0.95) contrast(0.98) saturate(1.05);
+  filter: brightness(0.75) contrast(1.1) saturate(1.1);
   animation: subtle-scale 20s infinite ease-in-out;
 }
 
@@ -122,86 +99,108 @@ const $t = (key: string) => t(key);
 
 .primary-overlay {
   z-index: 2;
-  background: linear-gradient(135deg, rgba(255,240,210,0.3) 0%, rgba(255,220,180,0.25) 100%);
-  mix-blend-mode: soft-light;
+  background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%);
+  mix-blend-mode: multiply;
 }
 
 .secondary-overlay {
   z-index: 3;
   background: linear-gradient(45deg, rgba(255,180,120,0.15) 0%, rgba(255,100,150,0.08) 100%);
-  mix-blend-mode: multiply;
-}
-
-.accent-overlay {
-  z-index: 3;
-  background: linear-gradient(215deg,
-    transparent 25%,
-    rgba(250, 250, 250, 0.25) 40%,
-    rgba(245, 245, 245, 0.2) 75%);
-  mix-blend-mode: screen;
-  opacity: 0.4;
+  mix-blend-mode: soft-light;
 }
 
 .accent-overlay {
   z-index: 4;
   background: 
-    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.15) 100%),
-    linear-gradient(180deg, rgba(250, 250, 250, 0.15) 0%, transparent 100%);
-  mix-blend-mode: color-dodge;
-  backdrop-filter: brightness(0.98);
+    linear-gradient(90deg, transparent 50%, rgba(255, 255, 255, 0.1) 100%),
+    linear-gradient(180deg, rgba(250, 250, 250, 0.1) 0%, transparent 100%);
+  mix-blend-mode: screen;
 }
 
-.hero-subtle-text {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+.hero-main-text {
+  position: relative;
   z-index: 5;
-  text-align: right;
-}
-
-.hero-tagline-subtle {
-  font-size: 1.2rem;
-  font-weight: 500;
+  text-align: center;
   color: white;
+  animation: fade-in-up 1.2s ease-out;
+}
+
+.hero-phrase {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
   margin: 0;
+  letter-spacing: 3px;
   line-height: 1.2;
-  letter-spacing: 0.5px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  padding: 8px 12px;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2px);
-  border-left: 2px solid var(--accent-yellow);
-  transition: all 0.3s ease;
-  opacity: 0.8;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  text-transform: capitalize;
+  background: linear-gradient(45deg, #ffffff, #f0f0f0, #ffffff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: glow-pulse 3s ease-in-out infinite, fade-in-up 1.2s ease-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-tagline-subtle:hover {
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.3);
+.hero-accent-line {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  margin: 2rem auto 0;
+  animation: fade-in-up 1.2s ease-out 0.6s both;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-  .hero-subtle-text {
-    bottom: 20px;
-    right: 20px;
+  .hero-title {
+    letter-spacing: 2px;
   }
   
-  .hero-tagline-subtle {
-    font-size: 1rem;
-    padding: 6px 10px;
+  .hero-subtitle {
+    letter-spacing: 4px;
+    margin-top: -0.3rem;
+  }
+  
+  .hero-accent-line {
+    width: 80px;
+    margin-top: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-subtle-text {
-    bottom: 15px;
-    right: 15px;
+  .hero-title {
+    letter-spacing: 1px;
   }
   
-  .hero-tagline-subtle {
-    font-size: 0.9rem;
-    padding: 5px 8px;
+  .hero-subtitle {
+    letter-spacing: 2px;
+    margin-top: -0.2rem;
+  }
+  
+  .hero-accent-line {
+    width: 60px;
+    margin-top: 1rem;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .hero-title, .hero-subtitle {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    color: white;
+    -webkit-text-fill-color: white;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .hero-title, .hero-subtitle, .hero-accent-line {
+    animation: none;
+  }
+  
+  .hero-img {
+    animation: none;
   }
 }
 </style>

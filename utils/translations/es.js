@@ -9,7 +9,8 @@ export default {
   },
   hero: {
     title: 'Bienvenido',
-    subtitle: 'Tu viaje comienza aquí'
+    subtitle: 'Tu viaje comienza aquí',
+    perfectPlace: 'Tu Lugar Perfecto en el Paraíso'
   },
   message: {
     title: 'Bienvenido a Casa',

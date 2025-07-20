@@ -28,15 +28,15 @@
         </h3>
         <div class="services-grid">
           <div class="service-card">
-            <img src="/img/1.jpg" alt="Personalized Real Estate Guidance" class="service-image">
+            <img src="/servicespictures/Real Estate Guidance.jpg" alt="Personalized Real Estate Guidance" class="service-image">
             <h4 class="service-title">{{ $t('message.services.guidanceTitle') }}</h4>
           </div>
           <div class="service-card">
-            <img src="/img/2.jpg" alt="Curated Property Showings" class="service-image">
+            <img src="/servicespictures/Curated Property Showings.jpg" alt="Curated Property Showings" class="service-image">
             <h4 class="service-title">{{ $t('message.services.showingsTitle') }}</h4>
           </div>
           <div class="service-card">
-            <img src="/img/3.jpeg" alt="Investment & Lifestyle Consulting" class="service-image">
+            <img src="/servicespictures/Investment & Lifestyle Consulting.jpg" alt="Investment & Lifestyle Consulting" class="service-image">
             <h4 class="service-title">{{ $t('message.services.consultingTitle') }}</h4>
           </div>
         </div>
