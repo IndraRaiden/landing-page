@@ -7,6 +7,7 @@
         <div class="text-container">
           <p class="section-subtitle">{{ $t('findYourPlace.subtitle') }}</p>
           <p class="section-description">{{ $t('findYourPlace.description') }}</p>
+          <p class="section-more-info">Want to see more? Visit <a href="https://lunamarestates.com" target="_blank" class="estate-link">LunaMarEstates.com</a> to explore the full catalog and discover your perfect place under the sun.</p>
         </div>
       </div>
       
@@ -114,9 +115,32 @@
   font-size: 1rem;
   opacity: 0.8;
   max-width: 800px;
+  margin: 0 0 1rem;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.section-more-info {
+  font-size: 1.1rem;
+  max-width: 800px;
   margin: 0 0 2rem;
   line-height: 1.6;
   text-align: right;
+  font-style: italic;
+  color: var(--color-text-dark);
+}
+
+.estate-link {
+  color: #ff0066;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.estate-link:hover {
+  border-bottom-color: #ff0066;
+  text-shadow: 0 0 1px rgba(255, 0, 102, 0.3);
 }
 
 .property-grid {

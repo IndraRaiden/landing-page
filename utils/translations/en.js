@@ -3,8 +3,8 @@ export default {
     about: 'About',
     contact: 'Contact',
     meetOlivia: 'Meet Olivia',
-    working: 'Working',
-    findYourPlace: 'Find Your Place',
+    working: 'Work With Liv',
+    findYourPlace: 'Discover Your Dream Home',
     livwilsellit: 'Livwilsellit'
   },
   hero: {
@@ -17,7 +17,7 @@ export default {
     subtitle: 'Real estate with heart, clarity, and local soul',
     intro: "I'm Olivia, an <strong>AMPI-certified real estate agent</strong> at LunaMar Estates, passionate about helping you find not just a property, but a lifestyle.",
     background: "With a background in journalism, hospitality, and luxury service, I guide my clients with care, discretion, and vision — from first-time buyers to seasoned investors. I speak your language (and Spanish too), and I know this town like home — because it is.",
-    journey: "Let's make the journey smooth, meaningful, and maybe even fun.",
+    journey: "Let's make the journey smooth, meaningful, and fun.",
     valuesHeading: "My values",
     valuesList: "Trust | Connection | Local Insight | Intuitive Care | Calm Guidance",
     servicesHeading: "Services",

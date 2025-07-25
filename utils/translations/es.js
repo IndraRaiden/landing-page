@@ -3,8 +3,8 @@ export default {
     about: 'Acerca de',
     contact: 'Contacto',
     meetOlivia: 'Conoce a Olivia',
-    working: 'Trabajo',
-    findYourPlace: 'Encuentra tu Lugar',
+    working: 'Trabaja con Liv',
+    findYourPlace: 'Descubre tu Casa Soñada',
     livwilsellit: 'Livwilsellit'
   },
   hero: {
@@ -17,7 +17,7 @@ export default {
     subtitle: 'Bienes raíces con corazón, claridad y alma local',
     intro: "Soy Olivia, una <strong>agente de bienes raíces certificada por AMPI</strong> en LunaMar Estates, apasionada por ayudarte a encontrar no solo una propiedad, sino un estilo de vida.",
     background: "Con experiencia en periodismo, hospitalidad y servicios de lujo, guío a mis clientes con cuidado, discreción y visión — desde compradores primerizos hasta inversionistas experimentados. Hablo tu idioma (y español también), y conozco esta ciudad como mi hogar — porque lo es.",
-    journey: "Hagamos que el viaje sea fluido, significativo y quizás hasta divertido.",
+    journey: "Hagamos que el viaje sea fluido, significativo y divertido.",
     valuesHeading: "Mis valores",
     valuesList: "Confianza | Conexión | Conocimiento Local | Cuidado Intuitivo | Guía Tranquila",
     servicesHeading: "Servicios",
