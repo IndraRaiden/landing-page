@@ -5,37 +5,43 @@
       <div class="by-text" data-animation="fade-down">by</div>
       <div class="logo" data-animation="fade-down" @click="scrollToSection('hero')" style="cursor: pointer;"><img src="/navbar/Transparent White Logo.png" alt="HWD Logo" /></div>
       <!-- Desktop Navigation Links -->
-      <ul class="nav-links desktop-nav">
-        <li data-animation="fade-down" class="delay-100">
-          <a href="#about" :class="{ active: activeSection === 'about' }" @click.prevent="scrollToSection('about')">{{ t('navbar.about') }}</a>
-        </li>
-        <li data-animation="fade-down" class="delay-200">
-          <a href="#contact" :class="{ active: activeSection === 'contact' }" @click.prevent="scrollToSection('contact')">{{ t('navbar.contact') }}</a>
-        </li>
-        <li data-animation="fade-down" class="delay-300">
-          <a href="#meetme" :class="{ active: activeSection === 'meetme' }" @click.prevent="scrollToSection('meetme')">{{ t('navbar.meetOlivia') }}</a>
-        </li>
-        <li data-animation="fade-down" class="delay-400">
-          <a href="#press" :class="{ active: activeSection === 'press' }" @click.prevent="scrollToSection('press')">{{ t('navbar.working') }}</a>
-        </li>
-        <li data-animation="fade-down" class="delay-500">
-          <a href="#projects" :class="{ active: activeSection === 'projects' }" @click.prevent="scrollToSection('projects')">{{ t('navbar.findYourPlace') }}</a>
-        </li>
+      <div class="nav-links-container">
+        <!-- First row of navigation links -->      
+        <ul class="nav-links desktop-nav nav-row first-row">
+          <li data-animation="fade-down" class="delay-100">
+            <a href="#about" :class="{ active: activeSection === 'about' }" @click.prevent="scrollToSection('about')">{{ t('navbar.about') }}</a>
+          </li>
+          <li data-animation="fade-down" class="delay-200">
+            <a href="#contact" :class="{ active: activeSection === 'contact' }" @click.prevent="scrollToSection('contact')">{{ t('navbar.contact') }}</a>
+          </li>
+          <li data-animation="fade-down" class="delay-300">
+            <a href="#meetme" :class="{ active: activeSection === 'meetme' }" @click.prevent="scrollToSection('meetme')">{{ t('navbar.meetOlivia') }}</a>
+          </li>
+        </ul>
 
-        <li data-animation="fade-down" class="delay-600 whatsapp-icon">
-          <a href="https://wa.me/523221014263" target="_blank" aria-label="Contact on WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#ffffff">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.13.332.202.043.72.043.433-.101.838z"/>
-              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/>
-            </svg>
-          </a>
-        </li>
-        <li data-animation="fade-down" class="delay-700 language-toggle">
-          <button @click="toggleLanguage()" aria-label="Toggle language" :title="currentLanguage === 'en' ? 'Cambiar a español' : 'Switch to English'">
-            {{ currentLanguage === 'en' ? 'ES' : 'EN' }}
-          </button>
-        </li>
-      </ul>
+        <!-- Second row of navigation links -->
+        <ul class="nav-links desktop-nav nav-row second-row">
+          <li data-animation="fade-down" class="delay-400">
+            <a href="#press" :class="{ active: activeSection === 'press' }" @click.prevent="scrollToSection('press')">{{ t('navbar.working') }}</a>
+          </li>
+          <li data-animation="fade-down" class="delay-500">
+            <a href="#projects" :class="{ active: activeSection === 'projects' }" @click.prevent="scrollToSection('projects')">{{ t('navbar.findYourPlace') }}</a>
+          </li>
+          <li data-animation="fade-down" class="delay-600 whatsapp-icon">
+            <a href="https://wa.me/523221014263" target="_blank" aria-label="Contact on WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#ffffff">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.13.332.202.043.72.043.433-.101.838z"/>
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/>
+              </svg>
+            </a>
+          </li>
+          <li data-animation="fade-down" class="delay-700 language-toggle">
+            <button @click="toggleLanguage()" aria-label="Toggle language" :title="currentLanguage === 'en' ? 'Cambiar a español' : 'Switch to English'">
+              {{ currentLanguage === 'en' ? 'ES' : 'EN' }}
+            </button>
+          </li>
+        </ul>
+      </div>
       
       <!-- Mobile Hamburger Button -->
       <button class="hamburger-menu" @click="toggleSidebar" :class="{ active: isSidebarOpen }" aria-label="Menu">
@@ -221,7 +227,7 @@ onUnmounted(() => {
 }
 
 .g16-logo img {
-  height: 50px;
+  height: 40px;
   width: auto;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
 }
@@ -255,12 +261,23 @@ onUnmounted(() => {
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
 }
 
-.nav-links {
-  list-style: none;
+.nav-links-container {
   display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  margin-left: auto;
+  gap: 8px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  align-items: center;
+}
+
+.nav-row {
+  justify-content: flex-end;
 }
 
 .nav-links a {
@@ -560,6 +577,7 @@ onUnmounted(() => {
   
   .nav-bar {
     padding: 0.75rem 1.25rem;
+    height: 70px; /* Return to original height for mobile */
   }
 }
 
