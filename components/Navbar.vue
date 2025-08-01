@@ -6,8 +6,8 @@
       <div class="logo" data-animation="fade-down" @click="scrollToSection('hero')" style="cursor: pointer;"><img src="/navbar/Transparent White Logo.png" alt="HWD Logo" /></div>
       <!-- Desktop Navigation Links -->
       <div class="nav-links-container">
-        <!-- First row of navigation links -->      
-        <ul class="nav-links desktop-nav nav-row first-row">
+        <!-- All navigation links in one row -->      
+        <ul class="nav-links desktop-nav nav-row">
           <li data-animation="fade-down" class="delay-100">
             <a href="#about" :class="{ active: activeSection === 'about' }" @click.prevent="scrollToSection('about')">{{ t('navbar.about') }}</a>
           </li>
@@ -17,10 +17,6 @@
           <li data-animation="fade-down" class="delay-300">
             <a href="#meetme" :class="{ active: activeSection === 'meetme' }" @click.prevent="scrollToSection('meetme')">{{ t('navbar.meetOlivia') }}</a>
           </li>
-        </ul>
-
-        <!-- Second row of navigation links -->
-        <ul class="nav-links desktop-nav nav-row second-row">
           <li data-animation="fade-down" class="delay-400">
             <a href="#press" :class="{ active: activeSection === 'press' }" @click.prevent="scrollToSection('press')">{{ t('navbar.working') }}</a>
           </li>
@@ -263,9 +259,7 @@ onUnmounted(() => {
 
 .nav-links-container {
   display: flex;
-  flex-direction: column;
   margin-left: auto;
-  gap: 8px;
 }
 
 .nav-links {
@@ -274,6 +268,9 @@ onUnmounted(() => {
   margin-bottom: 0;
   padding-left: 0;
   align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .nav-row {

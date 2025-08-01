@@ -21,7 +21,7 @@
         <div class="footer-column">
           <h3>{{ $t('footer.contact.title') }}</h3>
           <ul>
-            <li><a href="mailto:olivia@livwillsellit.com">olivia@livwillsellit.com</a></li>
+            <li><a href="mailto:Olivia@lunamarestates.com">Olivia@lunamarestates.com</a></li>
             <li><a href="https://wa.me/523221014263">(+52) 322-101-4263</a></li>
             <li><a href="https://instagram.com/livwillsellit">@livwillsellit</a></li>
           </ul>

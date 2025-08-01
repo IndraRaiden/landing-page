@@ -3,8 +3,8 @@ export default {
     about: 'Acerca de',
     contact: 'Contacto',
     meetOlivia: 'Conoce a Olivia',
-    working: 'Trabaja con Liv',
-    findYourPlace: 'Descubre tu Casa Soñada',
+    working: 'Work Together',
+    findYourPlace: 'Find Your Home',
     livwilsellit: 'Livwilsellit'
   },
   hero: {
