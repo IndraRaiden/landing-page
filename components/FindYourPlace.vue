@@ -17,7 +17,7 @@
           <div class="property-content">
             <h3>{{ $t('findYourPlace.properties.casaArbol.title') }}</h3>
             <p>{{ $t('findYourPlace.properties.casaArbol.description') }}</p>
-            <a href="https://my.flexmls.com/OliviaMatheson/search/shared_links/CMzdQ/listings/20250619190544831264000000" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
+            <a href="https://my.flexmls.com/OliviaMatheson/search/office_listing_categories/Active/listings/20250619190544831264000000" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
           </div>
         </div>
         
@@ -26,7 +26,7 @@
           <div class="property-content">
             <h3>{{ $t('findYourPlace.properties.loteOmana.title') }}</h3>
             <p>{{ $t('findYourPlace.properties.loteOmana.description') }}</p>
-            <a href="https://my.flexmls.com/OliviaMatheson/search/shared_links/CMzf4/listings/20250521221840757415000000" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
+            <a href="https://my.flexmls.com/OliviaMatheson/search/office_listing_categories/Active/listings/20250521221840757415000000" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
           </div>
         </div>
       </div>
