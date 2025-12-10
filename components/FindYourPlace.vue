@@ -11,7 +11,7 @@
         </div>
       </div>
       
-      <div class="property-grid">
+      <div class="property-grid-top">
         <div class="property-card delay-100" data-animation="fade-up">
           <div class="property-image casa-arbol"></div>
           <div class="property-content">
@@ -27,6 +27,35 @@
             <h3>{{ $t('findYourPlace.properties.loteOmana.title') }}</h3>
             <p>{{ $t('findYourPlace.properties.loteOmana.description') }}</p>
             <a href="https://my.flexmls.com/OliviaMatheson/search/office_listing_categories/Active/listings/20250521221840757415000000" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="property-grid-bottom">
+        <div class="property-card delay-300" data-animation="fade-up">
+          <div class="property-image villa-maresol"></div>
+          <div class="property-content">
+            <h3>{{ $t('findYourPlace.properties.villaMaresol.title') }}</h3>
+            <p>{{ $t('findYourPlace.properties.villaMaresol.description') }}</p>
+            <a href="https://lunamarestates.com" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
+          </div>
+        </div>
+        
+        <div class="property-card delay-400" data-animation="fade-up">
+          <div class="property-image casa-palmera"></div>
+          <div class="property-content">
+            <h3>{{ $t('findYourPlace.properties.casaPalmera.title') }}</h3>
+            <p>{{ $t('findYourPlace.properties.casaPalmera.description') }}</p>
+            <a href="https://lunamarestates.com" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
+          </div>
+        </div>
+        
+        <div class="property-card delay-500" data-animation="fade-up">
+          <div class="property-image lote-vista"></div>
+          <div class="property-content">
+            <h3>{{ $t('findYourPlace.properties.loteVista.title') }}</h3>
+            <p>{{ $t('findYourPlace.properties.loteVista.description') }}</p>
+            <a href="https://lunamarestates.com" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
           </div>
         </div>
       </div>
@@ -143,9 +172,17 @@
   text-shadow: 0 0 1px rgba(255, 0, 102, 0.3);
 }
 
-.property-grid {
+.property-grid-top {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.property-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   margin-bottom: 4rem;
   width: 100%;
@@ -185,6 +222,24 @@
 
 .lote-omana {
   background-image: url('/img/Lote_Omana_1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.villa-maresol {
+  background: linear-gradient(135deg, #4A90E2 0%, #50C9E8 100%);
+  background-position: center;
+  background-size: cover;
+}
+
+.casa-palmera {
+  background: linear-gradient(135deg, #2ECC71 0%, #27AE60 100%);
+  background-position: center;
+  background-size: cover;
+}
+
+.lote-vista {
+  background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
   background-position: center;
   background-size: cover;
 }
@@ -306,8 +361,13 @@
     font-size: 3rem;
   }
   
-  .property-grid {
+  .property-grid-top,
+  .property-grid-bottom {
     gap: 2rem;
+  }
+  
+  .property-grid-bottom {
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .cta-buttons {
@@ -332,9 +392,14 @@
     padding: 4rem 0;
   }
   
-  .property-grid {
+  .property-grid-top,
+  .property-grid-bottom {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .property-grid-top {
+    margin-bottom: 2rem;
   }
   
   .section-title {

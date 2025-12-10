@@ -135,6 +135,18 @@ export default {
       loteOmana: {
         title: 'Lote Omana',
         description: 'A rare opportunity to build your vision from the ground up — in a location full of potential.'
+      },
+      villaMaresol: {
+        title: 'Villa Maresol',
+        description: 'Stunning ocean views meet modern luxury in this architectural masterpiece steps from the beach.'
+      },
+      casaPalmera: {
+        title: 'Casa Palmera',
+        description: 'A charming retreat surrounded by tropical gardens, perfect for those seeking tranquility and authentic Mexican charm.'
+      },
+      loteVista: {
+        title: 'Lote Vista Hermosa',
+        description: 'Prime hillside lot with panoramic views — your canvas for creating the ultimate coastal sanctuary.'
       }
     },
     viewDetails: 'View Details →',
