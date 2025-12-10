@@ -137,16 +137,16 @@ export default {
         description: 'Una oportunidad única para construir tu visión desde cero — en una ubicación llena de potencial.'
       },
       villaMaresol: {
-        title: 'Villa Maresol',
-        description: 'Impresionantes vistas al mar se encuentran con el lujo moderno en esta obra maestra arquitectónica a pasos de la playa.'
+        title: 'Lote Brisa',
+        description: 'Vistas de montaña, horizontes oceánicos y brisas eternas. Una impresionante parcela en el lado norte que ofrece vistas de Monkey Mountain, vistas al océano desde el segundo piso y un entorno ideal para una casa de ensueño o inversión.'
       },
       casaPalmera: {
-        title: 'Casa Palmera',
-        description: 'Un refugio encantador rodeado de jardines tropicales, perfecto para quienes buscan tranquilidad y auténtico encanto mexicano.'
+        title: 'Lote Ladera',
+        description: 'Un lienzo natural para visión y elevación. Un lote plano a ladera perfecto para jardines en terrazas, desarrollo boutique o una casa privada con vistas elevadas.'
       },
       loteVista: {
-        title: 'Lote Vista Hermosa',
-        description: 'Lote privilegiado en la colina con vistas panorámicas — tu lienzo para crear el santuario costero definitivo.'
+        title: 'Lote Solana',
+        description: 'Potencial soleado en el lado norte de Sayulita. Un lote brillante y fértil con zonificación dúplex — ideal para un retiro sereno, un proyecto de múltiples unidades o vibrantes jardines tropicales.'
       }
     },
     viewDetails: 'Ver Detalles →',

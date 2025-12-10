@@ -37,7 +37,7 @@
           <div class="property-content">
             <h3>{{ $t('findYourPlace.properties.villaMaresol.title') }}</h3>
             <p>{{ $t('findYourPlace.properties.villaMaresol.description') }}</p>
-            <a href="https://lunamarestates.com" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
+            <a href="https://my.flexmls.com/OliviaMatheson/search/shared_links/D8l3F/listings/20251120201117302564000000" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
           </div>
         </div>
         
@@ -46,7 +46,7 @@
           <div class="property-content">
             <h3>{{ $t('findYourPlace.properties.casaPalmera.title') }}</h3>
             <p>{{ $t('findYourPlace.properties.casaPalmera.description') }}</p>
-            <a href="https://lunamarestates.com" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
+            <a href="https://my.flexmls.com/OliviaMatheson/search/shared_links/D8l3F/listings/20251120205104962231000000" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
           </div>
         </div>
         
@@ -55,7 +55,7 @@
           <div class="property-content">
             <h3>{{ $t('findYourPlace.properties.loteVista.title') }}</h3>
             <p>{{ $t('findYourPlace.properties.loteVista.description') }}</p>
-            <a href="https://lunamarestates.com" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
+            <a href="https://my.flexmls.com/OliviaMatheson/search/shared_links/D8l3F/listings/20251120202742206572000000" target="_blank" class="explore-link">{{ $t('findYourPlace.viewDetails') }}</a>
           </div>
         </div>
       </div>
@@ -227,25 +227,28 @@
 }
 
 .villa-maresol {
-  background: linear-gradient(135deg, #4A90E2 0%, #50C9E8 100%);
+  background-image: url('/newterrenos/Lotes_OM-Brisa (1).jpg');
   background-position: center;
   background-size: cover;
 }
 
 .casa-palmera {
-  background: linear-gradient(135deg, #2ECC71 0%, #27AE60 100%);
+  background-image: url('/newterrenos/Lotes_OM-Ladera (1).jpg');
   background-position: center;
   background-size: cover;
 }
 
 .lote-vista {
-  background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%);
+  background-image: url('/newterrenos/Lotes_OM-Solana (1).jpg');
   background-position: center;
   background-size: cover;
 }
 
 .property-content {
   padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .property-content h3 {
@@ -260,6 +263,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--color-text-dark);
+  flex: 1;
 }
 
 .explore-link {
