@@ -195,6 +195,6 @@ export default {
     },
     copyright: 'Livwillsellit Estates. All rights reserved.',
     designedWith: 'Designed with ♥ in Puerto Vallarta',
-    developedBy: 'Developed By Digital Sands & The Local Way'
+    developedBy: 'Developed By Artificial Webs & The Local Way'
   }
 }

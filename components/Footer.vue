@@ -49,13 +49,32 @@
     <div class="footer-bottom">
       <p>&copy; {{ new Date().getFullYear() }} {{ $t('footer.copyright') }}</p>
       <p>{{ $t('footer.designedWith') }}</p>
-      <p>{{ $t('footer.developedBy') }}</p>
+      <p>
+        {{ developedByPrefix }}
+        <a href="https://www.artificialwebs.com" target="_blank" rel="noopener noreferrer" class="artificial-webs-link">
+          Artificial Webs
+        </a>
+        {{ developedBySuffix }}
+      </p>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-// Footer component
+import { computed } from 'vue'
+import { t } from '~/utils/translationStore'
+
+const developedByPrefix = computed(() => {
+  const fullText = t('footer.developedBy')
+  const index = fullText.indexOf('Artificial Webs')
+  return index !== -1 ? fullText.substring(0, index) : fullText
+})
+
+const developedBySuffix = computed(() => {
+  const fullText = t('footer.developedBy')
+  const index = fullText.indexOf('Artificial Webs')
+  return index !== -1 ? fullText.substring(index + 'Artificial Webs'.length) : ''
+})
 </script>
 
 <style scoped>
@@ -196,6 +215,35 @@
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
+}
+
+.artificial-webs-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.artificial-webs-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.artificial-webs-link:hover::after {
+  transform: scaleX(1);
+}
+
+.artificial-webs-link:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
 .footer-certifications {
